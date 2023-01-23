@@ -1,34 +1,42 @@
 {% load admin_urls %}
 {% load dima_utils %}
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Código</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Tipo de patente</th>
-      <th scope="col">Departamento</th>
-      <th scope="col">Concedida</th>
-    </tr>
-  </thead>
 
-  <tbody>
-  {% for patent in patents %}
+{% if not patents.count %}
+  <div class="dima-alert alert alert-info" role="alert">
+    No hay resultados para esta combinación de filtros.
+  </div>
+{% else %}
 
-    {% replace patent.pk '/' '-' as url_ %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo de patente</th>
+        <th scope="col">Departamento</th>
+        <th scope="col">Concedida</th>
+      </tr>
+    </thead>
 
-    <tr>
-      <td><a class="btn btn-link dima--table-btn-link" href="{% url 'patents' url_ %}" role="button">{{patent.pk}}</a></td>
-      <td>{{patent.name}}
-      {% if user.is_authenticated %}
-        <a class='' href='{% url patents_admin|admin_urlname:'change' patent.pk %}'>Editar<i class="bi bi-pencil-square"></i></a>
-      {% endif %}
-      </td>
-      <td>{{patent.patent_type_pretty}}</td>
-      <td>{{patent.departament_pretty}}</td>
-      <td>{{patent.grant}}</td>
-    </tr>
-  {% endfor %}
-  </tbody>
+    <tbody>
+    {% for patent in patents %}
 
-</table>
+      {% replace patent.pk '/' '-' as url_ %}
+
+      <tr>
+        <td><a class="btn btn-link dima--table-btn-link" href="{% url 'patents' url_ %}" role="button">{{patent.pk}}</a></td>
+        <td>{{patent.name}}
+        {% if user.is_authenticated %}
+          <a class='' href='{% url patents_admin|admin_urlname:'change' patent.pk %}'>Editar<i class="bi bi-pencil-square"></i></a>
+        {% endif %}
+        </td>
+        <td>{{patent.patent_type_pretty}}</td>
+        <td>{{patent.departament_pretty}}</td>
+        <td>{{patent.grant}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+
+  </table>
+{% endif %}

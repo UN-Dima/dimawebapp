@@ -134,7 +134,7 @@ def update_departament_filter_(evt):
         FILTERS_RESEARCHERS['departament'] = evt.target.value
 
     ajax_render('dima-placeholder__researchers',
-                "investigadores/", FILTERS_RESEARCHERS)
+                "/investigadores/", FILTERS_RESEARCHERS)
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
 
 
@@ -164,7 +164,7 @@ def update_patents_departament(evt):
         FILTERS_PATENTS['departament'] = evt.target.value
 
     ajax_render('dima-placeholder__patents',
-                "propiedad_intelectual/patents/", FILTERS_PATENTS)
+                "/propiedad_intelectual/patents/", FILTERS_PATENTS)
 
 
 # ----------------------------------------------------------------------
@@ -178,7 +178,7 @@ def update_patents_types(evt):
         FILTERS_PATENTS['patent_type'] = evt.target.value
 
     ajax_render('dima-placeholder__patents',
-                "propiedad_intelectual/patents/", FILTERS_PATENTS)
+                "/propiedad_intelectual/patents/", FILTERS_PATENTS)
 
 
 # ----------------------------------------------------------------------
@@ -250,7 +250,6 @@ def on_load(evt):
             el.style = {'display': 'none', }
 
 
-
 # ----------------------------------------------------------------------
 @bind('.navbar-toggler', 'click')
 def navbar_collapse(evt):
@@ -272,7 +271,6 @@ def nav_item_click(evt):
     window.location.href = evt.target.select_one('.nav-link').href
 
 
-
 # # ----------------------------------------------------------------------
 # @bind('.dima-nav-home li.nav-item', 'mouseover')
 # def nav_home_hover(evt):
@@ -284,7 +282,6 @@ def nav_item_click(evt):
         # el.style = {
             # 'background-color': color,
         # }
-
 
 if __name__.startswith('__main__'):
     update_all_plots(filters_to_use='FILTERS_GROUPS')

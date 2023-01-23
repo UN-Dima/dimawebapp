@@ -1,8 +1,12 @@
 from django.db import models
 from utils.models import Choices
 
+import zlib
+from base64 import urlsafe_b64encode as b64e, urlsafe_b64decode as b64d
 
 ########################################################################
+
+
 class PersonBase():
     """"""
     # ----------------------------------------------------------------------
@@ -51,6 +55,16 @@ class PersonBase():
             return json.loads(getattr(self, field))
 
         return super().__getattr__(attr)
+
+    # ----------------------------------------------------------------------
+    @property
+    def obscure(self):
+        return b64e(zlib.compress(str(self.pk).encode(), 9)).decode()
+
+    # ----------------------------------------------------------------------
+    @classmethod
+    def unobscure(cls, obscured: bytes) -> bytes:
+        return zlib.decompress(b64d(obscured))
 
 
 ########################################################################

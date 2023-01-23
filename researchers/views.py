@@ -26,13 +26,13 @@ class Researchers(TemplateView):
         return self.render_to_response(context)
 
     # ----------------------------------------------------------------------
-    def get(self, request, pk=None, *args, **kwargs):
+    def get(self, request, obscure=None, *args, **kwargs):
         """"""
         self.template_name = "researchers_view.html"
         context = self.get_context_data(**kwargs)
 
         try:
-            context['professor'] = Professor.objects.get(pk=pk)
+            context['professor'] = Professor.objects.get(pk=Professor.unobscure(obscure))
             context['professor_admin'] = Professor._meta
         except:
             return HttpResponseNotFound('<h1>Page not found</h1>')

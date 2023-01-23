@@ -30,6 +30,15 @@
       <small class="text-muted">
         {% if user.is_authenticated %}
           <a href='{% url professor_admin|admin_urlname:'change' professor.pk %}'> Editar <i class="bi bi-pencil-square"></i></a>
+          <br>
+          <span class="dima-private"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Dato únicamente visible para el administrador">[CC: {{professor.pk}}]
+          </span>
+
+
         {% endif %}
       </small>
     </h1>

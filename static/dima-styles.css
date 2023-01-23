@@ -481,3 +481,12 @@ text-transform: capitalize;
 .nav-item {
   cursor: pointer;
 }
+
+
+.dima-private {
+  color: #D2042D !important;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: #D2042D;
+}

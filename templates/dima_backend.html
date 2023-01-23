@@ -29,4 +29,10 @@
   window.alert = function() {};
   var CSRF_TOKEN = '{{csrf_token}}';
   document.addEventListener("DOMContentLoaded", brython);
+
+  window.addEventListener('load', function() {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  });
+
 </script>

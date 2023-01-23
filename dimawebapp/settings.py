@@ -61,6 +61,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'tinymce',
+    'letsencrypt',
 
     'visualizations.apps.VisualizationsConfig',
 
@@ -247,7 +248,6 @@ if PROTECT:
         'sha256-VQaWNPlDvkQDjhMc2Dz0+hxaXQDi2bu44aG5P9THJ38=',
         'sha256-Uu66nCv3OKzuAS8ATrVHPwOun2YUE+KWfO73GgRTP9Q=',
         'sha256-LsV6mnSAm91ihslanFghBzuRSVySo9roFgMn4sdOwgQ=',
-        # 'sha256-FhooaR7Rh/dW8wipO49t4R7hXOosoY0mraLlD7krcKU=',
         'sha256-VvGfYkabMjxZJPSTc0b+KuD5cZRLutP/FtCK0W8NJ1s=',
         'sha256-0EZqoz+oBhx7gF4nvY2bSqoGyy4zLjNF+SDQXGp/ZrY=',
         'sha256-9p05vWz7JuUd6fR6erXru6EEugTSZHY2+WzbRfpXzB0=',
@@ -260,9 +260,6 @@ if PROTECT:
         'sha256-bkV+7ypydgbxtJ2pPV9NB94i06Fo9uSTyn/kY7rXbL0=',
         'sha256-IUmUSIOHNOrqjyKfjMakEQ19oWMgeHg/bkn75Lgltng=',
         'sha256-0ESkY8jjCi1ojYmMvxmMVQQdIeQcOIENVxlO6UJKkXo=',
-        # '',
-        # '',
-
     ]
 
     SCRIPT_HASHES = [
@@ -278,24 +275,6 @@ if PROTECT:
         'sha256-9N1pR+hg4o/+z8EPuKBlwEniCNYMoJWtb2VgjKo9fNA=',
         'sha256-t4YxutMXg20vbcEDdroNzK1yK3DGcPKc8yMgAdFBqeI=',
         'sha256-3UWUK1ZEnDETUa34alUUIbaqgLE3yQr/xboGWN+kWlk=',
-        # 'nonce-summernote',
-        # 'sha256-UrlmDfxevC9ZoXNkI7HEfmOY/sbWFtnoI6y82n+YGi8=',
-        # 'sha256-J00VKAmU8X8JM7tPF8/QAo/XsChimytRzrAFUNBfo+Y=',
-        # 'sha256-ZkVcnKYucOm3wARvV4sWX/6aGz+GfZ7486aY8XdlrRM=',
-        # 'sha256-S0JS1i34/J/5gBG5YIm99txTh+aCULCAhdwMFz+sIbg=',
-        # 'sha256-/xFYfh8sP0ijKZUYIKk4NIv6oOQVg7oXS+pcTVBLMlE=',
-        # 'sha256-XwqYcxvEay03doa5ks00esGyD1wri0A2LRoJLe6jmsE=',
-        # 'sha256-O/tJHbgRUjnyH+MUwF2Pd8HOPeBWBGtKTIP7gXyANyA=',
-        # 'sha256-rRJ11oE3XgfquNzdtKr4qosXr9F6zdOq/TK7GP685Fw=',
-        # 'sha256-Pts70rmymFzx6FX72b69cMDo+1JpCdRSASw7+ECJQUo=',
-        # 'sha256-PKg3sAsJ5ocRxK7iSlJSU0lUfNs5KhfGUEGcGM2XfSw=',
-        # 'sha256-wrYthA6c7J9fpT2fKIpVmioEVEcxDAiNniYDBFfTMGM=',
-        # 'sha256-5CpKeBKU3P99ppPbfg8iQhpuPbIcALyFiUfF5HMz/28=',
-        # 'sha256-kLEONfsTx85h5x32L8EwvhNovy3ExV0AxbEDo5D0/1c=',
-        # 'sha256-sel0WLI9+tjojZPwc+/kt47f0xW/2BHcvDPuwECyNXs=',
-        # 'sha256-Y97uXlqx3F/3Tz+4p0MoRt/CAOwKy1de20DJOy3jgGE=',
-
-
     ]
 
     SCRIPT_EXTERN = [
