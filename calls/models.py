@@ -51,8 +51,8 @@ class InternalCall(models.Model):
     def show(self):
         return self.active and not self.expired
 
-
     # ----------------------------------------------------------------------
+
     def __str__(self):
         return f'Convocatoria interna (ID:#{self.pk})'
 
@@ -72,7 +72,6 @@ class MincienciasCall(models.Model):
     class Meta:
         verbose_name = "Convocatoria de Minciencias"
         verbose_name_plural = "Convocatorias de Minciencias"
-
 
     @property
     # ----------------------------------------------------------------------
@@ -97,8 +96,8 @@ class MincienciasCall(models.Model):
     def show(self):
         return self.active and not self.expired
 
-
     # ----------------------------------------------------------------------
+
     def __str__(self):
         return f'Convocatoria de Minciencias (ID:#{self.pk})'
 
@@ -114,8 +113,8 @@ class JointCall(models.Model):
     headed = HTMLField('Dirigido a', max_length=2 ** 12)
     active = models.BooleanField('Convocatoria activa', help_text='Oculta la convoctaria de la vista pública', default=True)
 
-
     # ----------------------------------------------------------------------
+
     class Meta:
         verbose_name = "Convocatoria conjunta"
         verbose_name_plural = "Convocatorias conjuntas"
@@ -138,15 +137,17 @@ class JointCall(models.Model):
 ########################################################################
 class StudentsCall(models.Model):
     """"""
-    title = models.CharField('Título', max_length=2 ** 10)
+    title = models.CharField('Nombre de la convocatoria', max_length=2 ** 10)
     expiration = models.DateField('Finalización', help_text='Hasta cuando está abierta la convocatoria')
-    funding = models.CharField('Recursos del proyecto', max_length=2 ** 12)
+    funding = models.CharField('Proyecto', max_length=2 ** 12)
     supervise = models.CharField('Profesor responsable', max_length=2 ** 12)
     students = models.IntegerField('Estudiantes', help_text='Cantidad de estudiantes en la convocatoria')
-    profile = HTMLField('Perfil', max_length=2 ** 12)
-    time = models.IntegerField('Tiempo', help_text='Horas a la semana')
+    undergraduate = models.BooleanField('Abierta para pregrado')
+    postgraduate = models.BooleanField('Abierta para posgrado')
+    profile = HTMLField('Descripción', max_length=2 ** 12)
+    time = models.IntegerField('Disponibilidad de tiempo requerida', help_text='Horas a la semana')
     economic_stimulus = models.CharField('Estímulo económico', help_text='ej. 3 pagos de $2.000.000 y uno de $350.000', max_length=2 ** 12)
-    period = models.CharField('Periodo', max_length=2 ** 10, help_text='ej. 3 Meses y 5 días')
+    period = models.CharField('Duración de la vinculación', max_length=2 ** 10, help_text='ej. 3 Meses y 5 días')
     active = models.BooleanField('Convocatoria activa', help_text='Oculta la convoctaria de la vista pública', default=True)
 
     # Anexo no recbir benificios
@@ -167,7 +168,7 @@ class StudentsCall(models.Model):
 
     # ----------------------------------------------------------------------
     def __str__(self):
-        return f'Convocatoria para estudiante axiliar (ID:#{self.pk})'
+        return f'Convocatoria para estudiante auxiliar (ID:#{self.pk})'
 
 
 ########################################################################

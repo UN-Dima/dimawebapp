@@ -34,12 +34,27 @@
       </small>
     </h1>
 
-    <div class="dima-content">
+    {% if user.is_authenticated %}
+      <div class="dima__card-badge">
+        {% if not studentscall.active %}<span class="badge rounded-pill text-bg-danger">Oculta</span>{% endif %}
+        {% if studentscall.expired %}<span class="badge rounded-pill text-bg-danger">Finalizada</span>{% endif %}
+        {% if not studentscall.expired %}<span class="badge rounded-pill text-bg-warning">Activa</span>{% endif %}
+      </div>
+      <br>
+    {% else %}
+      <div class="dima__card-badge">
+        {% if studentscall.expired %}<span class="badge rounded-pill text-bg-danger">Finalizada</span>{% endif %}
+        {% if not studentscall.expired %}<span class="badge rounded-pill text-bg-primary">Abierta</span>{% endif %}
+      </div>
+      <br>
+    {% endif %}
+
+    <div class="dima-content dima-small_br">
         <div class="row">
 
           <dl class="row">
 
-            <dt class="col-sm-3">Recursos Proyecto</dt>
+            <dt class="col-sm-3">Proyecto</dt>
             <dd class="col-sm-9">{{studentscall.funding}}</dd>
 
             <dt class="col-sm-3">Profesor responsable</dt>
@@ -48,21 +63,21 @@
             <dt class="col-sm-3">Número de estudiantes a vincular</dt>
             <dd class="col-sm-9">{{studentscall.students}}</dd>
 
-            <dt class="col-sm-3">Perfil</dt>
+            <dt class="col-sm-3">Descripción de la convocatoria</dt>
             <dd class="col-sm-9">
               <div class="dima-content">
                 {{studentscall.profile|safe}}
               </div>
             </dd>
 
-            <dt class="col-sm-3">Tiempo</dt>
+            <dt class="col-sm-3 dima-small_br">Disponibilidad de tiempo requerida</dt>
             <dd class="col-sm-9">{{studentscall.time}} horas a la semana</dd>
 
-            <dt class="col-sm-3">Estímulo económico</dt>
+            <dt class="col-sm-3 dima-small_br">Estímulo económico</dt>
             <dd class="col-sm-9">{{studentscall.economic_stimulus}}</dd>
 
-            <dt class="col-sm-3">Periodo</dt>
-            <dd class="col-sm-9">{{studentscall.period}} días</dd>
+            <dt class="col-sm-3 dima-small_br">Duración de la vinculación</dt>
+            <dd class="col-sm-9">{{studentscall.period}}</dd>
 
           </dl>
 

@@ -490,3 +490,18 @@ text-transform: capitalize;
 .custom-tooltip {
   --bs-tooltip-bg: #D2042D;
 }
+
+
+a.dima-non_style_link:hover,
+a.dima-non_style_link {
+    color: unset;
+    text-decoration: none;
+    border: none;
+
+}
+
+
+.dima-content.dima-small_br dt,
+.dima-content.dima-small_br dd {
+  padding-top: 15px;
+}

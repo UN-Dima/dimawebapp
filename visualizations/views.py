@@ -174,7 +174,7 @@ class BarsTemplatePlot(TemplateView):
 
         self.template_name = "bars.html"
         x, y = zip(*[(Professor.objects.filter(category=key, **filters).count(), label)
-                   for key, label in Professor._meta.get_field('category').choices if label != 'Sin información'])
+                   for key, label in Professor._meta.get_field('category').choices])
         if sum(x) == 0:
             x, y = [], []
         else:
@@ -184,7 +184,7 @@ class BarsTemplatePlot(TemplateView):
             # y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{x} grupos"
+        hovertemplate = "%{x} docentes"
 
         return locals()
 
@@ -208,7 +208,7 @@ class BarsTemplatePlot(TemplateView):
             y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{x} grupos"
+        hovertemplate = "%{x} docentes"
 
         return locals()
 
@@ -230,7 +230,7 @@ class BarsTemplatePlot(TemplateView):
             y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{x} grupos"
+        hovertemplate = "%{x} docentes"
 
         return locals()
 

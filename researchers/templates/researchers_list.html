@@ -24,7 +24,6 @@
       {% replace professor.faculty_pretty 'Facultad de' '' as faculty %}
       {% replace professor.departament_pretty 'Departamento de' '' as departament %}
 
-      {% if professor.category_pretty != 'Sin información' %}
       <tr>
         <td class='dima-group--view' data-obscure='{{professor.obscure}}'>
           <a class="btn btn-link dima--table-btn-link" href="{% url 'researchers' professor.obscure %}" role="button">{{professor.full_name}}</a>
@@ -36,7 +35,6 @@
         <td>{{faculty|capfirst}}</td>
         <td>{{departament|capfirst}}</td>
       </tr>
-      {% endif %}
     {% endfor %}
     </tbody>
 

@@ -20,9 +20,7 @@
         <select class="form-select" id='dima-select--category__researchers' aria-label="Default select example">
           <option value="All">Todos los investigadores</option>
           {% for c in researcher_categories %}
-            {% if c != 'Sin información' %}
-              <option value="{{c}}">{{c}}</option>
-            {% endif %}
+            <option value="{{c}}">{{c}}</option>
           {% endfor %}
         </select>
       </div>
@@ -40,7 +38,6 @@
     </div>
   </div>
 </div>
-
 
 <div class='container-fluid dima-form'>
   <div class="container-lg">

@@ -247,7 +247,7 @@ class Choices:
         'Investigador Emérito',
         'Investigador Junior',
         'Investigador Senior',
-        'Sin información'
+        'Sin categoría'
     )
 
     GROUPS_CATEGORY = (
