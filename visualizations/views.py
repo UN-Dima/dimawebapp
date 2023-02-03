@@ -11,6 +11,7 @@ from django.views import View
 
 import numpy as np
 import textwrap
+from utils.models import Choices
 
 
 # ----------------------------------------------------------------------
@@ -175,6 +176,8 @@ class BarsTemplatePlot(TemplateView):
         self.template_name = "bars.html"
         x, y = zip(*[(Professor.objects.filter(category=key, **filters).count(), label)
                    for key, label in Professor._meta.get_field('category').choices])
+
+        y, x = zip(*[(k, dict(zip(y, x))[k]) for k in Choices.RESEARCHER_CATEGORY_SORTED])
         if sum(x) == 0:
             x, y = [], []
         else:

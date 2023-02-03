@@ -250,6 +250,14 @@ class Choices:
         'Sin categoría'
     )
 
+    RESEARCHER_CATEGORY_SORTED = (
+        'Sin categoría',
+        'Investigador Junior',
+        'Investigador Asociado',
+        'Investigador Senior',
+        'Investigador Emérito'
+    )
+
     GROUPS_CATEGORY = (
         'A1',
         'A',
