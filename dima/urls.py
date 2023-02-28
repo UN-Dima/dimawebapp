@@ -24,13 +24,15 @@ urlpatterns = [
          template_name="static/avales.html"), name='avales'),
     path('contacto', ContentView.as_view(label='contact',
          template_name="static/contact.html"), name='contact'),
+    path('formatos', ContentView.as_view(label='formatos',
+         template_name="static/formatos.html"), name='formatos'),
 
     # Convocatorias
     #path('convocatorias_internas', InternalCallView.as_view(), name='internal_call'),
-    #path('convocatorias_estudiantes_auxiliares',
-    #TemplateView.as_view(), name='calls_aux'),
-    #path('busqueda_de_convocatorias',
-    #TemplateView.as_view(), name='calls_search'),
+    # path('convocatorias_estudiantes_auxiliares',
+    # TemplateView.as_view(), name='calls_aux'),
+    # path('busqueda_de_convocatorias',
+    # TemplateView.as_view(), name='calls_search'),
 
 
 

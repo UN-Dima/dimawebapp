@@ -18,7 +18,7 @@
       {% include 'dima_backend.html' %}
       <link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/frontend.css' %}" media="all">
       <link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/accesibilidad.css' %}" media="all">
-      <link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/bootstrap-theme.min.css' %}" media="all">
+      <!--<link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/bootstrap-theme.min.css' %}" media="all">-->
       <link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/reset.css' %}" media="all">
       <link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/unal.css' %}" media="all">
       <link nonce="{{request.csp_nonce}}" rel="stylesheet" type="text/css" href="{% static 'unal/css/base.css' %}" media="all">
@@ -165,7 +165,8 @@
                      <div class="collapse btn-group dropstart languageMenu d-none d-md-block">
                         <div class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown">{{user}}<span class="caret"></span></div>
                         <ul class="dropdown-menu dropdown-menu-right dima-dropdown-menu">
-                           <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                           <li><a href="{% url 'admin:index' %}">Admin Databases</a></li>
+                           <li><a href="{% url 'dashboard' %}">Admin Dashboard</a></li>
                            <li><a href="{% url 'logout' %}?next={{request.path}}">Logout</a></li>
                         </ul>
                      </div>

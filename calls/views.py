@@ -27,7 +27,6 @@ class InternalCallView(TemplateView):
         return self.render_to_response(context)
 
 
-
 ########################################################################
 class JointCallView(TemplateView):
 
@@ -68,7 +67,6 @@ class MincienciasCallView(TemplateView):
         return self.render_to_response(context)
 
 
-
 ########################################################################
 class StudentsCallView(TemplateView):
 
@@ -83,7 +81,7 @@ class StudentsCallView(TemplateView):
             context['studentscall_admin'] = StudentsCall._meta
         else:
             self.template_name = "convocatorias/estudiantes.html"
-            context['studentscall'] = StudentsCall.objects.all()
+            context['studentscall'] = StudentsCall.objects.all().order_by('-expiration')
             context['studentscall_admin'] = StudentsCall._meta
 
         return self.render_to_response(context)

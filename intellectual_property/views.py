@@ -20,7 +20,7 @@ class PatentsView(TemplateView):
             Patent, json.loads(request.POST['data']))
 
         context['patents'] = Patent.objects.filter(
-            **{k: filters[k] for k in ['departament', 'patent_type'] if k in filters})        
+            **{k: filters[k] for k in ['departament', 'patent_type'] if k in filters})
 
         context['patents_admin'] = Patent._meta
         return self.render_to_response(context)
@@ -38,3 +38,6 @@ class PatentsView(TemplateView):
             return HttpResponseNotFound('<h1>Page not found</h1>')
 
         return self.render_to_response(context)
+
+
+

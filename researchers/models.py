@@ -4,9 +4,8 @@ from utils.models import Choices
 import zlib
 from base64 import urlsafe_b64encode as b64e, urlsafe_b64decode as b64d
 
+
 ########################################################################
-
-
 class PersonBase():
     """"""
     # ----------------------------------------------------------------------

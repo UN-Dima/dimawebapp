@@ -14,8 +14,8 @@
 <script nonce="{{request.csp_nonce}}" src="{% static 'plotly/plotly-2.14.0.min.js' %}"></script>
 
 <!--Brython-->
-<script nonce="{{request.csp_nonce}}" type="text/javascript" src="{% static 'brython/brython.js' %}"></script>
-<script nonce="{{request.csp_nonce}}" type="text/javascript" src="{% static 'brython/brython_stdlib.js' %}"></script>
+<script nonce="{{request.csp_nonce}}" type="text/javascript" src="{% static 'brython/brython-3.11.1/brython.js' %}"></script>
+<script nonce="{{request.csp_nonce}}" type="text/javascript" src="{% static 'brython/brython-3.11.1/brython_stdlib.js' %}"></script>
 
 <!--Brython scripts-->
 <script nonce="{{request.csp_nonce}}" type="text/python">
@@ -23,6 +23,7 @@
     sys.path.append("{% static 'py' %}")
 </script>
 <script type="text/python" src="{% static 'py/scripts.py' %}"></script>
+<script type="text/python" src="{% static 'py/dragndrop.py' %}"></script>
 
 <!--Javascript-->
 <script nonce="{{request.csp_nonce}}" type="application/javascript">

@@ -2,13 +2,18 @@ from django.contrib import admin
 from django.contrib.auth.models import User, Group
 from django.conf import settings
 from admin_interface.models import Theme
-from .models import Newsletter, Broadcast, Team, Content
+from .models import Newsletter, Broadcast, Team, Content, Attachment_Content
 
 admin.site.unregister(Group)
 # admin.site.unregister(User)
 
 if not settings.DEBUG:
     admin.site.unregister(Theme)
+
+
+class Attachment_ContentAdmin(admin.StackedInline):
+    model = Attachment_Content
+    extra = 1
 
 
 @admin.register(Newsletter)
@@ -34,6 +39,8 @@ class TeamAdmin(admin.ModelAdmin):
 class ContentAdmin(admin.ModelAdmin):
     list_display = ('label', 'content',)
     list_display_links = ['label']
+    inlines = [Attachment_ContentAdmin,
+               ]
 
 
 # @admin.register(Content)

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load admin_urls %}
+{% load humanize %}
+
+{% block 'head-title' %}Proyecto - {{project.proyecto}} {% endblock %}
+
+{% block 'main' %}
+
+<div class="container-lg">
+
+  <h1 class="display-6">{{project.proyecto}}</h1>
+
+
+
+    <div class="dima-content">
+        <div class="row">
+
+          <div class="col-md-12 col-lg-6">
+            <dl class="row">
+              <dt class="col-sm-4">Código:</dt>
+              <dd class="col-sm-8">{{project.code}}</dd>
+
+              <dt class="col-sm-4">Empresa:</dt>
+              <dd class="col-sm-8">{{project.empresa}}</dd>
+
+
+              <dt class="col-sm-4">Recuros:</dt>
+              <dd class="col-sm-8">{{project.resources.count}}</dd>
+
+
+            </dl>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <dl class="row">
+
+              <dt class="col-sm-4">Desde:</dt>
+              <dd class="col-sm-8">{{project.inicio_reporte}}</dd>
+
+              <dt class="col-sm-4">Hasta:</dt>
+              <dd class="col-sm-8">{{project.fin_reporte}}</dd>
+
+            </dl>
+          </div>
+
+        </div>
+    </div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  {% for recurso in project.resources.all %}
+    <li class="nav-item" role="presentation">
+      <button class="nav-link {% if not forloop.counter0 %} active {% endif %}" id="tab-{{recurso.resource}}" data-bs-toggle="tab" data-bs-target="#tab-{{recurso.resource}}-pane" type="button" role="tab" aria-controls="tab-{{recurso.resource}}-pane" aria-selected="false">Recurso: {{recurso.resource}}</button>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  {% for recurso in project.resources.all %}
+  <div class="tab-pane dima_tab-pane fade {% if not forloop.counter0 %}show active {% endif %}" id="tab-{{recurso.resource}}-pane" role="tabpanel" aria-labelledby="tab-{{recurso.resource}}" tabindex="0">
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Imputación</th>
+          <th scope="col">Apropiación definitiva</th>
+          <th scope="col">Cupo</th>
+          <th scope="col">Disponibilidad</th>
+          <th scope="col">Registro</th>
+          <th scope="col">Obligaciones</th>
+          <th scope="col">Pago</th>
+          <th scope="col">Saldo por comprometer</th>
+          <th scope="col">Saldo por ejecutar</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for row in recurso.rows.all %}
+          <tr>
+            <td>{{row.imputacion}}</td>
+            <td>${{row.apropiacion|intcomma}}</td>
+            <td>${{row.cupo|intcomma}}</td>
+            <td>${{row.disponibilidad|intcomma}}</td>
+            <td>${{row.registro|intcomma}}</td>
+            <td>${{row.obligaciones|intcomma}}</td>
+            <td>${{row.pago|intcomma}}</td>
+            <td>${{row.saldo_por_comprometer|intcomma}}</td>
+            <td>{{row.por_ejecutar}}%</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% endfor %}
+</div>
+
+
+  </div>
+{% endblock %}
+

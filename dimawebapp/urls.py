@@ -34,6 +34,9 @@ urlpatterns = [
 
     path("convocatorias/", include('calls.urls')),
 
+    path("dashboard/", include('dashboard.urls')),
+
+
 
 
     # Third party modules

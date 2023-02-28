@@ -9,9 +9,9 @@ from django.dispatch import receiver
 from tinymce.models import HTMLField
 from datetime import date
 
-
 upload_to_newsletter = os.path.join('uploads', 'newsletter')
 upload_to_broadcast = os.path.join('uploads', 'broadcast')
+upload_to_content = os.path.join('uploads', 'content')
 
 
 # ----------------------------------------------------------------------
@@ -29,7 +29,7 @@ def run_command(command):
 ########################################################################
 class Content(models.Model):
     """"""
-    label = models.CharField('Destino', primary_key=True, max_length=2**7, editable=False)
+    label = models.CharField('Destino', primary_key=True, max_length=2**7, editable=True)
     content = HTMLField('Contenido', max_length=2**15)
 
     # ----------------------------------------------------------------------
@@ -40,6 +40,17 @@ class Content(models.Model):
     # ----------------------------------------------------------------------
     def __str__(self):
         return f'Editar el contenido que se mostrará en la sección de "{self.label.capitalize()}"'
+
+
+########################################################################
+class Attachment_Content(models.Model):
+    content = models.ForeignKey('dima.Content', related_name='attachment', on_delete=models.CASCADE)
+    name = models.CharField('Nombre del archivo', max_length=2 ** 10)
+    attachment = models.FileField('Adjunto', upload_to=upload_to_content, blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Adjunto"
+
 
 ########################################################################
 class Team(models.Model):
@@ -63,8 +74,8 @@ class Team(models.Model):
 
         return super().__getattr__(attr)
 
-
     # ----------------------------------------------------------------------
+
     def __str__(self):
         return f'Editar equipo de trabajo'
 
@@ -158,6 +169,16 @@ def on_post_delete_broadcast(sender, instance, **kwargs):
 def on_post_delete_newsletter(sender, instance, **kwargs):
     """"""
     for object_ in ['file', 'thumbnail']:
+        if file := getattr(instance, object_, None):
+            if os.path.isfile(file.path):
+                os.remove(file.path)
+
+
+# ----------------------------------------------------------------------
+@receiver(post_delete, sender=Attachment_Content)
+def on_post_delete_Attachment_Content(sender, instance, **kwargs):
+    """"""
+    for object_ in ['attachment']:
         if file := getattr(instance, object_, None):
             if os.path.isfile(file.path):
                 os.remove(file.path)

@@ -12,7 +12,6 @@ from intellectual_property.models import Patent
 from datetime import date
 
 
-
 ########################################################################
 class HomeView(TemplateView):
     template_name = "home.html"
@@ -24,7 +23,6 @@ class HomeView(TemplateView):
         context['broadcasts'] = Broadcast.objects.filter(expiration__gt=date.today())
         context['broadcasts_admin'] = Broadcast._meta
         return context
-
 
 
 ########################################################################

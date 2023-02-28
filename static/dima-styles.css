@@ -442,22 +442,27 @@ text-transform: capitalize;
 
 
 .dima-color_one:hover {
-  background-color: #fd0;
+  background-color: #FEADCD;
   color: #212529;
 }
 .dima-color_two:hover {
-  background-color: #ffb600;
+  background-color: #FFEC9F;
   color: #212529;
 }
 .dima-color_three:hover {
-  background-color: #51b8be;
+  background-color: #79E7B8;
   color: #212529;
 }
 .dima-color_four:hover {
-  background-color: #008c95;
+  background-color: #5BD2F0;
+  color: #212529;
 }
 .dima-color_five:hover {
-  background-color: #ff3d30;
+  background-color: #9BE7FF;
+  color: #212529;
+}
+.dima-color_six:hover {
+  background-color: #B9ACF2;
   color: #212529;
 }
 
@@ -505,3 +510,61 @@ a.dima-non_style_link {
 .dima-content.dima-small_br dd {
   padding-top: 15px;
 }
+
+.dima-download_icon {
+    margin-left: 7px;
+}
+
+
+
+.dima-content ul li a {
+  border-bottom: unset;
+}
+
+
+.dima_tab-pane {
+  padding: 30px;
+}
+
+
+
+.dima-dragndrop {
+    background-color: #ebebeb82;
+    /* height: 150px; */
+    /* text-align: center; */
+    padding: 30px;
+    padding-bottom: 15px;
+}
+
+.dima-dragndrop_area {
+  min-height: 100px;
+  /*border: 5px dotted #dbdbdb;*/
+  margin-bottom: 20px;
+  padding: 30px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.dima-dragndrop_buttons {
+text-align: right;
+}
+
+
+.dima-dragndrop_output {
+    font-family: monospace;
+    font-size: 80%;
+    text-align: left;
+}
+.dima-dragndrop_output li {
+    list-style: none;
+}
+
+
+.dima-navbar {
+    background-color: #ebebeb;
+    margin-bottom: 60px;
+
+}
+
+
+

@@ -17,7 +17,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -28,6 +27,9 @@ SECRET_KEY = "django-insecure-&-%3g&h#^q8%fnsxg27jwe*^u+az&&zcp$_!rh%w&1ekh#_2!n
 DEBUG = os.getenv('DEBUG', False) == 'True'
 SQLITE = True
 PROTECT = True
+
+FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o755
+FILE_UPLOAD_PERMISSIONS = 0o644
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
@@ -58,6 +60,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.humanize",
 
     'django_extensions',
     'tinymce',
@@ -73,6 +76,8 @@ INSTALLED_APPS = [
     'unal_plantilla_web.apps.UnalPlantillaWebConfig',
     'intellectual_property.apps.IntellectualPropertyConfig',
     'calls.apps.CallsConfig',
+    'quipu.apps.QuipuConfig',
+    'dashboard.apps.DashboardConfig',
 ]
 
 MIDDLEWARE = [
@@ -145,8 +150,16 @@ DATABASES.update({
     }
 })
 
+DATABASES.update({
+    'quipu_database': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        "NAME": os.path.join(BASE_DIR, 'db', "quipu_database.sqlite3"),
+    }
+})
+
 DATABASE_ROUTERS = ['dima.db_router.DimaDBRouter',
-                    'calls.db_router.DimaDBRouter',
+                    'calls.db_router.CallsDBRouter',
+                    'quipu.db_router.QuipuDBRouter',
                     'dimawebapp.db_router.AdminInterfaceRouter']
 
 
@@ -172,13 +185,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "America/Bogota"
 
 USE_I18N = True
 
 USE_TZ = True
+
+FORMAT_MODULE_PATH = [
+    'formats',
+]
 
 
 # Static files (CSS, JavaScript, Images)
@@ -203,6 +218,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -260,6 +276,13 @@ if PROTECT:
         'sha256-bkV+7ypydgbxtJ2pPV9NB94i06Fo9uSTyn/kY7rXbL0=',
         'sha256-IUmUSIOHNOrqjyKfjMakEQ19oWMgeHg/bkn75Lgltng=',
         'sha256-0ESkY8jjCi1ojYmMvxmMVQQdIeQcOIENVxlO6UJKkXo=',
+
+        'sha256-de/GKPCYlDOggOSI5FkbyYYEVijbLGlJOTmEwhZ7Whk=',
+        'sha256-Dpw0KhmP3+K3x8urgjfTxV6HWe4VEpLqBu2BvPq5FIQ=',
+        'sha256-ZxEWvWIFfmh05xNHX9b02eT+h4Hc1plIoXqrOU52lHE=',
+        # '',
+        # '',
+        # '',
     ]
 
     SCRIPT_HASHES = [

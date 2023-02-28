@@ -1,0 +1,48 @@
+{% extends "base_unal.html" %}
+{% load admin_urls %}
+
+{% block 'head-title' %}Formatos{% endblock %}
+
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a href="#">Formatos</a></li>
+    </ol>
+  </nav>
+</div>
+{% endblock %}
+
+{% block 'main' %}
+<div class="container-lg">
+  <div class="row">
+
+    <h1 class="display-3">Formatos y solicitudes
+      <small class="text-muted">
+        {% if user.is_authenticated %}
+          <a href='{% url formatos_admin|admin_urlname:'change' formatos.pk %}'> Editar <i class="bi bi-pencil-square"></i></a>
+        {% endif %}
+      </small>
+    </h1>
+    <div class="dima-content">
+      {{formatos.content|safe}}
+
+      {% if formatos.attachment.count %}
+        <br><br>
+        <h1>Archivos adjuntos:</h1>
+        <ul>
+          {% for attachment in formatos.attachment.all %}
+            <li><a href='{{attachment.attachment.url}}' target='_blank'>{{attachment.name}} <i class="bi bi-download dima-download_icon"></i></a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+    </div>
+
+
+
+
+  </div>
+</div>
+{% endblock %}
