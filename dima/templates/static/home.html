@@ -4,7 +4,7 @@
 
 {% block 'top-page' %}
   {% if broadcasts %}
-    {% include 'dima_carousel.html' %}
+    {% include 'dima_accent.html' %}
   {% endif %}
 {% endblock %}
 
@@ -19,10 +19,33 @@
 {% endblock %}
 
 {% block 'main' %}
-<div class="container-lg">
-  <div class="row">
-
-    <h1 class="display-3">
+<!--<div class="container-lg"> -->
+  <!--<div class="row"> -->
+    <p class="dima-txt1">La Dirección de Investigaciones de Manizales DIMA</p>
+    <p class="dima-txt2">tiene como objeto principal orientar, promover y financiar a través de los recursos que se le asignen, las actividades de investigación en la Sede.</p>
+    <br>
+    <br>
+    <br>
+    <p class="dima-txt3">Corresponde a la Dirección de Investigación y Extensión de acuerdo con los lineamientos de la Vicerrectoría de Investigación: </p>
+    <br>
+    <br>
+    <br>
+    <ul class="dima-txt4">
+      <li>Implementar las políticas y reglamentaciones expedidas por el nivel nacional para la consolidación y articulación de los procesos de investigación y extensión de la Universidad.</li>
+      <br>
+      <li>Articular la investigación y extensión con la formación académica en la sede.</li>
+      <br>
+      <li>Realizar labores de coordinación y seguimiento de las bibliotecas de la sede en concordancia con las políticas del Sistema nacional de bibliotecas.</li>
+      <br>
+      <li>Dirigir las actividades relacionadas con la innovación y la propiedad intelectual.</li>
+      <br>
+      <li>Las demás que le asigne el Consejo de sede o el Vicerrector de sede y que sean acordes con las normas generales.</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    {% include 'dima_accent_home.html' %}
+    <!--<h1 class="display-3">
       <small class="text-muted">
         {% if user.is_authenticated %}
           <a href='{% url home_admin|admin_urlname:'change' home.pk %}'> Editar <i class="bi bi-pencil-square"></i></a>
@@ -34,18 +57,17 @@
     </div>
 
     <hr>
-
     <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
       <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe dima-map" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Manziales Caldas, Universidad Nacional de Colombia&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div><style>.mapouter{position:relative;text-align:right;width:100%;height:100vh;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
-    </div>
+    </div> -->
 
-    <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+     <!-- <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12"> -->
 
-      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-        {% include 'dima_accent_home.html' %}
-      </div>
+      <!--  <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
+      
+      <!--  </div> -->
 
-      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 dima-home_address">
+       <!-- <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 dima-home_address">
         <h1>Contacto:</h1>
         <b>Dirección:</b><br>
         Carrera 27 #64-60 Bloque H Piso 3  - Oficina de Dirección -  Manizales - Colombia<br>
@@ -57,9 +79,9 @@
         <a href="mailto:soportedima_man@unal.edu.co" target="_blank" rel="noopener">soportedima_man@unal.edu.co</a><br>
       </div>
 
-    </div>
+    </div>-->
 
 
-  </div>
-</div>
+ <!-- </div>
+</div>-->
 {% endblock %}

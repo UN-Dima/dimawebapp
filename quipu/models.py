@@ -1,7 +1,7 @@
 from django.db import models
+from utils.models import Choices
 
-
-########################################################################
+#######################################################################
 class QuipuProject(models.Model):
     code = models.CharField('Código Quipu', primary_key=True, max_length=2**5)
     proyecto = models.CharField('Nombre del proyecto', max_length=2**5)
@@ -35,9 +35,3 @@ class Row_QuipuProject(models.Model):
     pago = models.BigIntegerField('Pago')
     saldo_por_comprometer = models.BigIntegerField('Saldo por comprometer')
     por_ejecutar = models.DecimalField('Porcentaje por ejecutar', decimal_places=2, max_digits=5)
-
-
-
-
-
-

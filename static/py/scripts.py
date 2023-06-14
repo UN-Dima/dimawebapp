@@ -5,11 +5,13 @@ import logging
 
 FILTERS_GROUPS = {}
 FILTERS_RESEARCHERS = {}
+FILTERS_PROJECTS = {}
 FILTERS_PATENTS = {}
 filters = {
     'FILTERS_GROUPS': FILTERS_GROUPS,
     'FILTERS_RESEARCHERS': FILTERS_RESEARCHERS,
     'FILTERS_PATENTS': FILTERS_PATENTS,
+    'FILTERS_PROJECTS': FILTERS_PROJECTS,
 }
 
 
@@ -121,7 +123,21 @@ def update_faculty_filter_(evt):
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
     update_all_options(filters_to_use='FILTERS_RESEARCHERS',
                        id='#dima-select--departament__researchers')
+# ----------------------------------------------------------------------
+@bind('#dima-search--first_name__researchers', 'change')
+def update_first_name_filter_(evt):
+    """"""
+    global FILTERS_RESEARCHERS
+    if evt.target.value == '':
+        FILTERS_RESEARCHERS.pop('first_name')
+    else:
+        FILTERS_RESEARCHERS['first_name'] = evt.target.value
+        FILTERS_RESEARCHERS['last_name'] = evt.target.value
 
+    ajax_render('dima-placeholder__researchers',
+                "/investigadores/", FILTERS_RESEARCHERS)
+
+    update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--departament__researchers', 'change')
@@ -151,7 +167,19 @@ def update_researcher_category(evt):
     ajax_render('dima-placeholder__researchers',
                 "/investigadores/", FILTERS_RESEARCHERS)
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
+# ----------------------------------------------------------------------
+@bind('#dima-select--dedication__researchers', 'change')
+def update_researcher_dedication(evt):
+    """"""
+    global FILTERS_RESEARCHERS
+    if evt.target.value == 'All':
+        FILTERS_RESEARCHERS.pop('dedication')
+    else:
+        FILTERS_RESEARCHERS['dedication'] = evt.target.value
 
+    ajax_render('dima-placeholder__researchers',
+                "/investigadores/", FILTERS_RESEARCHERS)
+    update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--departament__patents', 'change')
@@ -180,6 +208,63 @@ def update_patents_types(evt):
     ajax_render('dima-placeholder__patents',
                 "/propiedad_intelectual/patents/", FILTERS_PATENTS)
 
+# ----------------------------------------------------------------------
+@bind('#dima-select--call_type__projects', 'change')
+def update_project_call_type(evt):
+    """"""
+    global FILTERS_PROJECTS
+    if evt.target.value == 'All':
+        FILTERS_PROJECTS.pop('call_type')
+    else:
+        FILTERS_PROJECTS['call_type'] = evt.target.value
+
+    ajax_render('dima-placeholder__projects',
+                "/proyectos/", FILTERS_PROJECTS)
+
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+
+# ----------------------------------------------------------------------
+@bind('#dima-select--project_state__projects', 'change')
+def update_project_project_state(evt):
+    """"""
+    global FILTERS_PROJECTS
+    if evt.target.value == 'All':
+        FILTERS_PROJECTS.pop('project_state')
+    else:
+        FILTERS_PROJECTS['project_state'] = evt.target.value
+
+    ajax_render('dima-placeholder__projects',
+                "/proyectos/", FILTERS_PROJECTS)
+
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+# ----------------------------------------------------------------------
+@bind('#dima-select--faculty__projects', 'change')
+def update_project_faculty(evt):
+    """"""
+    global FILTERS_PROJECTS
+    if evt.target.value == 'All':
+        FILTERS_PROJECTS.pop('faculty')
+    else:
+        FILTERS_PROJECTS['faculty'] = evt.target.value
+
+    ajax_render('dima-placeholder__projects',
+                "/proyectos/", FILTERS_PROJECTS)
+
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+# ----------------------------------------------------------------------
+@bind('#dima-select--departament__projects', 'change')
+def update_project_faculty(evt):
+    """"""
+    global FILTERS_PROJECTS
+    if evt.target.value == 'All':
+        FILTERS_PROJECTS.pop('departament')
+    else:
+        FILTERS_PROJECTS['departament'] = evt.target.value
+
+    ajax_render('dima-placeholder__projects',
+                "/proyectos/", FILTERS_PROJECTS)
+
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
 
 # ----------------------------------------------------------------------
 @bind('#patentes-tab', 'click')
@@ -201,7 +286,7 @@ def update_researchers_plot(evt):
 @bind('#proyectos-tab', 'click')
 def update_proyectos_plot(evt):
     """"""
-    update_all_plots(filters_to_use='FILTERS_PATENTS')
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
     update_tabs('proyectos', 'Proyectos')
 
 

@@ -1,21 +1,89 @@
 {% extends "base_unal.html" %}
 {% load admin_urls %}
-
+{% load static %}
 {% block 'head-title' %}Equipo de trabajo - {% endblock %}
 
-{% block 'breadcrumb' %}
-<div class="breadcrumb-class">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page"><a href="#">Equio de trabajo</a></li>
-    </ol>
-  </nav>
-</div>
-{% endblock %}
-
 {% block 'main' %}
-<div class="container-lg">
+<div>
+  <img src="{% static '/unal/images/perfiles/Grupo.png' %}">
+</div>
+<div class="dima-Equipo">
+    <table>
+      <tr>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/andres.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/angela.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/mario.png' %}">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/sandro.png' %}">
+          </div>
+        </td> 
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/geral.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/santiago.png' %}">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/maryi.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/lucho.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/sandra.png' %}">
+          </div>          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/rubiela.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/allison.png' %}">
+          </div>
+        </td>
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/alejandro.png' %}">
+          </div>
+        </td>
+      </tr>
+    </table>
+    
+  </div>
+
+
+
+<!--<div class="container-lg">
 
     <h1 class="display-3">Equipo de trabajo
       <small class="text-muted">
@@ -29,13 +97,13 @@
     {% for team in teams %}
 
       <div class="col-6 dima-teams--team">
-        <h1 class="display-9">{{team.area}}
+        <h1 class="display-9">{{team.area}} -->
         <!--<small class="text-muted">-->
-          {% if user.is_authenticated %}
+          <!--{% if user.is_authenticated %}
             <a class='dima-edit' href='{% url teams_admin|admin_urlname:'change' team.pk %}'>Editar<i class="bi bi-pencil-square"></i></a>
-          {% endif %}
+          {% endif %}-->
         <!--</small>-->
-        </h1>
+        <!--<</h1>
 
         {% for name in team.names_split %}
           {{name|lower|title}}</br>
@@ -63,7 +131,7 @@
 
 
   </div>
-</div>
+</div>-->
 {% endblock %}
 
 

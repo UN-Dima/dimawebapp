@@ -5,9 +5,11 @@ import json
 
 from groups.models import ResearchGroup
 from researchers.models import Professor
+from projects.models import Project
 
 from django.http import HttpResponse, HttpResponseNotFound
 from django.views import View
+from django.db.models import Max, Min
 
 import numpy as np
 import textwrap
@@ -23,16 +25,21 @@ def break_words(words, width=30, break_='<br>'):
 # ----------------------------------------------------------------------
 def fix_filters(model, filters):
     """"""
-    if not filters:
-        return {}
-
+    #if not filters:
+    #    return {}, {}
+    searchers = {}
     for k in filters:
-        k_plain = k.replace('~', '')
+        if 'name' in k:
+            searchers[k+'__icontains'] = filters[k]
+        else:
+            k_plain = k.replace('~', '')
 
-        if flts := [c for c in model._meta.get_field(k_plain).choices if filters[k] in c]:
-            filters[k] = flts[0][0]
+            if flts := [c for c in model._meta.get_field(k_plain).choices if filters[k] in c]:
+                filters[k] = flts[0][0]
 
-    return filters
+    for k in searchers.keys():
+        filters.pop(k[:-11])
+    return filters, searchers
 
 
 ########################################################################
@@ -47,6 +54,13 @@ class BarsTemplatePlot(TemplateView):
         'researchers_category': Professor,
         'researchers_faculty': Professor,
         'researchers_departament': Professor,
+        'researchers_dedication': Professor,
+        'projects_faculty': Project,
+        'projects_departament': Project,
+        'projects_call_type': Project,
+        'projects_project_state': Project,
+        'projects_total_project': Project,
+        'projects_execution_percentage': Project,
     }
 
     # ----------------------------------------------------------------------
@@ -63,7 +77,7 @@ class BarsTemplatePlot(TemplateView):
             plot = data['id'].split('--')[-1]
 
         context.update(getattr(self, f'render_{plot}')(
-            fix_filters(self.models[plot], data['filters'])))
+            fix_filters(self.models[plot], data['filters'])[0]))
 
         if context.get('render_plot', False):
             return self.render_to_response(context)
@@ -234,10 +248,188 @@ class BarsTemplatePlot(TemplateView):
 
         texttemplate = "%{text}%"
         hovertemplate = "%{x} docentes"
+        return locals()
+    # ----------------------------------------------------------------------
+    def render_researchers_dedication(self, filters):
+        """"""
+        if 'dedication' in filters:
+            return {}
+        self.template_name = "bars.html"
+        x, y = zip(*[(Professor.objects.filter(dedication=key, **filters).count(), label)
+                   for key, label in Professor._meta.get_field('dedication').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} docentes"
+        return locals()
+    # ----------------------------------------------------------------------
+    def render_projects_faculty(self, filters):
+        """"""
+        if 'faculty' in filters:
+            return {}
+        if 'departament' in filters:
+            return {}
+
+        self.template_name = "bars.html"
+        x, y = zip(*[(Project.objects.filter(faculty=key, **filters).count(), label)
+                   for key, label in Project._meta.get_field('faculty').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} proyectos"
 
         return locals()
 
+    # ----------------------------------------------------------------------
+    def render_projects_departament(self, filters):
+        """"""
+        if 'departament' in filters:
+            return {}
 
+        self.template_name = "bars.html"
+        x, y = zip(*[(Project.objects.filter(departament=key, **filters).count(), label)
+                   for key, label in Project._meta.get_field('departament').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} proyectos"
+        return locals()
+    # ----------------------------------------------------------------------
+    def render_projects_call_type(self, filters):
+        """"""
+        if 'call_type' in filters:
+            return {}
+        if 'call' in filters:
+            return {}
+
+        self.template_name = "bars.html"
+        x, y = zip(*[(Project.objects.filter(call_type=key, **filters).count(), label)
+                   for key, label in Project._meta.get_field('call_type').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} proyectos"
+
+        return locals()
+
+    # ----------------------------------------------------------------------
+    def render_projects_project_state(self, filters):
+        """"""
+        if 'project_state' in filters:
+            return {}
+
+        self.template_name = "bars.html"
+        x, y = zip(*[(Project.objects.filter(project_state=key, **filters).count(), label)
+                   for key, label in Project._meta.get_field('project_state').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} proyectos"
+        return locals()
+
+    # ----------------------------------------------------------------------
+    def render_projects_execution_percentage(self, filters):
+        """"""
+        #Each element of the list must be a tuple ordered as (values, label)
+        ranges = [([0, 0.1], '0-10%'),
+                  ([0.1, 0.2], '10-20%'),
+                  ([0.2, 0.3], '20-30%'),
+                  ([0.3, 0.4], '30-40%'),
+                  ([0.4, 0.5], '40-50%'),
+                  ([0.5, 0.6], '50-60%'),
+                  ([0.6, 0.7], '60-70%'),
+                  ([0.7, 0.8], '70-80%'),
+                  ([0.8, 0.9], '80-90%'),
+                  ([0.9, 1.0], '90-100%'),]
+        self.template_name = "bars.html"
+        x, y = zip(*[(Project.objects.filter(execution_percentage__range = range, **filters).count(), label)
+                   for range, label in ranges])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} proyectos"
+        return locals()
+
+    # ----------------------------------------------------------------------
+    def render_projects_total_project(self, filters):
+        """"""
+        bins = 10
+        max_value = Project.objects.aggregate(Max('total_project'))['total_project__max']
+        min_value = Project.objects.aggregate(Min('total_project'))['total_project__min']
+        data_range = max_value - min_value
+        delta = data_range/bins
+        ranges = [([min_value+delta*i, min_value+delta*(i+1)],
+                    f'${(min_value+delta*i)/1e6:.1f}M-${(min_value+delta*(i+1))/1e6:.1f}M')
+                    for i in range(bins)] 
+        self.template_name = "bars.html"
+        x, y = zip(*[(Project.objects.filter(total_project__range = range, **filters).count(), label)
+                   for range, label in ranges])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width = max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} proyectos"
+        return locals()
+    # ----------------------------------------------------------------------
+    # def render_projects_project_state(self, filters):
+    #     """"""
+    #     if 'project_state' in filters:
+    #         return {}
+
+    #     self.template_name = "bars.html"
+    #     x, y = zip(*[(Project.objects.filter(project_state=key, **filters).count(), label)
+    #                for key, label in Project._meta.get_field('project_state').choices])
+    #     if sum(x) == 0:
+    #         x, y = [], []
+    #     else:
+    #         render_plot = True
+    #         x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+    #         percentages = [round(100 * xi / sum(x)) for xi in x]
+    #         y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+    #     texttemplate = "%{text}%"
+    #     hovertemplate = "%{x} proyectos"
+    #     return locals()
 ########################################################################
 class GenerateFilteredOptionsView(View):
     """"""

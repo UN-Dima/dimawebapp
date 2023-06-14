@@ -17,7 +17,7 @@ class PatentsView(TemplateView):
         context = self.get_context_data(**kwargs)
 
         filters = fix_filters(
-            Patent, json.loads(request.POST['data']))
+            Patent, json.loads(request.POST['data']))[0]
 
         context['patents'] = Patent.objects.filter(
             **{k: filters[k] for k in ['departament', 'patent_type'] if k in filters})

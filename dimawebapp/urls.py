@@ -28,6 +28,8 @@ urlpatterns = [
     path("investigadores/", include('researchers.urls')),
     path("propiedad_intelectual/", include('intellectual_property.urls')),
 
+    path("proyectos/", include('projects.urls')),
+
     path("", include('visualizations.urls')),
     # path("", include('unal_plantilla_web.urls')),
 

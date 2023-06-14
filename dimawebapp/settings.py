@@ -51,7 +51,7 @@ if DEBUG:
 
 INSTALLED_APPS = [
 
-    'admin_interface.apps.AdminInterfaceConfig',
+    'admin_interface',
     'colorfield',
 
     "django.contrib.admin",
@@ -71,13 +71,16 @@ INSTALLED_APPS = [
     'researchers.apps.ResearchersConfig',
     'groups.apps.GroupsConfig',
     'dima.apps.DimaConfig',
+    #'projects',
     'projects.apps.ProjectsConfig',
+    'projects.templatetags.template_tags', #Load custom template tags to format text/values
     # 'bulk_data.apps.BulkDataConfig',
     'unal_plantilla_web.apps.UnalPlantillaWebConfig',
     'intellectual_property.apps.IntellectualPropertyConfig',
     'calls.apps.CallsConfig',
-    'quipu.apps.QuipuConfig',
+    #'quipu.apps.QuipuConfig',
     'dashboard.apps.DashboardConfig',
+    'quipu',
 ]
 
 MIDDLEWARE = [
@@ -118,12 +121,20 @@ WSGI_APPLICATION = "dimawebapp.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 if SQLITE:
-    DATABASES = {
+    if DEBUG:
+        DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, 'db', "default_database.sqlite3"),
+            "NAME": os.path.join(BASE_DIR, 'db', "toy_database.sqlite3"),
         }
     }
+    else:
+        DATABASES = {
+            "default": {
+                "ENGINE": "django.db.backends.sqlite3",
+                "NAME": os.path.join(BASE_DIR, 'db', "default_database.sqlite3"),
+            }
+        }
 
 else:
     DATABASES = {

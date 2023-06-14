@@ -1,0 +1,148 @@
+{% load admin_urls %}
+
+
+{% if user.is_authenticated %}
+  <div class="container">
+    <div class="dima-alert alert alert-danger" role="alert">
+      Los proyectos se pueden editar desde <a href="{% url proyects_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
+    </div>
+  </div>
+{% endif %}
+
+
+<div class="container-fluid dima-form">
+  <div class="container-lg">
+    <div class="row">
+
+      <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Facultad</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--faculty__projects" aria-label="Default select example">
+         <option value="All">Todas las facultades</option>
+          {% for f in faculties %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Departamento</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--departament__projects" aria-label="Default select example">
+          <option value="All">Todos los departamentos</option>
+          {% for d in departaments %}
+            <option value="{{d}}">{{d}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+        <h1 class="display-8">Tipologia</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--call_type__projects" aria-label="Default select example">
+          <option value="All">Todos las tipologias</option>
+          {% for c in type %}
+            <option value="{{c}}">{{c}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+        <h1 class="display-8">Convocatoria</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--call__projects" aria-label="Default select example">
+          <option value="All">Todas las convocatorias</option>
+          {% for e in call%}
+            <option value="{{e}}">{{e}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+        <h1 class="display-8">Estado</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--project_state__projects" aria-label="Default select example">
+          <option value="All">Todos los estados</option>
+          {% for e in state %}
+            <option value="{{e}}">{{e}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="container-lg">
+    <div class="row">
+      <div class="container-fluid">
+        <div class="container-lg">
+          <div class="row">
+            <div class="example" id="ex3">
+              <button class="dima-click_buttons dima-click_buttons_0" id="button3">Mostrar/Esconder Datos</button>
+              <!--
+                Everything within the span can be shown/hidden via the button.
+                Setting display:none means the content will be hidden by deafult.
+              -->
+              <span style="display:none" id="zone3" class="zone"> 
+                <div class="row">
+                  <h1 class="display-8">Numero de proyectos...</h1>
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    Por Tipologia:
+                    <div class="dima-plot" id="dima-plot--projects_call_type" filters="FILTERS_PROJECTS"></div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    Por Estado:
+                    <div class="dima-plot" id="dima-plot--projects_project_state" filters="FILTERS_PROJECTS"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    Por Facultad:
+                    <div class="dima-plot" id="dima-plot--projects_faculty" filters="FILTERS_PROJECTS"></div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    Por Departamento:
+                    <div class="dima-plot" id="dima-plot--projects_departament" filters="FILTERS_PROJECTS"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    Por Recursos Totales:
+                    <div class="dima-plot" id="dima-plot--projects_total_project" filters="FILTERS_PROJECTS"></div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    Por Porcentaje de Ejecución (Presupuesto):
+                    <div class="dima-plot" id="dima-plot--projects_execution_percentage" filters="FILTERS_PROJECTS"></div>
+                  </div>
+                </div>
+              </span>
+              <script type="text/python"  id="script3">
+              from browser import bind, document
+          
+              @bind("#button3", "click")
+              def change(event):
+                  display = document["zone3"].style.display
+                  document["zone3"].style.display = "inline" if display == "none" else "none"
+          
+              </script>
+            </div>
+            {% if user.is_authenticated %}
+              <div class="container">
+                <div class="dima-alert alert alert-danger" role="alert">
+                  Sólo se muestran los docentes con una categoría de investigador en Minciencias.
+                </div>
+              </div>
+            {% endif %}
+            <div id="dima-placeholder__projects">
+              {% include 'projects_list.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

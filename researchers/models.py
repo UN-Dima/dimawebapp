@@ -3,7 +3,7 @@ from utils.models import Choices
 
 import zlib
 from base64 import urlsafe_b64encode as b64e, urlsafe_b64decode as b64d
-
+import json
 
 ########################################################################
 class PersonBase():
@@ -76,6 +76,9 @@ class Professor(PersonBase, models.Model):
     faculty = models.CharField('Facultad', **Choices('FACULTY'))
     departament = models.CharField('Departamento', **Choices('DEPARTAMENT'))
     cvlac = models.URLField('CvLAC', null=True, blank=True)
+    dedication=models.CharField('Dedicación', **Choices('DEDICATION'),null=True,blank=True)
+    index_h=models.IntegerField('Indice_H',null=True,blank=True)
+    index_i10=models.IntegerField('Indice_I10',null=True,blank=True)
 
     class Meta:
         verbose_name = "Docente"

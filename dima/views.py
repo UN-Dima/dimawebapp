@@ -3,6 +3,7 @@ from django.views.generic.base import TemplateView
 from utils.models import Choices
 from groups.models import ResearchGroup
 from researchers.models import Researcher, Professor
+from projects.models import Project
 import json
 from visualizations.views import fix_filters
 from django.http import HttpResponseNotFound
@@ -33,6 +34,7 @@ class DataView(TemplateView):
     def get_context_data(self, **kwargs):
         """"""
         context = super().get_context_data(**kwargs)
+        context['OCDE'] = Choices.OCDE
         context['groups'] = ResearchGroup.objects.all()
         context['groups_admin'] = ResearchGroup._meta
         # context['broadcasts'] = Broadcast.objects.filter(
@@ -42,18 +44,23 @@ class DataView(TemplateView):
         context['departaments'] = Choices.DEPARTAMENT
         context['categories'] = Choices.GROUPS_CATEGORY
         context['professors'] = Professor.objects.all()
+        context['projects'] = Project.objects.all()
         context['patents'] = Patent.objects.all()
         context['patents_admin'] = Patent._meta
         context['professors_admin'] = Professor._meta
         context['researcher_categories'] = Choices.RESEARCHER_CATEGORY
         context['patents_types'] = Choices.PATENT_TYPE
         context['patent_admin'] = Patent._meta
+        context['dedication']=Choices.DEDICATION
+        context['type'] = Choices.CALL_TYPE
+        context['state'] = Choices.PROJECT_STATE
+
 
         context['cards'] = [
             ('Grupos de investigación', ResearchGroup.objects.count()),
             ('Departamentos', len(ResearchGroup._meta.get_field('departament').choices)),
             ('Investigadores', Researcher.objects.count() + Professor.objects.exclude(
-             ** fix_filters(Professor, {'category': 'Sin información', })).count()),
+             ** fix_filters(Professor, {'category': 'Sin información', })[0]).count()),
         ]
         return context
 

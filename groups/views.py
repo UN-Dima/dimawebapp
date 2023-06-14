@@ -15,7 +15,7 @@ class GroupView(TemplateView):
         context = self.get_context_data(**kwargs)
 
         filters = fix_filters(
-            ResearchGroup, json.loads(request.POST['data']))
+            ResearchGroup, json.loads(request.POST['data']))[0]
         # context['group'] = ResearchGroup.objects.filter(**data)
 
         context['groups'] = ResearchGroup.objects.filter(

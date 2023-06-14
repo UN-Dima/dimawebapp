@@ -5,7 +5,7 @@ from utils.models import Choices
 from visualizations.views import fix_filters
 from django.http import HttpResponseNotFound
 import json
-
+from django.db.models import Q
 
 ########################################################################
 class Researchers(TemplateView):
@@ -16,12 +16,21 @@ class Researchers(TemplateView):
         self.template_name = "researchers_list.html"
         context = self.get_context_data(**kwargs)
 
-        filters = fix_filters(
+        filters, searchers = fix_filters(
             Professor, json.loads(request.POST['data']))
+        print(json.loads(request.POST['data']))
+        query = Q()
+        if 'first_name__icontains' in searchers:
+            query |= Q(first_name__icontains=searchers['first_name__icontains'])
+        if 'last_name__icontains' in searchers:
+            query |= Q(last_name__icontains=searchers['last_name__icontains'])
 
-        context['professors'] = Professor.objects.filter(
-            **{k: filters[k]for k in ['faculty', 'departament', 'category'] if k in filters})
+        professors = Professor.objects.filter(
+        query,
+        **{k: filters[k] for k in ['faculty', 'departament', 'category', 'dedication'] if k in filters}
+        )
 
+        context['professors'] = professors
         context['professors_admin'] = Professor._meta
         return self.render_to_response(context)
 

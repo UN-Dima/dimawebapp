@@ -4,9 +4,6 @@
 # Wing project file : User-specific branch                       #
 ##################################################################
 [user attributes]
-<<<<<<< HEAD
-=======
->>>>>>> cf805c82075bec6a5d724c73a686224874d5432f
 cache.last-mime-type = {loc('calls/templates/convocatorias/internas.html'): 'text/html',
                         loc('dima/templates/home.html'): 'text/html',
                         loc('dima/templates/presentation.html'): 'text/html',
@@ -20,6 +17,8 @@ cache.last-mime-type = {loc('calls/templates/convocatorias/internas.html'): 'tex
                         loc('templates/dima_carousel.html'): 'text/html',
                         loc('visualizations/templates/bars.html'): 'text/html',
                         loc('visualizations/views.py'): 'text/x-python'}
+                        loc('projects/templates/projects.html'): 'text/html',
+                        loc('projects/views.py'): 'text/x-python',
 debug.breakpoints = {loc('dima/templatetags/utils.py'): {8: (0,
         None,
         1,

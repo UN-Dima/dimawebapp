@@ -1,0 +1,59 @@
+{% load admin_urls %}
+{% load dima_utils %}
+
+{% if not projects.count %}
+  <div class="dima-alert alert alert-info" role="alert">
+    No hay resultados para esta combinación de filtros.
+  </div>
+{% else %}
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">Proyecto</th>
+        <th scope="col">Director</th>
+        <th scope="col">Facultad</th>
+        <th scope="col">Departamento</th>
+        <th scope="col">Tipologia</th>        
+        <th scope="col">Convocatoria</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {% for project in projects %}
+
+      {% replace project.project_name '' '' as name %}
+      {% replace project.first_name '' '' as first_name %}
+      {% replace project.last_name '' '' as last_name %}
+      {% replace project.call_type_pretty '' '' as call_type %}
+      {% replace project.faculty_pretty '' '' as faculty %}
+      {% replace project.departament_pretty '' '' as department %}
+      {% replace project.call '' '' as call %}
+      {% replace project.project_state_pretty '' '' as state %}
+      <tr>
+        <td class="dima-group--view" data-obscure="{{project.obscure}}">
+          <a class="btn btn-link dima--table-btn-link" href="{% url 'projects' project.obscure %}" role="button">{{name}}</a>
+          {% if user.is_authenticated %}
+            <a class="" href="{% url projects_admin|admin_urlname:'change' project.obscure %}">Editar<i class="bi bi-pencil-square"></i></a>
+          {% endif %}
+        </td>
+        <td style="text-align:center;vertical-align:top;"> {{first_name|title}} {{last_name|title}}</td>
+        <td style="text-align:center;vertical-align:top;">{{faculty|title}}</td>
+        <td style="text-align:center;vertical-align:top;">{{department|title}}</td>
+        
+        <td style="text-align:center;vertical-align:top;">{{call_type|title}}</td>
+        
+        <td style="text-align:center;vertical-align:top;">{{call|title}}</td>
+
+        <td style="text-align:center;vertical-align:top;">{{state|title}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+
+  </table>
+{% endif %}
+
+
+
+

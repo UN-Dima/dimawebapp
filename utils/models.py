@@ -232,6 +232,7 @@ class Choices:
         'Departamento de Ingeniería Química',
         'Departamento de Matemáticas',
         'Escuela de Arquitectura y Urbanismo',
+        'Otro'
         # 'Instituto de estudios ambientales - idea - manizales'
     )
 
@@ -239,6 +240,7 @@ class Choices:
         'Facultad de Administración',
         'Facultad de Ciencias Exactas y Naturales',
         'Facultad de Ingeniería y Arquitectura',
+        'Sin Información',
         # 'Instituto de estudios ambientales - idea - manizales'
     )
 
@@ -270,6 +272,7 @@ class Choices:
         'Minciencias',
         'Regalías',
         'Interna',
+        'Externa',
         'Otra',
     )
 
@@ -279,12 +282,21 @@ class Choices:
         'Activo',
         'Finalizado',
         'Sin finalizar',
+        'Suspendido',
     )
 
     PATENT_TYPE = (
         'Patente de invención',
         'Patente modelo de utilidad',
     )
+    DEDICATION = (
+        'Docente catedra 0,3', 'Docente catedra 0,4',
+        'Docente catedra 0,5', 'Docente catedra 0,6',
+        'Docente catedra 0,7', 'Docente dedicac. exclusiva',
+        'Docente medio tiempo', 'Docente tiempo completo',
+    )
+
+    
 
     # ----------------------------------------------------------------------
     def __new__(self, choices: str) -> dict:

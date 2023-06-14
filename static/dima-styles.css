@@ -4,7 +4,10 @@
   height: 100vh;
 }
 
-.dima-body {}
+.dima-table{
+  margin-left:auto;
+  margin-right:auto;
+}
 
 .display-8 {
   font-size: 2rem;
@@ -40,7 +43,7 @@
 
 .dima-form {
   padding: 30px 30px;
-  background-color: #f8f9fa;
+  background-color: #fefeff;
   margin-top: 30px;
   margin-bottom: 30px;
   width: calc(100% + 30px);
@@ -53,21 +56,23 @@
 }
 
 main.detalle {
-  background-color: white;
-  padding: 15px;
-  margin-top: 30px !important;
-  padding-top: 30px;
+  margin: 5% 5% 5% 5%;
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
-  box-shadow: 0 0 6px #555;
-  padding-bottom: 180px;
-  overflow-x: hidden;
+  box-shadow: 0 0 6px rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 main.detalle p{
-  text-align: justify;
+  color:black;
+  text-align: center;
 }
 
-main .breadcrumb-class {
+main.detalle input{
+  color:black;
+}
+
+main .-class {
   margin-bottom: 30px !important;
 }
 
@@ -108,7 +113,7 @@ h6 {
 .dima-newsletter--thumbnail {
   display: inline-grid;
   margin: 30px;
-  border: 1px solid #dddddd;
+  border: 1px solid white;
   border-radius: 4px;
 }
 
@@ -161,7 +166,7 @@ h6 {
 #dima-carousel {}
 
 .dima--carousel-separator {
-  background-color: #5b5b5b;
+  background-color: #5b5b5bcc;
   width: 100%;
   height: 30px;
 }
@@ -222,6 +227,7 @@ h6 {
 }
 
 .dima-content {
+  color:black;
   margin-top: 20px;
 }
 
@@ -274,8 +280,10 @@ h6 {
 }
 
 .dima-nav__container {
-  background-color: #5b5b5b;
-  border-top: 2px solid #666666;
+  background-image:  url('/static/assets/carousel.png');
+  background-color: #4b5b9b;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .dima-nav__container ul {
@@ -299,7 +307,7 @@ h6 {
   text-decoration: none;
   font-family: "Ancizar sans light";
   line-height: 20px;
-  font-size: 70%;z
+  font-size: 70%;
   text-transform: uppercase;
 }
 
@@ -482,11 +490,64 @@ text-transform: capitalize;
   }
 }
 
-
-.nav-item {
+.nav-item{
+  border-radius: 8px;
   cursor: pointer;
 }
 
+.nav-item_formatos{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item_datos{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item_boletin{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item_convocatoria{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item_contacto{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item_equipo{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item_formatos:hover {
+  background-color: #fd0;
+}
+
+.nav-item_datos:hover {
+  background-color: #ffb600;
+}
+
+.nav-item_boletin:hover {
+  background-color: #52b8be;
+}
+
+.nav-item_convocatoria:hover {
+  background-color: #008c95;
+}
+
+.nav-item_contacto:hover {
+  background-color: #ff3d30;
+}
+
+.nav-item_equipo:hover {
+  background-color: #9e271f;
+}
 
 .dima-private {
   color: #D2042D !important;
@@ -566,5 +627,291 @@ text-align: right;
 
 }
 
+.dima-click_buttons {
+  background-color: #14A8DF;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.dima-click_buttons_0 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #14A8DF;
+}
+.dima-click_buttons_0:hover {
+  background-color: #14A8DF;
+  color: white;
+}
+.dima-txt1{
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-24)/28px var(--unnamed-font-family-ancizar-sans) !important ;
+  letter-spacing: var(--unnamed-character-spacing-0) !important ;
+  font: normal normal normal 24px/28px Ancizar Sans !important ;
+  letter-spacing: 0px !important ;
+  color: #482283 !important ;
+}
+.dima-txt2{
+  /* Layout Properties */
+/* UI Properties */
+  font: italic normal var(--unnamed-font-weight-300) var(--unnamed-font-size-24)/28px var(--unnamed-font-family-ancizar-sans) !important ;
+  letter-spacing: var(--unnamed-character-spacing-0) !important ;
+  font: italic normal 300 24px/28px Ancizar Sans !important ;
+  letter-spacing: 0px !important ;
+  color: #482283 !important ;
+  }
+.dima-txt3{
+/* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-32)/var(--unnamed-line-spacing-36) var(--unnamed-font-family-ancizar-sans)!important ;
+  letter-spacing: var(--unnamed-character-spacing-0)!important ;
+  color: var(--unnamed-color-1b2242) !important ;
+  font: normal normal bold 32px/36px Ancizar Sans!important ;
+  letter-spacing: 0px!important ;
+  color: #1B2242 !important ;
+  opacity: 1!important ;
+}
+.dima-txt4{
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-24)/28px var(--unnamed-font-family-ancizar-sans)!important ;
+  letter-spacing: var(--unnamed-character-spacing-0)!important ;
+  color: var(--unnamed-color-1b2242)!important ;
+  font: normal normal normal 24px/28px Ancizar Sans !important ;
+  color: #1B2242 !important ;
+  opacity: 1 !important ;
+  
+  list-style-type: disc !important ;
+}
+.dima-txt4 li::marker {
+  color: #00C18A; /* Aquí puedes cambiar el color a tu preferencia */
+}
+.dima-div-0 {
+  /* UI Properties */
+  width: 220px;
+  height: 455px;
+  background-image: url('/static/unal/images/formatos y solicitudes 0.png');
+  background-size: cover !important ; /* ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  transition: background-image 0.5s ease !important ; /* agrega una transición suave al cambiar la imagen */
+  margin: 0 15px 0 0;
+}
+.dima-div-0:hover {
+  background-image: url('/static/unal/images/formatos y solicitudes 1.png'); /* establece la segunda imagen al pasar el cursor */
+}
 
+.dima-div-1 {
+  /* Layout Properties */
+  top: 23px !important;
+  left: 41px !important;
+  width: 230px !important;
+  height: 360px !important;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  letter-spacing: 0px !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  /* Flexbox Properties */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Background Image Properties */
+  background-image: url('/static/unal/Icons/formatos y solicitudes.svg');
+  background-size: auto;
+  background-position: 87 240;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease !important; /* agrega una transición suave al cambiar la imagen */
+  }
+.dima-buttons-0{
+  /* Layout Properties */
+  top: 23px !important;
+  left: 41px !important;
+  width: 120px !important;
+  height: 35px !important;
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-23) var(--unnamed-font-family-ancizar-sans) !important;
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  font: normal normal bold 24px/23px Ancizar Sans !important;
+  letter-spacing: 0px !important;
+}
+.dima-div-2 {
+  /* UI Properties */
+  width: 220px;
+  height: 455px;
+  background-image: url('/static/unal/images/dima en datos 0.png');
+  background-size: cover !important ; /* ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  transition: background-image 0.5s ease !important ; /* agrega una transición suave al cambiar la imagen */
+  margin: 0 15px 0 0;
+}
+.dima-div-2:hover {
+  background-image: url('/static/unal/images/dima en datos 1.png'); /* establece la segunda imagen al pasar el cursor */
+}
 
+.dima-div-3 {
+  /* Layout Properties */
+  top: 23px !important;
+  left: 41px !important;
+  width: 230px !important;
+  height: 360px !important;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  letter-spacing: 0px !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  /* Flexbox Properties */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Background Image Properties */
+  background-image: url('/static/unal/Icons/dima en datos.svg');
+  background-size: auto;
+  background-position: 87 240;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease !important; /* agrega una transición suave al cambiar la imagen */
+  }
+.dima-buttons-1{
+  /* Layout Properties */
+  position: relative;
+  top: 0px !important;
+  left: -10px !important;
+  width: 120px !important;
+  height: 35px !important;
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-23) var(--unnamed-font-family-ancizar-sans) !important;
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  font: normal normal bold 24px/23px Ancizar Sans !important;
+  letter-spacing: 0px !important;
+}
+.dima-div-4 {
+  /* Layout Properties */
+  /* UI Properties */
+  width: 220px;
+  height: 455px;
+  background-image: url('/static/unal/images/boletines 0.png');
+  background-size: cover !important ; /* ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  transition: background-image 0.5s ease !important ; /* agrega una transición suave al cambiar la imagen */
+  margin: 0 15px 0 0;
+}
+.dima-div-4:hover {
+  background-image: url('/static/unal/images/boletines 1.png'); /* establece la segunda imagen al pasar el cursor */
+}
+.dima-div-5 {
+  /* Layout Properties */
+  top: 23px !important;
+  left: 41px !important;
+  width: 230px !important;
+  height: 360px !important;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  letter-spacing: 0px !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  /* Flexbox Properties */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Background Image Properties */
+  background-image: url('/static/unal/Icons/boletines.svg');
+  background-size: auto;
+  background-position: 87 240;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease !important; /* agrega una transición suave al cambiar la imagen */
+}
+.dima-div-6 {
+  /* Layout Properties */
+  /* UI Properties */
+
+  width: 220px;
+  height: 455px;
+  background-image: url('/static/unal/images/convocatorias 0.png');
+  background-size: cover !important ; /* ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  transition: background-image 0.5s ease !important ; /* agrega una transición suave al cambiar la imagen */
+  margin: 0 15px 0 0;
+}
+.dima-div-6:hover {
+  background-image: url('/static/unal/images/convocatorias 1.png'); /* establece la segunda imagen al pasar el cursor */
+}
+.dima-div-7 {
+  /* Layout Properties */
+  
+  position: relative;
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-23) var(--unnamed-font-family-ancizar-sans) !important;
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  font: normal normal bold 24px/23px Ancizar Sans !important;
+  letter-spacing: 0px !important;
+  top: 0px !important;
+  left: 0px !important;
+  width: 230px !important;
+  height: 360px !important;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  letter-spacing: 0px !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  /* Flexbox Properties */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Background Image Properties */
+  background-image: url('/static/unal/Icons/convocatorias.svg');
+  background-size: auto;
+  background-position: 80 240;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease !important; /* agrega una transición suave al cambiar la imagen */
+}
+.dima-div-8 {
+  /* Layout Properties */
+  /* UI Properties */
+  width: 220px;
+  height: 455px;
+  background-image: url('/static/unal/images/contacto 0.png');
+  background-size: cover !important ; /* ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  transition: background-image 0.5s ease !important ; /* agrega una transición suave al cambiar la imagen */
+}
+.dima-div-8:hover {
+  background-image: url('/static/unal/images/contacto 1.png'); /* establece la segunda imagen al pasar el cursor */
+}
+.dima-div-9 {
+  /* Layout Properties */
+  top: 23px !important;
+  left: 41px !important;
+  width: 230px !important;
+  height: 360px !important;
+  /* UI Properties */
+  letter-spacing: var(--unnamed-character-spacing-0) !important;
+  color: var(--unnamed-color-ffffff) !important;
+  text-align: center !important;
+  letter-spacing: 0px !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  /* Flexbox Properties */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Background Image Properties */
+  background-image: url('/static/unal/Icons/contacto.svg');
+  background-size: auto;
+  background-position: 87 240;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease !important; /* agrega una transición suave al cambiar la imagen */
+}
+.dima-equipo{
+  position: relative;
+  left: -50px !important;
+}

@@ -14,6 +14,9 @@
         <th scope="col">Categoría de investigador</th>
         <th scope="col">Facultad</th>
         <th scope="col">Departamento</th>
+        <th scope="col">Dedicación</th>        
+        <th scope="col">Índice H</th>
+        <th scope="col">Índice I10</th>
       </tr>
     </thead>
 
@@ -23,17 +26,23 @@
       {% replace professor.category_pretty 'Investigador' '' as category %}
       {% replace professor.faculty_pretty 'Facultad de' '' as faculty %}
       {% replace professor.departament_pretty 'Departamento de' '' as departament %}
-
+      {% replace professor.dedication_pretty 'Dedicación' '' as dedication  %}
       <tr>
-        <td class='dima-group--view' data-obscure='{{professor.obscure}}'>
+        <td class="dima-group--view" data-obscure="{{professor.obscure}}">
           <a class="btn btn-link dima--table-btn-link" href="{% url 'researchers' professor.obscure %}" role="button">{{professor.full_name}}</a>
           {% if user.is_authenticated %}
-            <a class='' href='{% url professors_admin|admin_urlname:'change' professor.obscure %}'>Editar<i class="bi bi-pencil-square"></i></a>
+            <a class="" href="{% url professors_admin|admin_urlname:'change' professor.obscure %}">Editar<i class="bi bi-pencil-square"></i></a>
           {% endif %}
         </td>
         <td>{{category|capfirst}}</td>
         <td>{{faculty|capfirst}}</td>
         <td>{{departament|capfirst}}</td>
+        
+        <td>{{dedication|capfirst}}</td>
+        
+        <td>{{professor.index_h|capfirst}}</td>
+        
+        <td>{{professor.index_i10|capfirst}}</td>
       </tr>
     {% endfor %}
     </tbody>
