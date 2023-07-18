@@ -80,7 +80,7 @@
       </div>
       <div class="div-flex">
         <div class="col-30-70">
-          <input type="text" id = "dima-search--name__calls" onkeypress="return event.keyCode != 13" placeholder="Nombre de la convocatoria">
+          <input class="searcher" type="text" id = "dima-search--name__calls" onkeypress="return event.keyCode != 13" placeholder="Nombre de la convocatoria">
           <select class="form-select" id = "dima-select--state__calls" aria-label="Default select example">
             <option value="All">Todas las convocatorias</option>
             {% for c in call_state %}

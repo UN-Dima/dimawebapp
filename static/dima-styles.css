@@ -74,17 +74,22 @@ main.detalle p{
 }
 
 main.detalle input{
-  width:100%;
-  max-width: 350px;
-  margin:15px 0px 15px 0px;
-  border-radius: 10px;
-  color:black;
+  color: #1F2022;
+  padding-left: 5px;
+}
+
+.searcher {
   background-image: url('/static/unal/Icons/lupa.svg');
-  background-repeat: no-repeat;
-  background-position: 5px center;
-  background-size: 20px 20px;
+  color: black;
   background-color: #F1F1F1;
-  padding: 5px 0px 5px 25px;
+  max-width: 350px;
+  background-position: 5px center;
+  padding: 5px 0px 5px 25px !important; 
+  width:100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  margin:15px 0px 15px 0px;
+  background-size: 20px 20px;
 }
 
 main .-class {

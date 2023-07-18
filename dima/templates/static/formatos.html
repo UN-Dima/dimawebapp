@@ -134,7 +134,7 @@
               {% csrf_token %}
               <input type="hidden" name="folder" value="{{key}}">
               <input type="image" src="{% static '/unal/Icons/file.svg' %}" alt="Imagen" width="25" height="25" class="image-button" >
-              <input type="submit" value="  {{key}}" class="white-button">
+              <input class="white-button" type="submit" value="  {{key}}">
             </form>
           </th>
           <th>{{values.0}}&nbsp; MB</th>
