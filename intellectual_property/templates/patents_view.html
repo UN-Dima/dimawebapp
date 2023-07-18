@@ -54,7 +54,7 @@
             <dd class="col-sm-8">
               <ul class="dima-list-noindent">
               {% for professor in patent.inventors.all %}
-                <li><a href="{% url 'researchers' professor.pk %}">{{professor.full_name}}</a></li>
+                <li><a href="{% url 'researchers' professor.obscure %}">{{professor.full_name}}</a></li>
               {% endfor %}
               </ul>
             </dd>

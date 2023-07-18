@@ -24,7 +24,7 @@
 <div class="container-lg">
 
     <h1 class="display-3">Convocatorias</h1>
-
+    <!--
     <div class="dima-content">
         <div class="row">
 
@@ -70,6 +70,39 @@
 
         </div>
     </div>
-
+    -->
+       <div class="">
+        <button class="dima-click_buttons student-title" id="calls_students">Estudiantes Auxiliares</button>
+        <button class="dima-click_buttons dima-click_buttons_inactive" id="calls_inner">Internas</button>
+        <!--<button class="dima-click_buttons dima-click_buttons_inactive" id="calls_outer">Externas</button>-->
+        <button class="dima-click_buttons dima-click_buttons_inactive" id="calls_joint">Conjuntas</button>
+        <button class="dima-click_buttons dima-click_buttons_inactive" id="calls_minciencias">Minciencias</button>
+      </div>
+      <div class="div-flex">
+        <div class="col-30-70">
+          <input type="text" id = "dima-search--name__calls" onkeypress="return event.keyCode != 13" placeholder="Nombre de la convocatoria">
+          <select class="form-select" id = "dima-select--state__calls" aria-label="Default select example">
+            <option value="All">Todas las convocatorias</option>
+            {% for c in call_state %}
+              <option value="{{c}}">{{c}}</option>
+            {% endfor %}
+          </select>
+          <select class="form-select" id = "dima-select--student__calls" aria-label="Default select example">
+            <option value="All">Todos los estudiantes</option>
+            {% for c in call_student %}
+              <option value="{{c}}">{{c}}</option>
+            {% endfor %}
+          </select>
+          <!--<select class="form-select" id = "dima-select--sum__calls" aria-label="Default select example">
+            <option value="All">Todos los montos</option>
+            {% for c in researcher_categories %}
+              <option value="{{c}}">{{c}}</option>
+            {% endfor %}
+          </select>-->
+        </div>
+        <div id="dima-render--calls" class="col-70-30">
+          {% include 'convocatorias/calls_list.html' %}
+        </div>    
+      </div>
 </div>
 {% endblock %}

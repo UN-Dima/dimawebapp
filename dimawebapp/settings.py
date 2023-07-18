@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-&-%3g&h#^q8%fnsxg27jwe*^u+az&&zcp$_!rh%w&1ekh#_2!n"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', False) == 'True'
+DEBUG = True #os.getenv('DEBUG', False) == 'True'
 SQLITE = True
 PROTECT = True
 
@@ -213,9 +213,8 @@ FORMAT_MODULE_PATH = [
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'resources')
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.relpath(os.path.join(BASE_DIR, 'media_root'))
-
 SCRIPTS_ROOT = os.path.join(BASE_DIR, 'scripts')
 
 

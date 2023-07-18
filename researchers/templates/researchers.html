@@ -14,9 +14,7 @@
   <div class="container-lg">
     <div class="row">
       <h1 class="display-8">Buscar por Nombre</h1>
-      <form onsubmit="return false">
         <input type="text" id = "dima-search--first_name__researchers" onkeypress="return event.keyCode != 13">
-      </form>
     </div>
     <div class="row">
 
@@ -76,25 +74,30 @@
         <div class="container-lg">
           <div class="row">
             <div class="example" id="ex4">
-              <button class="dima-click_buttons dima-click_buttons_0" id="button4">Mostrar/Esconder Datos</button>
+              <button class="dima-click_buttons dima-click_buttons_inactive" id="button4">Mostrar/Esconder Datos</button>
               <!--
                 Everything within the span can be shown/hidden via the button.
                 Setting display:none means the content will be hidden by deafult.
               -->
               <span style="display:none" id="zone4" class="zone"> 
                 <div class="row">
+                  <h1 class="display-8">Docentes por:</h1>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    <h2 class="display-9">Categoría</h2>
                     <div class="dima-plot" id="dima-plot--researchers_category" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    <h2 class="display-9">Dedicación</h2>
                     <div class="dima-plot" id="dima-plot--researchers_dedication" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    <h2 class="display-9">Facultad</h2>
                     <div class="dima-plot" id="dima-plot--researchers_faculty" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+                    <h2 class="display-9">Departamento</h2>
                     <div class="dima-plot" id="dima-plot--researchers_departament" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                 </div>
@@ -115,7 +118,7 @@
                 </div>
               </div>
             {% endif %}
-            <div id="dima-placeholder__researchers">
+            <div class="table_overfull" id="dima-placeholder__researchers">
               {% include 'researchers_list.html' %}
             </div>
           </div>

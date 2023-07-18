@@ -82,40 +82,40 @@
         <div class="container-lg">
           <div class="row">
             <div class="example" id="ex3">
-              <button class="dima-click_buttons dima-click_buttons_0" id="button3">Mostrar/Esconder Datos</button>
+              <button class="dima-click_buttons dima-click_buttons_inactive" id="button3">Mostrar/Esconder Datos</button>
               <!--
                 Everything within the span can be shown/hidden via the button.
                 Setting display:none means the content will be hidden by deafult.
               -->
               <span style="display:none" id="zone3" class="zone"> 
                 <div class="row">
-                  <h1 class="display-8">Numero de proyectos...</h1>
+                  <h1 class="display-8">Proyectos por:</h1>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    Por Tipologia:
+                    <h2 class="display-9">Tipologia</h2>
                     <div class="dima-plot" id="dima-plot--projects_call_type" filters="FILTERS_PROJECTS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    Por Estado:
+                    <h2 class="display-9">Estado</h2>
                     <div class="dima-plot" id="dima-plot--projects_project_state" filters="FILTERS_PROJECTS"></div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    Por Facultad:
+                    <h2 class="display-9">Facultad</h2>
                     <div class="dima-plot" id="dima-plot--projects_faculty" filters="FILTERS_PROJECTS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    Por Departamento:
+                    <h2 class="display-9">Departamento</h2>
                     <div class="dima-plot" id="dima-plot--projects_departament" filters="FILTERS_PROJECTS"></div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    Por Recursos Totales:
+                    <h2 class="display-9">Recursos (totales)</h2>
                     <div class="dima-plot" id="dima-plot--projects_total_project" filters="FILTERS_PROJECTS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    Por Porcentaje de Ejecución (Presupuesto):
+                    <h2 class="display-9">Procentaje de Ejecución</h2>
                     <div class="dima-plot" id="dima-plot--projects_execution_percentage" filters="FILTERS_PROJECTS"></div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@
                 </div>
               </div>
             {% endif %}
-            <div id="dima-placeholder__projects">
+            <div class="table_overfull" id="dima-placeholder__projects">
               {% include 'projects_list.html' %}
             </div>
           </div>

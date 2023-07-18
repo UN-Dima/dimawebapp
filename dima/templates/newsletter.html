@@ -17,13 +17,12 @@
 
 <div class="container-lg">
   <div class="row">
-    <h1 class="display-3">Boletines DIMA
-      <small class="text-muted">
-        {% if user.is_authenticated %}
-          <a href='{% url newsletters_admin|admin_urlname:'add' %}'>Agregar boletín<i class="bi bi-pencil-square"></i></a>
-        {% endif %}
-      </small>
-    </h1>
+    <small class="text-muted">
+      {% if user.is_authenticated %}
+        <a href='{% url newsletters_admin|admin_urlname:'add' %}'>Agregar boletín<i class="bi bi-pencil-square"></i></a>
+      {% endif %}
+    </small>
+
 
     <div class="d-flex justify-content-around flex-wrap">
 

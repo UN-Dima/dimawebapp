@@ -7,11 +7,13 @@ FILTERS_GROUPS = {}
 FILTERS_RESEARCHERS = {}
 FILTERS_PROJECTS = {}
 FILTERS_PATENTS = {}
+FILTERS_CALLS = {'type':'students', 'title':''}
 filters = {
     'FILTERS_GROUPS': FILTERS_GROUPS,
     'FILTERS_RESEARCHERS': FILTERS_RESEARCHERS,
     'FILTERS_PATENTS': FILTERS_PATENTS,
     'FILTERS_PROJECTS': FILTERS_PROJECTS,
+    'FILTERS_CALLS': FILTERS_CALLS
 }
 
 
@@ -89,6 +91,15 @@ def update_all_options(filters_to_use, id, req=None):
         else:
             option.style = {'display': 'block'}
 
+def update_bretheren_style(id, style):
+    """"""
+    parent = document.select_one(id).parent
+
+    for child in parent.children:
+        child.class_name = 'dima-click_buttons dima-click_buttons_inactive'
+
+    document.select_one(id).class_name = 'dima-click_buttons '+style
+
     # ajax_render('dima-render--group', "/grupos/", filters[filters_to_use])
 
 
@@ -124,7 +135,7 @@ def update_faculty_filter_(evt):
     update_all_options(filters_to_use='FILTERS_RESEARCHERS',
                        id='#dima-select--departament__researchers')
 # ----------------------------------------------------------------------
-@bind('#dima-search--first_name__researchers', 'change')
+@bind('#dima-search--first_name__researchers', 'input')
 def update_first_name_filter_(evt):
     """"""
     global FILTERS_RESEARCHERS
@@ -355,6 +366,80 @@ def nav_item_click(evt):
     """"""
     window.location.href = evt.target.select_one('.nav-link').href
 
+@bind('#calls_students', 'click')
+def update_calls_type(evt):
+    """"""
+    global FILTERS_CALLS
+    FILTERS_CALLS['type'] = 'students'
+
+    update_bretheren_style(id = '#calls_students', style = 'student-title')
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+    
+@bind('#calls_inner', 'click')
+def update_calls_type(evt):
+    """"""
+    global FILTERS_CALLS
+    FILTERS_CALLS['type'] = 'inner'
+
+    update_bretheren_style(id = '#calls_inner', style = 'inner-title')
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+
+@bind('#calls_outer', 'click')
+def update_calls_type(evt):
+    """"""
+    global FILTERS_CALLS
+    FILTERS_CALLS['type'] = 'outer'
+
+    update_bretheren_style(id = '#calls_outer', style = 'outer-title')
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+
+@bind('#calls_joint', 'click')
+def update_calls_type(evt):
+    """"""
+    global FILTERS_CALLS
+    FILTERS_CALLS['type'] = 'joint'
+
+    update_bretheren_style(id = '#calls_joint', style = 'joint-title')
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+
+@bind('#calls_minciencias', 'click')
+def update_calls_type(evt):
+    """"""
+    global FILTERS_CALLS
+    FILTERS_CALLS['type'] = 'minciencias'
+
+    update_bretheren_style(id = '#calls_minciencias', style = 'minscience-title')
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+
+@bind('#dima-select--state__calls', 'change')
+def update_call_state(evt):
+    """"""
+    global FILTERS_CALLS
+    if evt.target.value == 'All':
+        FILTERS_CALLS.pop('state')
+    else:
+        FILTERS_CALLS['state'] = evt.target.value
+
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+
+@bind('#dima-select--student__calls', 'change')
+def update_call_state(evt):
+    """"""
+    global FILTERS_CALLS
+    if evt.target.value == 'All':
+        FILTERS_CALLS.pop('students')
+    else:
+        FILTERS_CALLS['students'] = evt.target.value
+
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
+
+@bind('#dima-search--name__calls', 'input')
+def update_first_name_filter_(evt):
+    """"""
+    global FILTERS_CALLS
+    FILTERS_CALLS['title'] = evt.target.value
+
+    ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
 
 # # ----------------------------------------------------------------------
 # @bind('.dima-nav-home li.nav-item', 'mouseover')

@@ -84,6 +84,12 @@ table.table {
   font-size: 90%;
 }
 
+table.table thead {
+  position: sticky;
+  top:0;
+  background:white;
+}
+
 table.table a {
   font-size: 90% !important;
   text-decoration: none !important;
@@ -105,7 +111,7 @@ main.accesibility-on {
 }
 
 #unalTop {
-  margin-right: 15px;
+  margin-right: 0px;
 }
 
 

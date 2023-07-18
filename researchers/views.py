@@ -18,7 +18,7 @@ class Researchers(TemplateView):
 
         filters, searchers = fix_filters(
             Professor, json.loads(request.POST['data']))
-        print(json.loads(request.POST['data']))
+        
         query = Q()
         if 'first_name__icontains' in searchers:
             query |= Q(first_name__icontains=searchers['first_name__icontains'])

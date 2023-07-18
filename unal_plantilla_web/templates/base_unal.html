@@ -457,15 +457,9 @@
       <!-- Contenido -->
       <main class="detalle">
          <!--<div class="dima-logo"><a href="{% url 'home' %}"><img src="{% static 'assets/dima_logo.svg' %}"></img></a></div>-->
-         <!--<{% block 'breadcrumb' %}
-         <div class="breadcrumb-class">
-            <nav aria-label="breadcrumb">
-               <ol class="breadcrumb">
-                  <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
-               </ol>
-            </nav>
-         </div>
-         {% endblock %} -->
+         <!-- -->
+         {% block 'breadcrumb' %}
+         {% endblock %} 
          <div class="dima-main">{% block 'main' %}{% endblock %}</div>
       </main>
       <!-- Footer -->

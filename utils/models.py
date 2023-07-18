@@ -276,6 +276,16 @@ class Choices:
         'Otra',
     )
 
+    CALL_STATE = (
+        'Abierta',
+        'Finalizada'
+    )
+
+    CALL_STUDENT = (
+        'Pregrado',
+        'Posgrado'
+    )
+
     PROJECT_STATE = (
         'Propuesto',
         'No aprobado',

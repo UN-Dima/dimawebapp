@@ -1,0 +1,82 @@
+{% load admin_urls %}
+{% load dima_utils %}
+
+<div class="container-lg">
+    <div class="dima-content">
+        <div class="row">
+            {% if user.is_authenticated %}
+                <a href ="{% url calls_admin|admin_urlname:'add' %}">Agregar convocatoria<i class="bi bi-pencil-square"></i></a>
+            {% endif %}
+            {% for call in calls %}
+                {% if user.is_authenticated or call.active %}
+
+                <div class="col-md-12 col-lg-12 dima-margin-bottom__30">
+                <div class="card calls-card">
+                    <div class="calls-img">
+                        <img class="call-img" src="/static/bootstrap-icons/image.svg" alt="image">
+                    </div>
+                    <div class="card-body calls-card-body">
+                        <div class="cards-title">
+                            <div>
+                                <h1 class="card-title"><a href="{% url 'students_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a><br>
+                                {% if call.expired %}
+                                    <small class="text-muted">Cerró en {{call.expiration}}{% if not call.expired %} ({{call.expiration|timeuntil}}){% endif %} </small>
+                                {% else %}
+                                    <small class="text-muted">Abierta hasta {{call.expiration}}{% if not call.expired %} ({{call.expiration|timeuntil}}){% endif %} </small>
+                                {% endif %}
+                                </h1>
+                            </div>
+                            <div class="db-title student-title">
+                                <b>Estudiantes Auxiliares</b>
+                            </div>
+                        </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-4">Proyecto</dt>
+                        <dd class="col-sm-8">{{call.funding}}</dd>
+
+                        <dt class="col-sm-4">Estímulo económico</dt>
+                        <dd class="col-sm-8">{{call.economic_stimulus}}</dd>
+
+                        <dt class="col-sm-4">Tipo de estudiante{% if call.students > 1 %}s{% endif %}</dt>
+                        <dd class="col-sm-8">
+                        {% if call.undergraduate and call.postgraduate %}
+                            De pregrado y posgrado
+                        {% elif call.undergraduate and not call.postgraduate %}
+                            De pregrado
+                        {% elif not call.undergraduate and call.postgraduate %}
+                            De posgrado
+                        {% endif %}
+                        </dd>
+                    </dl>
+
+
+                    {% if user.is_authenticated %}
+                        <div class="dima__card-badge">
+                        {% if not call.active %}<span class="badge rounded-pill text-bg-danger">Oculta</span>{% endif %}
+                        {% if call.expired %}<span class="badge rounded-pill text-bg-danger">Finalizada</span>{% endif %}
+                        {% if not call.expired %}<span class="badge rounded-pill text-bg-warning">Activa</span>{% endif %}
+                        </div>
+                        <br>
+                    {% else %}
+                        <div class="dima__card-badge">
+                        {% if call.expired %}<span class="badge rounded-pill text-bg-danger">Finalizada</span>{% endif %}
+                        {% if not call.expired %}<span class="badge rounded-pill text-bg-primary">Abierta</span>{% endif %}
+                        </div>
+                        <br>
+                    {% endif %}
+
+                    <a href="{% url 'students_call' call.pk %}" class="card-link">Ver convocatoria...</a>
+
+                    </div>
+                </div>
+                </div>
+                {% endif %}
+            {% empty %}
+            <div class="dima-alert alert alert-info" role="alert">
+                No hay resultados para esta combinación de filtros.
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>

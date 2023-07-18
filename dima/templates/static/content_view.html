@@ -1,0 +1,125 @@
+{% extends "formatos_base.html" %}
+{% load admin_urls %}
+{% load static %}
+{% block 'head-title' %}Formatos{% endblock %}
+
+{% block 'breadcrumb' %}
+  {% for key,values in file_data.items %}
+    <div class="breadcrumb-class">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="/formatos">Formatos</a></li>
+          <li class="breadcrumb-item"><a href="#">{{key}}</a></li>     
+        </ol>
+      </nav>
+    </div>
+  {% endfor %}
+{% endblock %}
+{% block head %}
+{% for key,values in file_data.items %}
+  <div class="dima-content-text-1">
+    <a href="/formatos" >
+      <img src="{% static '/unal/Icons/prev.svg' %}" alt="Imagen" width="20" height="20">
+      <span> &nbsp; &nbsp;{{key}} </span>
+    </a>
+  </div>
+{% endfor %}
+
+{% endblock %}
+{% block content %}
+<div class="dima-content">
+  {% for key,values in file_data.items %}
+    {% if key == 'Gestión propiedad intelectual' %}
+      <div class="dima-formatos">
+        <table class='dima-formatos-table'>
+          {% for key,values in file_data.items %}
+            <tr class="dima-formatos-background">
+              <th class="dima-formatos-table-th">Formulario</th>
+              <th class="dima-formatos-table-th">Área</th>
+              <th class="dima-formatos-table-th"></th>
+            </tr>
+            <tr>
+              <th>
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" class="image-button1">
+                  <img src="{% static '/unal/Icons/bom.svg' %}" alt="Imagen" width="20" height="20">
+                  <span> &nbsp; &nbsp;Formulario de análisis para solicitud de patente internacional </span>
+                </a>
+              </th>
+              <th class="dima-formatos-table-th">            
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">
+                  {{values.0.3}}
+                </a>
+              </th>
+              <th class="dima-content-button-th">
+                <a href="https://es.wikipedia.org/wiki/Tu_Página" class="dima-content-button">Solicitar</a>
+
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" class="image-button1">
+                  <img src="{% static '/unal/Icons/bom.svg' %}" alt="Imagen" width="20" height="20">
+                  <span> &nbsp; &nbsp;Solicitud de patente internacional PCT</span>
+                </a>
+              </th>
+              <th class="dima-formatos-table-th">            
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">
+                  {{values.0.3}}
+                </a>
+              </th>
+              <th class="dima-content-button-th">
+                <a href="https://es.wikipedia.org/wiki/Tu_Página" class="dima-content-button">Solicitar</a>
+
+              </th>
+            </tr>
+          {% endfor %}
+        </table> 
+      </div>
+    {% endif %}
+  {% endfor %}
+  <p><br></p>
+  <div class="dima-formatos">
+    <table class='dima-content-table'>
+      {% for key,values in file_data.items %}
+        {% for value in values %}
+          {% if forloop.counter0|divisibleby:4 %}
+            <tr>
+          {% endif %}
+      
+          <td class="image-cell">
+            {% if value.2 == "pdf" %}
+              <a href="{{value.1}}">
+                <img src="{% static '/unal/Icons/pdf.svg' %}" alt="Imagen" >
+              </a> 
+            {% elif value.2 == "xlsx" %}
+              <a href="{{value.1}}">
+                <img src="{% static '/unal/Icons/excel.svg' %}" alt="Imagen" >
+              </a>
+            {% else %}
+              <a href="{{value.1}}">
+                <img src="{% static '/unal/Icons/word.svg' %}" alt="Imagen" >
+              </a>
+            {% endif %}
+            <a href="{{value.1}}">
+              {{value.0}}
+            </a>
+            <p></p>
+            <a class="dima-formatos-table-th" href="{{value.1}}">
+              {{key}}
+            </a>
+            <p></p>
+          </td>
+      
+          {% if forloop.counter|divisibleby:4 or forloop.last %}
+            </tr>
+          {% endif %}
+      
+        {% endfor %}
+      {% endfor %}
+    </table>
+  </div>  
+    
+    
+</div> 
+{% endblock %}

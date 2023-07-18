@@ -3,79 +3,254 @@
 {% load static %}
 {% block 'head-title' %}Equipo de trabajo - {% endblock %}
 
-{% block 'main' %}
-<div>
-  <img src="{% static '/unal/images/perfiles/Grupo.png' %}">
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a href="#">Equipo de trabajo</a></li>
+    </ol>
+  </nav>
 </div>
+{% endblock %}
+
+{% block 'main' %}
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>
+        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe dima-map" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=60&amp;height=40&amp;hl=en&amp;q=Manziales%20Caldas,%20Universidad%20Nacional%20de%20Colombia&amp;t=m&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;cid=5623872900342523874&amp;output=embed"></iframe></div><style>.mapouter{position:relative;text-align:right;width:100%;height:100vh;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+      </td>
+      <td class="top-align" style="width: 200px;">
+        <img class="dima-equipo_icon1" src="{% static '/unal/Icons/tel.svg' %}">
+      </td>
+      <td class="top-align1" >
+        <p class="dima-equipo-txt8">
+          PBX <span class="dima-equipo-txt9">(57+6)</span> 8879300
+        </p>
+      </td>
+      <td class="top-align1">
+        <img class="dima-equipo_icon1" src="{% static '/unal/Icons/direccion.svg' %}">
+      </td>
+      <td class="top-align1">
+        <p class="dima-equipo-txt10">Manizales - Colombia </p>
+        <p class="dima-equipo-txt8"> Carrera 27 #64-60 </p>
+        <p class="dima-equipo-txt8"> Bloque H Piso 3 - Oficina de Dirección</p>
+        <p class="dima-equipo-txt8">Bloque D Piso 4 - Oficina de Extensión</p>
+        <p class="dima-equipo-txt8">y Soporte Hermes</p>
+      </td>
+      
+      <td class="top-align1">
+          <img class="dima-equipo_icon1" src="{% static '/unal/Icons/correo.svg' %}">
+      </td>
+
+      <td class="top-align1">
+          <p class="dima-equipo-txt8">dima_man@unal.edu.co</p>
+          <p class="dima-equipo-txt8">soportedima_man@unal.edu.co</p>
+          <p class="dima-equipo-txt8">extension_man@unal.edu.co</p>
+          <p class="dima-equipo-txt8">gestionpi_man@unal.edu.co</p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
 <div class="dima-Equipo">
-    <table>
+    <table class="dima-table">
       <tr>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/andres.png' %}">
+            <p class="dima-equipo-txt1">Andrés Felipe López Vásquez</p>
+            <br>
+            <br>
+            <br>
+            <p class="dima-equipo-txt2"> </p>
+            <br>
+            <P class="dima-equipo-txt2"></P>
+            <br>
+            <p class="dima-equipo-txt3"></p>
+            <br>
+            <p class="dima-equipo-txt3"></p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/angela.png' %}">
+            <p class="dima-equipo-txt4">Angela Rodríguez Blandón</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt5">dima_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">arodriguezbl@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">Ext: 50193</p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/mario.png' %}">
+            <p class="dima-equipo-txt6">Mario Alexander Gamboa</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt7">dima_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt7">magamboa@unal.edu.co </p>
+            <br>
+            <p class="dima-equipo-txt7">Ext: 50183</p>
           </div>
         </td>
       </tr>
       <tr>
         <td>
           <div>
-            <img src="{% static '/unal/images/perfiles/sandro.png' %}">
+            <img src="{% static '/unal/images/perfiles/sandro.png' %}">            
+            <p class="dima-equipo-txt1">Sandro Villamil Martha</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt3">otrinlace_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt3">savillamilm@uanl.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt3">Ext: 50528</p>
           </div>
         </td> 
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/geral.png' %}">
+            <p class="dima-equipo-txt4">Geraldine Ladino Vásquez</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt5">dima_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">gladinov@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">Ext: 50279</p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/santiago.png' %}">
+            <p class="dima-equipo-txt6">Santiago Buitrago Aristizabal</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt7">dima_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt7">sbuitragoa@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt7">Ext: 50172</p>
           </div>
         </td>
       </tr>
       <tr>
         <td>
           <div>
-            <img src="{% static '/unal/images/perfiles/maryi.png' %}">
+            <img src="{% static '/unal/images/perfiles/maryi.png' %}">            
+            <p class="dima-equipo-txt1">Maryi Camila Melchor Gutierrez</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt3">extension_man@unal.edu.co </p>
+            <br>
+            <p class="dima-equipo-txt3">mcmelchorg@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt3">Ext: 50528</p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/lucho.png' %}">
+            <p class="dima-equipo-txt4">Luis Eduardo López Betancur</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt5">extension_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">lelopezb@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">Ext: 50528</p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/sandra.png' %}">
+            <p class="dima-equipo-txt6">Sandra Viviana Alzate López</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt7">soportedima_man@unal.edu.co </p>
+            <br>
+            <p class="dima-equipo-txt7">svalzatel@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt7">Ext: 50512</p>
           </div>          
         </td>
       </tr>
       <tr>
         <td>
           <div>
-            <img src="{% static '/unal/images/perfiles/rubiela.png' %}">
+            <img src="{% static '/unal/images/perfiles/rubiela.png' %}">            
+            <p class="dima-equipo-txt1">Rubiela Pacanchique Vargas</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt3">gestionpi_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt3">mcmelchorg@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt3">Ext: 50528</p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/allison.png' %}">
+            <p class="dima-equipo-txt4">Allison Bernal Díaz</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt5">gestionpi_man@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">rpacanchiquev@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt5">Ext: 50528</p>
           </div>
         </td>
         <td>
           <div>
             <img src="{% static '/unal/images/perfiles/alejandro.png' %}">
+            <p class="dima-equipo-txt6">Alejandro Soto</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt7">dasotol@unal.edu.co</p>
+            <br>
+            <p class="dima-equipo-txt7">Ext: 50528</p>
           </div>
         </td>
+      </tr>
+      <tr>
+        
+        <td>
+          <div>
+            <img src="{% static '/unal/images/perfiles/diego.png' %}">
+            <p class="dima-equipo-txt1">Diego Collazos</p>
+            <br>
+            <br> 
+            <br>             
+            <p class="dima-equipo-txt3">gestionpi_man@unal.edu.co </p>
+            <br>             
+            <p class="dima-equipo-txt3">rpacanchiquev@unal.edu.co  </p>
+            <br>
+            <p class="dima-equipo-txt3">Ext: 50528</p>
+          </div>
+        </td>
+        
       </tr>
     </table>
     
@@ -93,7 +268,7 @@
       </small>
     </h1>
 
-    <div class="row">
+    <div class="row"> 
     {% for team in teams %}
 
       <div class="col-6 dima-teams--team">

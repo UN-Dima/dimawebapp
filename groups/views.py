@@ -16,7 +16,6 @@ class GroupView(TemplateView):
 
         filters = fix_filters(
             ResearchGroup, json.loads(request.POST['data']))[0]
-        # context['group'] = ResearchGroup.objects.filter(**data)
 
         context['groups'] = ResearchGroup.objects.filter(
             **{k: filters[k]for k in ['faculty', 'departament', 'category'] if k in filters})

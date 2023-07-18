@@ -17,6 +17,7 @@ urlpatterns = [
     path('estudiantes_auxiliares', StudentsCallView.as_view(), name='students_call'),
     path('estudiantes_auxiliares/<slug:pk>', StudentsCallView.as_view(), name='students_call'),
 
+    path('lista', CallsView.as_view(), name='calls_list'),
 ]
 
 

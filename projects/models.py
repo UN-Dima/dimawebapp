@@ -25,6 +25,7 @@ class Project(models.Model):
     call_type = models.CharField('Tipo de convocatoria',**Choices('CALL_TYPE'),default='')
     call = models.CharField('Convocatoria',max_length=2**6)
     modality = models.CharField('Modalidad',max_length=2**6)
+    #professor = models.ForeignKey('researchers.Professor', verbose_name='Identificación Investigador', on_delete=models.CASCADE, null=True, blank=True, related_name='projects')
     professor_id = models.BigIntegerField('Identificación Investigador')
     first_name = models.CharField('Nombre(s)', max_length=2**6)
     last_name = models.CharField('Apellido(s)', max_length=2**6)

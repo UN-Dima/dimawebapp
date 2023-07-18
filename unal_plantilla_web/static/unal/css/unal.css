@@ -463,12 +463,12 @@ ul.dropdown-menu a:focus {
 .main_menu .buscador .gsc-input-box-hover,
 #unalTop .navigation .buscador .gsc-search-box .gsc-input>input:hover,
 #unalTop .navigation .buscador .gsc-input-box-hover {
-	border: 0; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; outline: 0;
+	border: 0; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; outline: 0; 
 }
 
 .main_menu .buscador .gsc-control-searchbox-only .gsc-input,
 #unalTop .navigation .buscador .gsc-control-searchbox-only .gsc-input {
-	background-color: #777; background-image: none!important; width: 100%; padding: 0;
+	background-color: #ffffff; background-image: none!important; width: 100%; padding: 0; 
 }
 
 .main_menu .buscador .gsc-control-searchbox-only .gsc-input input,
@@ -478,7 +478,7 @@ ul.dropdown-menu a:focus {
 
 .main_menu .buscador .gsc-control-searchbox-only .gsc-input input::placeholder,
 #unalTop .navigation .buscador .gsc-control-searchbox-only .gsc-input input::placeholder {
-	color: #ddd;
+	color: #141313; font-size: 15px !important;
 }
 
 .main_menu .buscador .gsc-control-searchbox-only .gsc-input td.gsib_b,
@@ -934,5 +934,7 @@ footer .logos a img {
 }
 
 .carousel-fluff{
-	margin: 2% 10% 2% 10%;
+	display: flex;
+	align-items: center;
+	margin: 1.5% 10% 1.5% 3%;
 }

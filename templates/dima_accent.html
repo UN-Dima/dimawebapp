@@ -5,36 +5,100 @@
     <div class="dima-main">
 
       <ul class="nav">
-        <li class="nav-item_formatos">
-          <img class="nav-item_icon" src="{% static '/unal/Icons/application.png' %}">
-          <a class="nav-link" href="{% url 'formatos' %}">Formatos y solicitudes</a>
+        {% if request.path == '/formatos' or request.path == '/Certificado_estudiantes'%}
+        <li class="nav-item_formatos1">
+          <img class="nav-item_icon1" src="{% static '/unal/Icons/formatos y solicitudes.svg' %}">
+          <p>Formatos y solicitudes</p>
         </li>
-        <li class="nav-item_datos">
-          <img class="nav-item_icon" src="{% static '/unal/Icons/grafico-de-barras.png' %}">
-          <a class="nav-link" href="{% url 'data' %}">DIMA en datos</a>
+        {% else %}
+        <a href="{% url 'formatos' %}">
+          <li class="nav-item_formatos">
+            <img class="nav-item_icon" src="{% static '/unal/Icons/formatos y solicitudes.svg' %}">
+            <p>Formatos y solicitudes</p>
+          </li>
+        </a>
+        {% endif %} 
+
+        {% if page == 'datos' %}
+        <li class="nav-item_datos1">
+          <img class="nav-item_icon1" src="{% static '/unal/Icons/dima en datos.svg' %}">
+          <p>DIMA en datos</p>
         </li>
-        <li class="nav-item_boletin">
-          <img class="nav-item_icon" src="{% static '/unal/Icons/periodico.png' %}">
-          <a class="nav-link" href="{% url 'newsletters' %}">Boletines DIMA</a>
+        
+        {% else %}
+        <a href="{% url 'data' %}">
+          <li class="nav-item_datos">
+            <img class="nav-item_icon" src="{% static '/unal/Icons/dima en datos.svg' %}">
+            <p>DIMA en datos</p>
+          </li>
+        </a>
+        {% endif %} 
+
+
+        {% if page == 'boletines' %}
+        <li class="nav-item_boletin1">
+          <img class="nav-item_icon1" src="{% static '/unal/Icons/boletines.svg' %}">
+          <p>Boletines DIMA</p>
         </li>
-        <li class="nav-item_convocatoria">
-          <img class="nav-item_icon" src="{% static '/unal/Icons/megafono.png' %}">
-          <a class="nav-link" href="{% url 'calls' %}">Convocatorias</a>
+        {% else %}
+        <a href="{% url 'newsletters' %}">
+          <li class="nav-item_boletin">
+            <img class="nav-item_icon" src="{% static '/unal/Icons/boletines.svg' %}">
+            <p>Boletines DIMA</p>
+          </li>
+        </a>
+        {% endif %} 
+
+        {% if page == 'convocatorias' %}
+
+        <li class="nav-item_convocatoria1">
+          <img class="nav-item_icon1" src="{% static '/unal/Icons/convocatorias.svg' %}">
+          <p>Convocatorias</p>
         </li>
-        <li class="nav-item_contacto">
-          <img class="nav-item_icon" src="{% static '/unal/Icons/informacion.png' %}">
-          <a class="nav-link" href="{% url 'contact' %}">Contáctenos</a>
+        {% else %}
+        <a href="{% url 'calls' %}">
+          <li class="nav-item_convocatoria">
+            <img class="nav-item_icon" src="{% static '/unal/Icons/convocatorias.svg' %}">
+            <a class="nav-link" href="{% url 'calls' %}">Convocatorias</a>
+          </li>
+        </a>
+        {% endif %} 
+
+        {% if page == 'contacto' %}
+        <li class="nav-item_equipo1">
+          <img class="nav-item_icon1" src="{% static '/unal/Icons/contacto.svg' %}">
+          <p>Contáctenos</p>
         </li>
-        <li class="nav-item_equipo">
-          <img class="nav-item_icon" src="{% static '/unal/Icons/equipo.png' %}">
-          <a class="nav-link" href="{% url 'equipo_de_trabajo' %}">Equipo de trabajo</a>
-        </li>
+        {% else %}
+        <a href="{% url 'equipo_de_trabajo' %}">
+          <li class="nav-item_equipo">
+            <img class="nav-item_icon" src="{% static '/unal/Icons/contacto.svg' %}">
+            <p>Contáctenos</p>
+          </li>
+        </a>
+        {% endif %} 
+
       </ul>
     
     </div>
       <div class="carousel-fluff">
+        {% if page == 'datos' %}
+          <img src="{% static 'assets/datos.png' %}" alt="Dima en datos" height="100">
+        {% elif page == 'boletines' %}
+          <img src="{% static 'assets/boletines.png' %}" alt="Boletines" height="100">
+        {% elif page == 'convocatorias' %}
+          <img src="{% static 'assets/convocatorias.png' %}" alt="Convocatorias" height="100">
+        {% elif page == 'contacto' %}
+          <img src="{% static 'assets/contacto.png' %}" alt="Contacto" height="100">
+        {% elif page == 'home' %}
+          <!--This is empty so that the home page doesn't show any extra image-->
+        {% else %}
+          <!--Currently, formats does not have an associated views.py file, as such we use 
+            the else here to force the format site to have the extra logo-->
+          <img src="{% static 'assets/formatos.png' %}" alt="Formatos" height="100">
+        {% endif %} 
         <a href="/">
-          <img src="{% static 'assets/dima_logo_white.png' %}" alt="Dima" width="800">
+          <img src="{% static 'assets/dima_logo_white.png' %}" alt="Dima" height="100">
         </a>
       </div>
     </div>

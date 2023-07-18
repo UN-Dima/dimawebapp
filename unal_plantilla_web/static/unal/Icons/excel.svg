@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="144" viewBox="0 0 232 144">
+  <g id="Grupo_28281" data-name="Grupo 28281" transform="translate(-89 -6544)">
+    <g id="Image" transform="translate(89 6544)">
+      <path id="Image-2" data-name="Image" d="M12,0H220a12,12,0,0,1,12,12V144a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V12A12,12,0,0,1,12,0Z" fill="#f5f9ff"/>
+      <g id="File" transform="translate(16 16)">
+        <path id="File-2" data-name="File" d="M12,0H188a12,12,0,0,1,12,12V128a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V12A12,12,0,0,1,12,0Z" fill="#fff"/>
+        <g id="Logo" transform="translate(16 16)">
+          <rect id="Logo-2" data-name="Logo" width="40" height="40" rx="20" fill="#458df9"/>
+          <text id="W" transform="translate(11 10)" fill="#fff" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="1.527" y="17">W</tspan></text>
+        </g>
+        <g id="All_Line" data-name="All Line" transform="translate(16 64)">
+          <g id="Line">
+            <rect id="Line-2" data-name="Line" width="168" height="8" rx="2" fill="#f5f9ff"/>
+          </g>
+          <g id="Line-3" data-name="Line" transform="translate(0 16)">
+            <rect id="Line-4" data-name="Line" width="168" height="8" rx="2" fill="#f5f9ff"/>
+          </g>
+          <g id="Line-5" data-name="Line" transform="translate(0 32)">
+            <rect id="Line-6" data-name="Line" width="168" height="8" rx="2" fill="#f5f9ff"/>
+          </g>
+          <g id="Line-7" data-name="Line" transform="translate(0 48)">
+            <rect id="Line-8" data-name="Line" width="168" height="8" rx="2" fill="#f5f9ff"/>
+          </g>
+        </g>
+        <g id="Logo-3" data-name="Logo" transform="translate(16 16)">
+          <rect id="Logo-4" data-name="Logo" width="40" height="40" rx="20" fill="#67ada4"/>
+          <text id="W-2" data-name="W" transform="translate(11 10)" fill="#fff" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="4.281" y="17">X</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

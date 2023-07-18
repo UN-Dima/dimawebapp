@@ -27,6 +27,8 @@ urlpatterns = [
     path('formatos', ContentView.as_view(label='formatos',
          template_name="static/formatos.html"), name='formatos'),
 
+
+
     # Convocatorias
     #path('convocatorias_internas', InternalCallView.as_view(), name='internal_call'),
     # path('convocatorias_estudiantes_auxiliares',
