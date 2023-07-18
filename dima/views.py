@@ -165,27 +165,30 @@ class ContentView(TemplateView):
         self.file_filter={}
         
         folder_root={}
-        path = 'media_root/uploads/content/'
+        path = os.path.join('.','media_root', 'uploads', 'content')
+        print(path)
         folders = os.listdir(path)
         self.Area={'Comité_de_ética':'Comité de ética','Certificado_estudiantes':'Estudiante auxiliar',
          'Formatos_contrapartidas':'Contrapartidas','Gestión_propiedad_intelectual':'Propiedad_intelectual',
          'Marketing_tecnológico':'Lorem impsum','Paz_y_salvos':'Paz y salvo','Solicitudes':'Solicitudes'}
-        zip_path = 'media_root/uploads/Zip/'
-        zip_path_m='media/uploads/Zip/'
+        zip_path = os.path.join('.','media_root', 'uploads', 'Zip')
+        zip_path_m=os.path.join('.','media', 'uploads', 'Zip')
         url=[zip_path_m+i for i in os.listdir(zip_path)]
         for j,u in zip(folders,url):
-            self.file_filter[j]=os.listdir(path+j+'/')
-            folder_root[j]=[tamano_carpeta(path+j+'/'),self.Area[j.replace(' ','_')],u]
+            self.file_filter[j]=os.listdir(os.path.join(path,j))
+            folder_root[j]=[tamano_carpeta(path+j),self.Area[j.replace(' ','_')],u]
         aux=['Certificado estudiantes', 'Comité de ética']
-        folder_path = 'media/uploads/content/'
+
+        folder_path = os.path.join('.','media', 'uploads', 'content')
         files_root={}
         
         for folder in aux:
             aux=[]
-            files=os.listdir(path+folder+'/')
+            files=os.listdir(os.path.join(path, folder))
+            print(files)
             for file in files:
                 s=file.split('.')
-                aux.append([s[0],folder_path+folder+"/"+file,s[1]])
+                aux.append([s[0],os.path.join(folder_path,folder,file),s[1]])
 
             files_root[folder]=aux
         
