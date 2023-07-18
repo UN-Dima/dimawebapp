@@ -198,5 +198,5 @@ class ContentView(TemplateView):
             #os.listdir(path+)
             context['folder_data'] = folder_root
         except:
-            print(Hello, World!)
+            print('')
         return context
