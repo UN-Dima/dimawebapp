@@ -79,36 +79,70 @@
 {% block content %}
 
 <div class="dima-content">
-  
   <p><br></p>
   <table class='dima-content-table'>
     <tr>
-      {% for key,values in file_view.items %}
-        {% for value in values %}
+      {% if filter  %}
+        {% for file in files %}
+          {% if forloop.counter0|divisibleby:4 %}
+            <tr>
+          {% endif %}
+      
           <td class="image-cell">
-            {% if value.2 == "pdf" %}
-              <a href="{{value.1}}">
+            {% if file.2 == "pdf" %}
+              <a href="{{file.3.url}}">
                 <img src="{% static '/unal/Icons/pdf.svg' %}" alt="Imagen" >
               </a> 
-            {% elif value.2 == "xlsx" %}
-              <a href="{{value.1}}">
+            {% elif file.2 == "xlsx" %}
+              <a href="{{file.3.url}}">
                 <img src="{% static '/unal/Icons/excel.svg' %}" alt="Imagen" >
               </a>
             {% else %}
-              <a href="{{value.1}}">
+              <a href="{{file.3.url}}">
                 <img src="{% static '/unal/Icons/word.svg' %}" alt="Imagen" >
               </a>
             {% endif %}
-            <a href="{{value.1}}">
-              {{value.0}}
-            </a>
-            <a class="dima-formatos-table-th" href="{{value.1}}">
-              {{key}}
+            <a href="{{file.3.url}}">
+              {{file.0}}
             </a>
             <p></p>
-          </td>
+            <a class="dima-formatos-table-th" href="{{file.3.url}}">
+              {{file.1}}
+            </a>
+            <p></p>
+          </td>    
+          {% if forloop.counter|divisibleby:4 or forloop.last %}
+            </tr>
+          {% endif %}
         {% endfor %}
-      {% endfor %}
+      {% else %}
+        {% for attachment in formatos.attachment.all %}
+          {% if attachment.label == 'file' and  attachment.area == 'Contrapartidas' and attachment.type == 'docx' %}
+            <td class="image-cell">
+              {% if attachment.type == "pdf" %}
+                <a href="{{attachment.attachment.url}}">
+                  <img src="{% static '/unal/Icons/pdf.svg' %}" alt="Imagen" >
+                </a> 
+              {% elif attachment.type == "xlsx" %}
+                <a href="{{attachment.attachment.url}}">
+                  <img src="{% static '/unal/Icons/excel.svg' %}" alt="Imagen" >
+                </a>
+              {% else %}
+                <a href="{{attachment.attachment.url}}">
+                  <img src="{% static '/unal/Icons/word.svg' %}" alt="Imagen" >
+                </a>
+              {% endif %}
+              <a href="{{attachment.attachment.url}}">
+                {{attachment.name}}
+              </a>
+              <a class="dima-formatos-table-th" href="{{attachment.attachment.url}}">
+                {{attachment.area}}
+              </a>
+              <p></p>
+            </td>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </tr>
   </table>
 
@@ -127,31 +161,33 @@
           <th class="width-min-th"></th>
           <th class="width-min-th"></th>
         </tr>
-      {% for key,values in folder_data.items %}
-        <tr>
-          <th>
-            <form method="post">
-              {% csrf_token %}
-              <input type="hidden" name="folder" value="{{key}}">
-              <input type="image" src="{% static '/unal/Icons/file.svg' %}" alt="Imagen" width="25" height="25" class="image-button" >
-              <input class="white-button" type="submit" value="  {{key}}">
-            </form>
-          </th>
-          <th>{{values.0}}&nbsp; MB</th>
-          <th class="dima-formatos-table-th">{{values.1}}</th>
-          <th class="width-min-th">
-            <form  method="post">
-              {% csrf_token %}
-              <input type="hidden" name="folder" value="{{ key }}">
-              <input type="image" src="{% static '/unal/Icons/eye.svg' %}" alt="Imagen" width="20" height="20" class="image-button1">
-            </form>            
-          </th>
-          <th class="width-min-th">
-              <a  href="{{ values.2 }}" class="image-button1">
-                <img src="{% static '/unal/Icons/download.svg' %}" alt="Imagen" width="20" height="20" >
-              </a>
-          </th>
-        </tr>
+      {% for attachment in formatos.attachment.all %}
+        {% if attachment.label == 'folder' %}
+          <tr>
+            <th>
+              <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="folder" value="{{attachment.area}}">
+                <input type="image" src="{% static '/unal/Icons/file.svg' %}" alt="Imagen" width="25" height="25" class="image-button" >
+                <input class="white-button" type="submit" value="{{attachment.name}}">
+              </form>
+            </th>
+            <th>{{attachment.size}}&nbsp; MB</th>
+            <th class="dima-formatos-table-th">{{attachment.area}}</th>
+            <th class="width-min-th">
+              <form  method="post">
+                {% csrf_token %}
+                <input type="hidden" name="folder" value="{{attachment.area}}">
+                <input type="image" src="{% static '/unal/Icons/eye.svg' %}" alt="Imagen" width="20" height="20" class="image-button1">
+              </form>            
+            </th>
+            <th class="width-min-th">
+                <a  href="{{attachment.attachment.url}}" class="image-button1">
+                  <img src="{% static '/unal/Icons/download.svg' %}" alt="Imagen" width="20" height="20" >
+                </a>
+            </th>
+          </tr>
+        {% endif %}
       {% endfor %}
     </tbody>
     </table>

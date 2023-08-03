@@ -47,7 +47,10 @@ class Attachment_Content(models.Model):
     content = models.ForeignKey('dima.Content', related_name='attachment', on_delete=models.CASCADE)
     name = models.CharField('Nombre del archivo', max_length=2 ** 10)
     attachment = models.FileField('Adjunto', upload_to=upload_to_content, blank=True, null=True)
-
+    type= models.CharField('Tipo', max_length=2 ** 10,blank=True, null=True)
+    size=models.FloatField('Tamaño',blank=True, null=True)
+    area=models.CharField('Área', max_length=2 ** 10,blank=True, null=True)
+    label=models.CharField('Etiqueta', max_length=2 ** 10,blank=True, null=True)
     class Meta:
         verbose_name = "Adjunto"
 

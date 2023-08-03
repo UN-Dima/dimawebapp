@@ -18,12 +18,8 @@
                     <div class="card-body calls-card-body">
                         <div class="cards-title">
                             <div>
-                                <h1 class="card-title"><a href="{% url 'students_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a><br>
-                                {% if call.expired %}
-                                    <small class="text-muted">Cerró en {{call.expiration}}{% if not call.expired %} ({{call.expiration|timeuntil}}){% endif %} </small>
-                                {% else %}
-                                    <small class="text-muted">Abierta hasta {{call.expiration}}{% if not call.expired %} ({{call.expiration|timeuntil}}){% endif %} </small>
-                                {% endif %}
+                                <h1 class="card-title">
+                                    <a href="{% url 'students_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a>
                                 </h1>
                             </div>
                             <div class="db-title student-title">
@@ -38,7 +34,7 @@
                         <dt class="col-sm-4">Estímulo económico</dt>
                         <dd class="col-sm-8">{{call.economic_stimulus}}</dd>
 
-                        <dt class="col-sm-4">Tipo de estudiante{% if call.students > 1 %}s{% endif %}</dt>
+                        <!-- <dt class="col-sm-4">Tipo de estudiante{% if call.students > 1 %}s{% endif %}</dt>
                         <dd class="col-sm-8">
                         {% if call.undergraduate and call.postgraduate %}
                             De pregrado y posgrado
@@ -47,24 +43,30 @@
                         {% elif not call.undergraduate and call.postgraduate %}
                             De posgrado
                         {% endif %}
-                        </dd>
+                        </dd> -->
                     </dl>
-
-
-                    {% if user.is_authenticated %}
-                        <div class="dima__card-badge">
-                        {% if not call.active %}<span class="badge rounded-pill text-bg-danger">Oculta</span>{% endif %}
-                        {% if call.expired %}<span class="badge rounded-pill text-bg-danger">Finalizada</span>{% endif %}
-                        {% if not call.expired %}<span class="badge rounded-pill text-bg-warning">Activa</span>{% endif %}
+                    <br>
+                    <div class="cards-details">
+                        <div class="card-state"><p class="card-attribute">Estudiante</p>
+                            {% if call.undergraduate and call.postgraduate %}
+                                Pregrado y Posgrado
+                            {% elif call.undergraduate and not call.postgraduate %}
+                                Pregrado
+                            {% elif not call.undergraduate and call.postgraduate %}
+                                Posgrado
+                            {% endif %}
                         </div>
-                        <br>
-                    {% else %}
-                        <div class="dima__card-badge">
-                        {% if call.expired %}<span class="badge rounded-pill text-bg-danger">Finalizada</span>{% endif %}
-                        {% if not call.expired %}<span class="badge rounded-pill text-bg-primary">Abierta</span>{% endif %}
+                            {% if user.is_authenticated %}
+                                {% if call.expired %}<div class="card-state card-state-closed"><p class="card-attribute">Finalizada</p>
+                                {% else %}<div class="card-state card-state-active"><p class="card-attribute">Activa hasta</p>{% endif %}
+                                {% if not call.active %}<p class="card-attribute"> (Oculta)</p>{% endif %}
+                            {% else %}
+                                {% if call.expired %}<div class="card-state card-state-closed"><p class="card-attribute">Finalizada</p>
+                                {% else %}<div class="card-state card-state-active"><p class="card-attribute">Abierta hasta</p>{% endif %}
+                            {% endif %}
+                            {{call.expiration}}
                         </div>
-                        <br>
-                    {% endif %}
+                    </div>
 
                     <a href="{% url 'students_call' call.pk %}" class="card-link">Ver convocatoria...</a>
 

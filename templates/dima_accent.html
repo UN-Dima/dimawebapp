@@ -83,22 +83,22 @@
     </div>
       <div class="carousel-fluff">
         {% if page == 'datos' %}
-          <img src="{% static 'assets/datos.png' %}" alt="Dima en datos" height="100">
+          <img src="{% static 'assets/datos.png' %}" alt="Dima en datos" height="75">
         {% elif page == 'boletines' %}
-          <img src="{% static 'assets/boletines.png' %}" alt="Boletines" height="100">
+          <img src="{% static 'assets/boletines.png' %}" alt="Boletines" height="75">
         {% elif page == 'convocatorias' %}
-          <img src="{% static 'assets/convocatorias.png' %}" alt="Convocatorias" height="100">
+          <img src="{% static 'assets/convocatorias.png' %}" alt="Convocatorias" height="75">
         {% elif page == 'contacto' %}
-          <img src="{% static 'assets/contacto.png' %}" alt="Contacto" height="100">
+          <img src="{% static 'assets/contacto.png' %}" alt="Contacto" height="75">
         {% elif page == 'home' %}
           <!--This is empty so that the home page doesn't show any extra image-->
         {% else %}
           <!--Currently, formats does not have an associated views.py file, as such we use 
             the else here to force the format site to have the extra logo-->
-          <img src="{% static 'assets/formatos.png' %}" alt="Formatos" height="100">
+          <img src="{% static 'assets/formatos.png' %}" alt="Formatos" height="75">
         {% endif %} 
         <a href="/">
-          <img src="{% static 'assets/dima_logo_white.png' %}" alt="Dima" height="100">
+          <img src="{% static 'assets/dima_logo_white.png' %}" alt="Dima" height="75">
         </a>
       </div>
     </div>

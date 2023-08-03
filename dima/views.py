@@ -6,6 +6,7 @@ from django.shortcuts import render
 from researchers.models import Researcher, Professor
 from projects.models import Project
 import json
+import numpy as np
 from visualizations.views import fix_filters
 from django.http import HttpResponseNotFound
 from .models import Newsletter, Broadcast, Team, Content
@@ -100,54 +101,40 @@ class TeamView(TemplateView):
 
 
 ########################################################################
-def tamano_carpeta(carpeta):
-    tamano_total = 0
+def buscar_resultados_similares(lista, palabra):
+    posiciones_similares = []
+    coincidencias = difflib.get_close_matches(palabra, lista, n=6, cutoff=0.5)
+    
+    for coincidencia in coincidencias:
+        posiciones = [i for i, elem in enumerate(lista) if elem == coincidencia]
+        posiciones_similares.extend(posiciones)
+    
+    return posiciones_similares
 
-    for ruta_actual, carpetas, archivos in os.walk(carpeta):
-        for archivo in archivos:
-            ruta_completa = os.path.join(ruta_actual, archivo)
-            tamano_total += os.path.getsize(ruta_completa)
-    tamano_mb = tamano_total / (1024 * 1024)
-    return round(tamano_mb,2)
-def buscar_resultados_similares(diccionario, palabra):
-    resultados_similares = {}
-    for clave, valores in diccionario.items():
-        coincidencias = difflib.get_close_matches(palabra, valores, n=6, cutoff=0.5)
-        if coincidencias:
-            resultados_similares[clave] = coincidencias
-    return resultados_similares
 class ContentView(TemplateView):
     label=''
     def post(self, request, **kwargs):
         context=self.get_context_data()
         folder=request.POST.get('folder')
         filter=request.POST.get('q')
-        media_root = settings.MEDIA_ROOT
-        media_path = settings.MEDIA_URL
-        path = os.path.join(media_root, 'uploads', 'content')
-        folder_path = os.path.join(media_path, 'uploads', 'content')
+        files=[]
+        for attachment in Content.objects.get(label=self.label).attachment.all():
+            if attachment.label =='file' and attachment.area == folder:
+                files.append([attachment.name,attachment.area,attachment.type,attachment.attachment])       
         if folder:
-
-            files_root={}
-            files=os.listdir(os.path.join(path,folder))
-            aux=[]
-            for file in files:
-                s=file.split('.')
-                aux.append([s[0],os.path.join(folder_path,folder,file),s[1],self.Area[folder.replace(' ','_')]])
-
-            files_root[folder]=aux
-            context['file_data']=files_root
+            context['file_data']=folder
+            context['files']=files
             return render(request,'static/content_view.html',context)
         elif filter:
-            result = buscar_resultados_similares(self.file_filter, filter)
-            file_result={}
-            for key,values in result.items():
-                aux=[]
-                for value in values:
-                    s=value.split('.')
-                    aux.append([s[0],os.path.join(folder_path,key,value),s[1],self.Area[key.replace(' ','_')]])
-                file_result[key]=aux
-            context['file_data']=file_result
+            files=[]
+            for attachment in Content.objects.get(label=self.label).attachment.all():
+                if attachment.label =='file':
+                    files.append([attachment.name,attachment.area,attachment.type,attachment.attachment])
+            result = buscar_resultados_similares(np.array(files)[:,0], filter)
+            
+
+            context['filter']=filter
+            context['files']=np.array(files)[result,:]
             return render(request,'static/formatos.html',context)
         
     
@@ -165,43 +152,5 @@ class ContentView(TemplateView):
             context['broadcasts_admin'] = Broadcast._meta
             context['page'] = 'home'
         # Obtener la lista de archivos en una ubicación específica
-        self.file_filter={}
         
-        folder_root={}
-        try:
-            media_root = settings.MEDIA_ROOT
-            media_path = settings.MEDIA_URL
-            path = os.path.join(media_root, 'uploads', 'content')
-            print(path)
-            folders = os.listdir(path)
-            self.Area={'Comité_de_ética':'Comité de ética','Certificado_estudiantes':'Estudiante auxiliar',
-            'Formatos_contrapartidas':'Contrapartidas','Gestión_propiedad_intelectual':'Propiedad_intelectual',
-            'Marketing_tecnológico':'Lorem impsum','Paz_y_salvos':'Paz y salvo','Solicitudes':'Solicitudes'}
-            zip_path = os.path.join(media_root, 'uploads', 'Zip')
-            zip_path_m= os.path.join(media_path, 'uploads', 'Zip')
-            url=[zip_path_m+i for i in os.listdir(zip_path)]
-            for j,u in zip(folders,url):
-                self.file_filter[j]=os.listdir(os.path.join(path,j))
-                folder_root[j]=[tamano_carpeta(os.path.join(path,j)),self.Area[j.replace(' ','_')],u]
-            aux=['Certificado estudiantes', 'Comité de ética']
-
-            folder_path = os.path.join(media_path, 'uploads', 'content')
-            files_root={}
-            
-            for folder in aux:
-                aux=[]
-                files=os.listdir(os.path.join(path, folder))
-                print(files)
-                for file in files:
-                    s=file.split('.')
-                    aux.append([s[0],os.path.join(folder_path,folder,file),s[1]])
-
-                files_root[folder]=aux
-            
-            context['file_view']=files_root
-            #for i,j in 
-            #os.listdir(path+)
-            context['folder_data'] = folder_root
-        except:
-            print('Hello, World!')
         return context
