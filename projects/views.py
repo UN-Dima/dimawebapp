@@ -6,7 +6,7 @@ from utils.models import Choices
 from visualizations.views import fix_filters
 from django.http import HttpResponseNotFound
 import json
-
+from django.db.models import Q
 
 ########################################################################
 class Projects(TemplateView):
@@ -17,12 +17,20 @@ class Projects(TemplateView):
         self.template_name = "projects_list.html"
         context = self.get_context_data(**kwargs)
 
-        filters = fix_filters(
-            Project, json.loads(request.POST['data']))[0]
+        filters, searchers = fix_filters(
+            Project, json.loads(request.POST['data']))
 
-        context['projects'] = Project.objects.filter(
-            **{k: filters[k]for k in ['faculty', 'departament', 'type', 'call_type', 'project_state'] if k in filters})
+        query = Q()
 
+        if 'project_name__icontains' in searchers:
+            query |= Q(project_name__icontains=searchers['project_name__icontains'])
+
+        projects = Project.objects.filter(
+            query,
+            **{k: filters[k] for k in ['faculty', 'departament', 'type', 'call_type', 'project_state'] if k in filters}
+        )
+
+        context['projects'] = projects
         context['projects_admin'] = Project._meta
 
         

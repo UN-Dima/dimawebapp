@@ -56,8 +56,8 @@
 }
 
 .dima-plot {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  position: relative;
+  margin-top: 10px;
 }
 
 main.detalle {
@@ -100,14 +100,23 @@ main {
 }
 
 h1,
-h2,
-h3,
 h4,
 h5,
-h6 {
+h6{
   font-family: "Ancizar Sans Light" !important;
-  color: #14a8df;
+  color: black;
 }
+
+h2{
+  font-family: "Monaco" !important;
+  font-size: 25;
+}
+
+h3{
+  font-family: "Ancizar Sans Light" !important;
+  font-size: 19;
+}
+
 
 .dima-main {
   margin: 0 5% 0 5%;
@@ -1583,9 +1592,16 @@ text-align: right !important;
   background-color: #F1F1F1;
 }
 
+.col-50-50 {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .div-flex {
   justify-content: space-between;
   display:flex;
+  margin: 15px;
 }
 
 #dima-select--state__calls,
@@ -1596,3 +1612,87 @@ text-align: right !important;
   background-color: #F1F1F1;
 }
 
+.groups-count{
+  box-shadow: 0px 16px 13px #EFF1F9BF;
+  border-radius: 10px;
+  margin: 15px auto 15px auto;
+  padding: 22px;
+  width: 78%;
+  height: 29%;
+}
+
+.green-groups-count{
+  background-color: #7FA82A;
+}
+
+.blue-groups-count{
+  background-color: #22A6AC;
+}
+
+.pink-groups-count{
+  background-color: #F05179;
+}
+
+.Filter-container{
+  color:#000000;
+  background-color: #F9F9F9;
+}
+
+.Graph-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.anim-button-open {
+  border-radius: 90px;
+  margin:0;
+  width: 45px;
+  height: 45px;
+  transform: rotate(90deg);
+}
+
+.anim-button-closed {
+  border-radius: 90px;
+  transition: 0.5s;
+  margin:0;
+  width: 45px;
+  height: 45px;
+  transform: rotate(0deg);
+}
+
+.row {
+  align-items: center;
+}
+.row-top {
+  align-items:baseline;
+}
+
+.hide{
+  display: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin:auto;
+  margin-top:15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.clue{
+  background-color:#FFF;
+  border-radius:90px;
+  box-shadow: 0px 3px 6px #00000029;
+  color: #5300a3;
+  font-weight:bold;
+  font-size: 20px;
+  cursor:help;
+}

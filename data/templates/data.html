@@ -1,0 +1,43 @@
+{% extends "base_unal.html" %}
+{% load static %}
+
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class breadcrumb-class__no-border">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a href="#">Dima en datos</a></li>
+      <li class="breadcrumb-item dima-breadcrumb"></li>
+    </ol>
+  </nav>
+</div>
+{% endblock %}
+
+
+{% block 'main' %}
+  <div>
+    <h1>Dima en datos</h1>
+    <p>
+      La Dirección de Investigaciones de Manizales DIMA tiene como objeto principal orientar, promover y financiar a través de los recursos que se le asignen, las actividades de investigación en la Sede.
+    </p>
+  </div>
+  <br>
+  <select class="form-select" id = "dima-select--data" aria-label="Default select example" width="25%">
+    <option value="Groups-tab">Grupos de investigación</option>
+    <option value="Researchers-tab">Investigadores</option>
+    <option value="Patents-tab">Propiedad intelectual</option>
+    <option value="Projects-tab">Proyectos</option>
+  </select>
+  
+  <div id="load-circle" class="loader"></div>
+  <div id="dima-render--data" class="hide">
+    {% include 'tables.html' %}
+  </div>
+
+  <script type="text/python">
+    from browser import document
+    
+    document.select_one('#load-circle').style.display = 'none'
+    document.select_one('#dima-render--data').style.display = 'inline'
+  </script>
+{% endblock %}

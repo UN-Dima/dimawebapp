@@ -38,7 +38,7 @@ urlpatterns = [
 
     path("dashboard/", include('dashboard.urls')),
 
-    # path("datos/", include('data.urls'))
+    path("datos/", include('data.urls')),
 
 
 

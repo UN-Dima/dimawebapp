@@ -1,0 +1,496 @@
+{% load admin_urls %}
+
+<br>
+<div id="Groups-tab">
+  <div class="container-lg">
+      <div class="row">
+
+        {% if user.is_authenticated %}
+          <div class="dima-alert alert alert-danger" role="alert">
+            Los grupos de investigación se pueden editar desde <a href="{% url groups_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
+          </div>
+        {% endif %}
+
+      </div>
+  </div>
+  <!--Counts-->
+  <div id="groups-counts" class="div-flex">
+    <div class="col-50-50">
+      <h4>Grupos de Investigación</h4>
+      <div class="dima-plot" id="dima-plot--faculties" filters="FILTERS_GROUPS"></div>
+    </div>
+    
+    <div class="col-50-50">
+      <div class="groups-count green-groups-count">
+        <h3>Grupos de investigación</h3>
+        <h2><b>{{groups.count}}</b></h2>
+      </div>
+      <div class="groups-count blue-groups-count">
+        <h3>Proyectos Activos</h3>
+        <h2><b>{{active_projects}}</b></h2>
+      </div>
+      <div class="groups-count pink-groups-count">
+        <h3>Investigadores</h3>
+        <h2><b>{{professors.count}}</b></h2>
+      </div>
+    </div>
+  </div>
+
+  <!--Graphs-->
+  <div id="groups-graphs1">
+    <div id="groups-graphs--filters1" class="row">
+      <button id ="groups-graphs-button1" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder Graficas">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por áreas del conocimiento</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--knowledge__groups" aria-label="Default select example">
+        <option value="All">Todas las areas</option>
+          {% for f in OCDE %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por categorias</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--category__groups" aria-label="Default select example">
+          <option value="All">Todas las categorías</option>
+          {% for c in categories %}
+            <option value="{{c}}">{{c}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id ="groups-graphs-graphs1" class="Graph-container">
+      <div id="groups-graphs--graph1" class="col-50-50">
+        <h4>Por área de conocimiento de la OCDE 
+          <span class="clue" title="Se trata de una agrupación que se hace de los programas académicos, teniendo en cuenta cierta afinidad en los contenidos, en los campos específicos del conocimiento, en los campos de acción de la educación superior cuyos propósitos de formación conduzcan a la investigación o al desempeño de ocupaciones, profesiones y disciplinas.">
+            &nbsp;&nbsp;i&nbsp;&nbsp;
+          </span>
+        </h4>
+        <div class="dima-plot" id="dima-plot--knowledge" dima-size="10" filters="FILTERS_GROUPS"></div>
+      </div>
+      <div id="groups-graphs--graph2" class="col-50-50">
+        <h4>Por categorias 
+          <span class="clue" title="Los grupos se clasificarán de acuerdo con las siguientes categorías, una vez se haya cumplido con los requisitos para ser Grupo de investigación, Desarrollo Tecnológico o de Innovación Reconocido. De mayor a menor reconocimiento:A1, A, B, C y D">
+            &nbsp;&nbsp;i&nbsp;&nbsp;
+          </span>
+        </h4>
+        <div class="dima-plot" id="dima-plot--categories" dima-size="6" filters="FILTERS_GROUPS"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="groups-graphs2">
+    <div id="groups-graphs--filters2" class="row">
+      <button id ="groups-graphs-button2" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder Graficas">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por facultad</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--faculty__groups" aria-label="Default select example">
+        <option value="All">Todas las facultades</option>
+          {% for f in faculties %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por departamento</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--departament__groups" aria-label="Default select example">
+          <option value="All">Todas los departamentos</option>
+          {% for c in departaments %}
+            <option value="{{c}}">{{c}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id ="groups-graphs-graphs2" class="Graph-container">
+      <div id="groups-graphs--graph4" class="col-50-50">
+        <h4>
+          Por departamento 
+        </h4>
+        <div class="dima-plot" id="dima-plot--departament" dima-size="6" filters="FILTERS_GROUPS"></div>
+      </div>
+    </div>
+  </div>
+  <!--Table-->
+  <div class="container-fluid">
+    <div class="container-lg">
+      <div class="row">
+
+        <div class="col-lg-12 col-sm-12">
+          <div class="table_overfull" id="dima-render--group">{% include 'groups_table.html' %}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Researchers-tab">
+  <div class="container-lg">
+    <div class="row">
+
+      {% if user.is_authenticated %}
+        <div class="dima-alert alert alert-danger" role="alert">
+          Los investigadores se pueden editar desde <a href="{% url professors_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+  <!--Counts-->
+  <div id="researchers-counts" class="div-flex">
+    <div class="col-50-50">
+      <h4>Investigadores</h4>
+      <div class="dima-plot" id="dima-plot--researchers_category" filters="FILTERS_RESEARCHERS"></div>
+    </div>
+    
+    <div class="col-50-50">
+      <div class="groups-count green-groups-count">
+        <h3>Grupos de investigación</h3>
+        <h2><b>{{groups.count}}</b></h2>
+      </div>
+      <div class="groups-count blue-groups-count">
+        <h3>Proyectos Activos</h3>
+        <h2><b>{{active_projects}}</b></h2>
+      </div>
+      <div class="groups-count pink-groups-count">
+        <h3>Investigadores</h3>
+        <h2><b>{{professors.count}}</b></h2>
+      </div>
+    </div>
+  </div>
+
+  <!--Graphs-->
+  <div id="researchers-graphs1">
+    <div id="researchers-graphs--filters1" class="row">
+      <button id ="researchers-graphs-button1" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por facultades</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--faculty__researchers" aria-label="Default select example">
+        <option value="All">Todas las facultades</option>
+          {% for f in faculties %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por departamentos</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--departament__researchers" aria-label="Default select example">
+          <option value="All">Todos los departamentos</option>
+          {% for d in departaments %}
+            <option value="{{d}}">{{d}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id ="researchers-graphs-graphs1" class="Graph-container">
+      <div id="researchers-graphs--graph1" class="col-50-50">
+        <h4>Por Facultad</h4>
+        <div class="dima-plot" id="dima-plot--researchers_faculty" dima-size="6" filters="FILTERS_RESEARCHERS"></div>
+      </div>
+      <div id="researchers-graphs--graph2" class="col-50-50">
+        <h4>Por Departamento</h4>
+        <div class="dima-plot" id="dima-plot--researchers_departament" dima-size="6" filters="FILTERS_RESEARCHERS"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="researchers-graphs2">
+    <div id="researchers-graphs--filters2" class="row">
+      <button id ="researchers-graphs-button2" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por dedicación</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--dedication__researchers" aria-label="Default select example">
+        <option value="All">Todas las dedicaciones</option>
+          {% for f in dedication %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por categorias</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--category__researchers" aria-label="Default select example">
+          <option value="All">Todas las categorias</option>
+          {% for d in researcher_categories %}
+            <option value="{{d}}">{{d}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id ="researchers-graphs-graphs2" class="Graph-container">
+      <div id="researchers-graphs--graph3" class="col-50-50">
+        <h4>Por Dedicación</h4>
+        <div class="dima-plot" id="dima-plot--researchers_dedication" dima-size="6" filters="FILTERS_RESEARCHERS"></div>
+      </div>
+    </div>
+  </div>
+  <!--Table-->
+  <div class="container-fluid">
+    <div class="container-lg">
+      <div class="row row-top">
+
+        <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12">
+          <h4 class="display-8">
+            Buscar por Nombre
+            <span class="clue" title="Porfavor incluir los acentos.">
+              &nbsp;&nbsp;i&nbsp;&nbsp;
+            </span>
+          </h4>
+          <br>
+            <input type="text" id = "dima-search--first_name__researchers" class="search-input">
+        </div>
+        <br>
+
+        <div class="col-lg-8 col-sm-12">
+          <div class="table_overfull" id="dima-render--researchers">{% include 'researchers_list.html' %}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Patents-tab">
+  <div class="container-lg">
+    <div class="row">
+
+      {% if user.is_authenticated %}
+        <div class="dima-alert alert alert-danger" role="alert">
+          Las propiedades intelectuales se pueden editar desde <a href="{% url patents_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+  <!--Counts-->
+  <div id="Patents-counts" class="div-flex">
+    <div class="col-50-50">
+      <h4>Propiedades Intelectuales</h4>
+      <div class="dima-plot" id="dima-plot--patent_type" filters="FILTERS_PATENTS"></div>
+    </div>
+    
+    <div class="col-50-50">
+      <div class="groups-count green-groups-count">
+        <h3>Grupos de investigación</h3>
+        <h2><b>{{groups.count}}</b></h2>
+      </div>
+      <div class="groups-count blue-groups-count">
+        <h3>Proyectos Activos</h3>
+        <h2><b>{{active_projects}}</b></h2>
+      </div>
+      <div class="groups-count pink-groups-count">
+        <h3>Investigadores</h3>
+        <h2><b>{{professors.count}}</b></h2>
+      </div>
+    </div>
+  </div>
+
+  <!--Graphs-->
+  <div id="patents-graphs">
+    <div id="patents-graphs--filters" class="row">
+      <button id ="patents-graphs-button1" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por facultades</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--faculty__patents" aria-label="Default select example">
+        <option value="All">Todas las facultades</option>
+          {% for f in faculties %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por departamentos</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--departament__patents" aria-label="Default select example">
+          <option value="All">Todos los departamentos</option>
+          {% for d in departaments %}
+            <option value="{{d}}">{{d}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id="patents-graphs-graphs1" class="Graph-container">
+      <div id="patents-graphs--graph1" class="col-50-50">
+        <h4>Por Facultad</h4>
+        <div class="dima-plot" id="dima-plot--patent_faculty" dima-size="6" filters="FILTERS_PATENTS"></div>
+      </div>
+      <div id="patents-graphs--graph2" class="col-50-50">
+        <h4>Por Departamento</h4>
+        <div class="dima-plot" id="dima-plot--patent_departament" dima-size="6" filters="FILTERS_PATENTS"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--Table-->
+  <div class="container-fluid">
+    <div class="container-lg">
+      <div class="row">
+
+        <div class="col-lg-12 col-sm-12">
+          <div class="table_overfull" id="dima-render--patents">{% include 'patents_list.html' %}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Projects-tab">
+  <div class="container-lg">
+    <div class="row">
+
+      {% if user.is_authenticated %}
+        <div class="dima-alert alert alert-danger" role="alert">
+          Los proyectos se pueden editar desde <a href="{% url projects_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+  <!--Counts-->
+  <div id="projects-counts" class="div-flex">
+    <div class="col-50-50">
+      <h4>Proyectos</h4>
+      <div class="dima-plot" id="dima-plot--projects_call_type" filters="FILTERS_PROJECTS"></div>
+    </div>
+    
+    <div class="col-50-50">
+      <div class="groups-count green-groups-count">
+        <h3>Grupos de investigación</h3>
+        <h2><b>{{groups.count}}</b></h2>
+      </div>
+      <div class="groups-count blue-groups-count">
+        <h3>Proyectos Activos</h3>
+        <h2><b>{{active_projects}}</b></h2>
+      </div>
+      <div class="groups-count pink-groups-count">
+        <h3>Investigadores</h3>
+        <h2><b>{{professors.count}}</b></h2>
+      </div>
+    </div>
+  </div>
+
+  <!--Graphs-->
+  <div id="projects-graphs1">
+    <div id="projects-graphs--filters1" class="row">
+      <button id ="projects-graphs-button1" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por facultades</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--faculty__projects" aria-label="Default select example">
+        <option value="All">Todas las facultades</option>
+          {% for f in faculties %}
+            <option value="{{f}}">{{f}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por departamentos</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--departament__projects" aria-label="Default select example">
+          <option value="All">Todos los departamentos</option>
+          {% for d in departaments %}
+            <option value="{{d}}">{{d}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id="projects-graphs-graphs1" class="Graph-container">
+      <div id="projects-graphs--graph1" class="col-50-50">
+        <h4>Por Facultad</h4>
+        <div class="dima-plot" id="dima-plot--projects_faculty" dima-size="6" filters="FILTERS_PROJECTS"></div>
+      </div>
+      <div id="projects-graphs--graph2" class="col-50-50">
+        <h4>Por Departamento</h4>
+        <div class="dima-plot" id="dima-plot--projects_departament" dima-size="8" filters="FILTERS_PROJECTS"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="projects-graphs2">
+    <div id="projects-graphs--filters2" class="row">
+      <button id ="projects-graphs-button2" class="dima-click_buttons anim-button-open" title="Mostrar/Esconder">></button>
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por tipo de convocatoria</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--call_type__projects" aria-label="Default select example">
+          <option value="All">Todas las convocatorias</option>
+          {% for e in call%}
+            <option value="{{e}}">{{e}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+        <h1 class="display-8">Filtrar por estado</h1>
+        <p></p>
+        <select class="form-select" id="dima-select--project_state__projects" aria-label="Default select example">
+          <option value="All">Todos los estados</option>
+          {% for e in state %}
+            <option value="{{e}}">{{e}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div id="projects-graphs-graphs2" class="Graph-container">
+      <div id="projects-graphs--graph3" class="col-50-50">
+        <h4>Por Porcentaje de Ejecución</h4>
+        <div class="dima-plot" id="dima-plot--projects_execution_percentage" dima-size="6" filters="FILTERS_PROJECTS"></div>
+      </div>
+      <div id="projects-graphs--graph4" class="col-50-50">
+        <h4>Por Estado</h4>
+        <div class="dima-plot" id="dima-plot--projects_project_state" dima-size="6" filters="FILTERS_PROJECTS"></div>
+      </div>
+    </div>
+  </div>
+  <!--Table-->
+  <div class="container-fluid">
+    <div class="container-lg">
+      <div class="row row-top">
+
+        <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12">
+          <h4 class="display-8">
+            Buscar por Nombre
+            <span class="clue" title="Porfavor incluir los acentos.">
+              &nbsp;&nbsp;i&nbsp;&nbsp;
+            </span>
+          </h4>
+          <br>
+            <input type="text" id = "dima-search--project_name__projects" class="search-input">
+        </div>
+        <br>
+
+        <div class="col-lg-8 col-sm-12">
+          <div class="table_overfull" id="dima-render--projects">{% include 'projects_list.html' %}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/python">
+  from browser import document
+
+  tabs = ['Researchers-tab', 'Patents-tab', 'Projects-tab']
+  for tab in tabs:
+      document.select_one(f'#{tab}').style.display = 'none'
+</script>

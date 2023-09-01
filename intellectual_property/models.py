@@ -12,6 +12,7 @@ class Patent(models.Model):
     name = models.CharField('Nombre de la patente', max_length=2**10)
     patent_type = models.CharField('Tipo de patente', **Choices('PATENT_TYPE'))
 
+    faculty = models.CharField('Facultad', **Choices('FACULTY'))
     departament = models.CharField('Departamento', **Choices('DEPARTAMENT'))
     grant = models.DateField('Fecha de concesión', default='django.utils.timezone.now')
     filling = models.DateField('Fecha de presentación', default='django.utils.timezone.now')

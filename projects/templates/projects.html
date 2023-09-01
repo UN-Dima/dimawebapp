@@ -1,15 +1,5 @@
 {% load admin_urls %}
 
-
-{% if user.is_authenticated %}
-  <div class="container">
-    <div class="dima-alert alert alert-danger" role="alert">
-      Los proyectos se pueden editar desde <a href="{% url proyects_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
-    </div>
-  </div>
-{% endif %}
-
-
 <div class="container-fluid dima-form">
   <div class="container-lg">
     <div class="row">
@@ -91,31 +81,31 @@
                 <div class="row">
                   <h1 class="display-8">Proyectos por:</h1>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Tipologia</h2>
+                    <h1 class="display-9">Tipologia</h1>
                     <div class="dima-plot" id="dima-plot--projects_call_type" filters="FILTERS_PROJECTS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Estado</h2>
+                    <h1 class="display-9">Estado</h1>
                     <div class="dima-plot" id="dima-plot--projects_project_state" filters="FILTERS_PROJECTS"></div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Facultad</h2>
+                    <h1 class="display-9">Facultad</h1>
                     <div class="dima-plot" id="dima-plot--projects_faculty" filters="FILTERS_PROJECTS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Departamento</h2>
+                    <h1 class="display-9">Departamento</h1>
                     <div class="dima-plot" id="dima-plot--projects_departament" filters="FILTERS_PROJECTS"></div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Recursos (totales)</h2>
+                    <h1 class="display-9">Recursos (totales)</h1>
                     <div class="dima-plot" id="dima-plot--projects_total_project" filters="FILTERS_PROJECTS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Procentaje de Ejecución</h2>
+                    <h1 class="display-9">Procentaje de Ejecución</h1>
                     <div class="dima-plot" id="dima-plot--projects_execution_percentage" filters="FILTERS_PROJECTS"></div>
                   </div>
                 </div>

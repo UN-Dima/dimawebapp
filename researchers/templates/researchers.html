@@ -1,15 +1,5 @@
 {% load admin_urls %}
 
-
-{% if user.is_authenticated %}
-  <div class = "container">
-    <div class="dima-alert alert alert-danger" role="alert">
-      Los docentes se pueden editar desde <a href="{% url professors_admin|admin_urlname:'changelist' %}" target="_blank">este link</a>.
-    </div>
-  </div>
-{% endif %}
-
-
 <div class = "container-fluid dima-form">
   <div class="container-lg">
     <div class="row">
@@ -83,21 +73,21 @@
                 <div class="row">
                   <h1 class="display-8">Docentes por:</h1>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Categoría</h2>
+                    <h1 class="display-9">Categoría</h1>
                     <div class="dima-plot" id="dima-plot--researchers_category" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Dedicación</h2>
+                    <h1 class="display-9">Dedicación</h1>
                     <div class="dima-plot" id="dima-plot--researchers_dedication" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Facultad</h2>
+                    <h1 class="display-9">Facultad</h1>
                     <div class="dima-plot" id="dima-plot--researchers_faculty" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
-                    <h2 class="display-9">Departamento</h2>
+                    <h1 class="display-9">Departamento</h1>
                     <div class="dima-plot" id="dima-plot--researchers_departament" filters="FILTERS_RESEARCHERS"></div>
                   </div>
                 </div>

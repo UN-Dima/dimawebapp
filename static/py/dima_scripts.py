@@ -4,7 +4,7 @@ import logging
 
 
 # ----------------------------------------------------------------------
-def ajax_render(id, url, data=None, callback=None, execute_scripts=True):
+def ajax_render(id, url, data=None, callback=None, execute_scripts=True, callback_args=None,):
     """"""
     def read(req):
         if req.text:
@@ -20,11 +20,11 @@ def ajax_render(id, url, data=None, callback=None, execute_scripts=True):
                         'height': f'{60 * float(size)}px'}
                 elif size := script.attrs.get('dima-size', False):
                     document.select_one(f'#{id}').style = {
-                        'height': f'{60 * float(size)}px'}
+                        'height': f'90%'}
                 window.eval(script.innerHTML)
 
         if callback:
-            callback(req)
+            callback(callback_args)
 
     req = ajax.ajax()
     req.bind('complete', read)

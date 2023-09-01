@@ -1,4 +1,5 @@
 from browser import document, bind, html, window
+from time import sleep
 from dima_scripts import ajax_render, update_plot, ajax_request
 import json
 import logging
@@ -13,7 +14,7 @@ filters = {
     'FILTERS_RESEARCHERS': FILTERS_RESEARCHERS,
     'FILTERS_PATENTS': FILTERS_PATENTS,
     'FILTERS_PROJECTS': FILTERS_PROJECTS,
-    'FILTERS_CALLS': FILTERS_CALLS
+    'FILTERS_CALLS': FILTERS_CALLS,
 }
 
 
@@ -27,11 +28,24 @@ def load_group_view(evt):
     else:
         FILTERS_GROUPS['category'] = evt.target.value
 
-    update_all_plots(filters_to_use='FILTERS_GROUPS')
-    update_all_options(filters_to_use='FILTERS_GROUPS',
-                       id='#dima-select--departament__groups')
+    # update_all_options(filters_to_use='FILTERS_GROUPS',
+    #                    id='#dima-select--departament__groups')
     ajax_render('dima-render--group', "/grupos/", FILTERS_GROUPS)
+    update_all_plots(filters_to_use='FILTERS_GROUPS')
 
+@bind('#dima-select--knowledge__groups', 'change')
+def update_knowledge_filter(evt):
+    """"""
+    global FILTERS_GROUPS
+    if evt.target.value == 'All':
+        FILTERS_GROUPS.pop('knowledge_area')
+    else:
+        FILTERS_GROUPS['knowledge_area'] = evt.target.value
+
+    # update_all_options(filters_to_use='FILTERS_GROUPS',
+    #                    id='#dima-select--departament__groups')
+    ajax_render('dima-render--group', "/grupos/", FILTERS_GROUPS)
+    update_all_plots(filters_to_use='FILTERS_GROUPS')
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--faculty__groups', 'change')
@@ -47,13 +61,15 @@ def update_faculty_filter(evt):
     if 'departament' in FILTERS_GROUPS:
         FILTERS_GROUPS.pop('departament')
 
-    document.select_one('#dima-select--departament__groups').value = 'All'
-
-    update_all_plots(filters_to_use='FILTERS_GROUPS')
-    update_all_options(filters_to_use='FILTERS_GROUPS',
+    try:
+        document.select_one('#dima-select--departament__groups').value = 'All'
+        update_all_options(filters_to_use='FILTERS_GROUPS',
                        id='#dima-select--departament__groups')
+    except:
+        print('No department filter found')
+    
     ajax_render('dima-render--group', "/grupos/", FILTERS_GROUPS)
-
+    update_all_plots(filters_to_use='FILTERS_GROUPS')
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--departament__groups', 'change')
@@ -73,7 +89,6 @@ def update_departament_filter(evt):
 def update_all_plots(filters_to_use):
     """"""
     for element in document.select('.dima-plot'):
-
         if filters_to_use == element.attrs['filters']:
             update_plot(element.attrs['id'], filters=filters[filters_to_use])
 
@@ -126,14 +141,13 @@ def update_faculty_filter_(evt):
     if 'departament' in FILTERS_RESEARCHERS:
         FILTERS_RESEARCHERS.pop('departament')
 
-    ajax_render('dima-placeholder__researchers',
-                "/investigadores/", FILTERS_RESEARCHERS)
-
     document.select_one(
         '#dima-select--departament__researchers').value = 'All'
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
     update_all_options(filters_to_use='FILTERS_RESEARCHERS',
                        id='#dima-select--departament__researchers')
+    ajax_render('dima-render--researchers',
+                "/investigadores/", FILTERS_RESEARCHERS)
 # ----------------------------------------------------------------------
 @bind('#dima-search--first_name__researchers', 'input')
 def update_first_name_filter_(evt):
@@ -145,10 +159,10 @@ def update_first_name_filter_(evt):
         FILTERS_RESEARCHERS['first_name'] = evt.target.value
         FILTERS_RESEARCHERS['last_name'] = evt.target.value
 
-    ajax_render('dima-placeholder__researchers',
-                "/investigadores/", FILTERS_RESEARCHERS)
+    #update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
 
-    update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
+    ajax_render('dima-render--researchers',
+                "/investigadores/", FILTERS_RESEARCHERS)
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--departament__researchers', 'change')
@@ -160,9 +174,9 @@ def update_departament_filter_(evt):
     else:
         FILTERS_RESEARCHERS['departament'] = evt.target.value
 
-    ajax_render('dima-placeholder__researchers',
-                "/investigadores/", FILTERS_RESEARCHERS)
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
+    ajax_render('dima-render--researchers',
+                "/investigadores/", FILTERS_RESEARCHERS)
 
 
 # ----------------------------------------------------------------------
@@ -175,9 +189,9 @@ def update_researcher_category(evt):
     else:
         FILTERS_RESEARCHERS['category'] = evt.target.value
 
-    ajax_render('dima-placeholder__researchers',
-                "/investigadores/", FILTERS_RESEARCHERS)
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
+    ajax_render('dima-render--researchers',
+                "/investigadores/", FILTERS_RESEARCHERS)
 # ----------------------------------------------------------------------
 @bind('#dima-select--dedication__researchers', 'change')
 def update_researcher_dedication(evt):
@@ -188,9 +202,9 @@ def update_researcher_dedication(evt):
     else:
         FILTERS_RESEARCHERS['dedication'] = evt.target.value
 
+    update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
     ajax_render('dima-placeholder__researchers',
                 "/investigadores/", FILTERS_RESEARCHERS)
-    update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--departament__patents', 'change')
@@ -229,7 +243,7 @@ def update_project_call_type(evt):
     else:
         FILTERS_PROJECTS['call_type'] = evt.target.value
 
-    ajax_render('dima-placeholder__projects',
+    ajax_render('dima-render--projects',
                 "/proyectos/", FILTERS_PROJECTS)
 
     update_all_plots(filters_to_use='FILTERS_PROJECTS')
@@ -244,10 +258,10 @@ def update_project_project_state(evt):
     else:
         FILTERS_PROJECTS['project_state'] = evt.target.value
 
-    ajax_render('dima-placeholder__projects',
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+    ajax_render('dima-render--projects',
                 "/proyectos/", FILTERS_PROJECTS)
 
-    update_all_plots(filters_to_use='FILTERS_PROJECTS')
 # ----------------------------------------------------------------------
 @bind('#dima-select--faculty__projects', 'change')
 def update_project_faculty(evt):
@@ -258,10 +272,10 @@ def update_project_faculty(evt):
     else:
         FILTERS_PROJECTS['faculty'] = evt.target.value
 
-    ajax_render('dima-placeholder__projects',
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+    ajax_render('dima-render--projects',
                 "/proyectos/", FILTERS_PROJECTS)
 
-    update_all_plots(filters_to_use='FILTERS_PROJECTS')
 # ----------------------------------------------------------------------
 @bind('#dima-select--departament__projects', 'change')
 def update_project_faculty(evt):
@@ -272,10 +286,21 @@ def update_project_faculty(evt):
     else:
         FILTERS_PROJECTS['departament'] = evt.target.value
 
-    ajax_render('dima-placeholder__projects',
+    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+    ajax_render('dima-render--projects',
                 "/proyectos/", FILTERS_PROJECTS)
 
-    update_all_plots(filters_to_use='FILTERS_PROJECTS')
+@bind('#dima-search--project_name__projects', 'input')
+def update_project_name_filter_(evt):
+    """"""
+    global FILTERS_PROJECTS
+    if evt.target.value == '':
+        FILTERS_PROJECTS.pop('project_name')
+    else:
+        FILTERS_PROJECTS['project_name'] = evt.target.value
+
+    ajax_render('dima-render--projects',
+                "/proyectos/", FILTERS_PROJECTS)
 
 # ----------------------------------------------------------------------
 @bind('#patentes-tab', 'click')
@@ -423,7 +448,7 @@ def update_call_state(evt):
     ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
 
 @bind('#dima-select--student__calls', 'change')
-def update_call_state(evt):
+def update_call_student(evt):
     """"""
     global FILTERS_CALLS
     if evt.target.value == 'All':
@@ -441,6 +466,52 @@ def update_first_name_filter_(evt):
 
     ajax_render('dima-render--calls', '/convocatorias/lista', FILTERS_CALLS)
 
+@bind('#dima-select--data', 'change')
+def update_data_choice(evt):
+    # global FILTERS_DATA
+    # FILTERS_DATA['data_choice'] = evt.target.value
+    tabs = ['Groups-tab', 'Researchers-tab', 'Patents-tab', 'Projects-tab']
+    selection = tabs.pop(tabs.index(evt.target.value)) # remove the selected tab from the list
+    for tab in tabs:
+        document.select_one(f'#{tab}').style.display = 'none'
+    document.select_one(f'#{selection}').style.display = 'inline'
+
+    # Show the plots of the corresponding tab
+    # I know python 3.10 has switch statement, but the server is still on 3.9
+    if selection == 'Groups-tab':
+        update_all_plots(filters_to_use='FILTERS_GROUPS')
+    elif selection == 'Researchers-tab':
+        update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
+    elif selection == 'Patents-tab':
+        update_all_plots(filters_to_use='FILTERS_PATENTS')
+    else:
+        update_all_plots(filters_to_use='FILTERS_PROJECTS')
+
+@bind('#groups-graphs-button1', 'click')
+@bind('#groups-graphs-button2', 'click')
+@bind('#researchers-graphs-button1', 'click')
+@bind('#researchers-graphs-button2', 'click')
+@bind('#patents-graphs-button1', 'click')
+@bind('#projects-graphs-button1', 'click')
+@bind('#projects-graphs-button2', 'click')
+def hide_show(evt):
+    id = evt.target.id
+    state = document.select_one(f'#{id}').class_name.split()
+    if state[1] == 'anim-button-open':
+        document.select_one(f'#{id}').class_name = 'dima-click_buttons '+'anim-button-closed'
+        document.select_one(f'#{id[:-7]}graphs{id[-1]}').style.display = 'none'
+    else:                                       
+        document.select_one(f'#{id}').class_name = 'dima-click_buttons '+'anim-button-open'
+        document.select_one(f'#{id[:-7]}graphs{id[-1]}').style.display = 'flex'
+
+    if 'groups' in id:
+        update_all_plots(filters_to_use='FILTERS_GROUPS')
+    elif 'researchers' in id:
+        update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
+    elif 'patents' in id:
+        update_all_plots(filters_to_use='FILTERS_PATENTS')
+    else:
+        update_all_plots(filters_to_use='FILTERS_PROJECTS')
 # # ----------------------------------------------------------------------
 # @bind('.dima-nav-home li.nav-item', 'mouseover')
 # def nav_home_hover(evt):

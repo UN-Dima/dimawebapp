@@ -6,6 +6,7 @@ import json
 from groups.models import ResearchGroup
 from researchers.models import Professor
 from projects.models import Project
+from intellectual_property.models import Patent
 
 from django.http import HttpResponse, HttpResponseNotFound
 from django.views import View
@@ -50,6 +51,7 @@ class BarsTemplatePlot(TemplateView):
         'ocde': ResearchGroup,
         'knowledge': ResearchGroup,
         'faculties': ResearchGroup,
+        'departament':ResearchGroup,
         'categories': ResearchGroup,
         'researchers_category': Professor,
         'researchers_faculty': Professor,
@@ -61,6 +63,9 @@ class BarsTemplatePlot(TemplateView):
         'projects_project_state': Project,
         'projects_total_project': Project,
         'projects_execution_percentage': Project,
+        'patent_type': Patent,
+        'patent_faculty': Patent,
+        'patent_departament': Patent,
     }
 
     # ----------------------------------------------------------------------
@@ -126,8 +131,8 @@ class BarsTemplatePlot(TemplateView):
     def render_knowledge(self, filters):
         """"""
         self.template_name = "bars.html"
-        if 'category' in filters:
-            filters.pop('category')
+        if 'knowledge_area' in filters:
+            return {}
         x, y = zip(*[(ResearchGroup.objects.filter(knowledge_area=key, **filters).count(), label)
                    for key, label in ResearchGroup._meta.get_field('knowledge_area').choices])
         if sum(x) == 0:
@@ -146,7 +151,7 @@ class BarsTemplatePlot(TemplateView):
     # ----------------------------------------------------------------------
     def render_faculties(self, filters):
         """"""
-        self.template_name = "bars.html"
+        self.template_name = "Dima Pie.html"
         x, y = zip(*[(ResearchGroup.objects.filter(faculty=key).count(), label)
                    for key, label in ResearchGroup._meta.get_field('faculty').choices])
         if sum(x) == 0:
@@ -156,18 +161,42 @@ class BarsTemplatePlot(TemplateView):
             x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
             percentages = [round(100 * xi / sum(x)) for xi in x]
             y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+            total_x = sum(x)
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{x} grupos"
+        hovertemplate = "%{value} grupos<extra></extra>"
+        plottitle = f'{total_x}<br>Grupos'
+
+        return locals()
+
+    # ----------------------------------------------------------------------
+    def render_departament(self, filters):
+        """"""
+        self.template_name = "bars.html"
+        if 'departament' in filters:
+            return {}
+        x, y = zip(*[(ResearchGroup.objects.filter(departament=key, **filters).count(), label)
+                   for key, label in ResearchGroup._meta.get_field('departament').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+            total_x = sum(x)
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{value} grupos<extra></extra>"
 
         return locals()
 
     # ----------------------------------------------------------------------
     def render_categories(self, filters):
         """"""
-        self.template_name = "pie.html"
+        self.template_name = "bars.html"
         if 'category' in filters:
-            filters.pop('category')
+            return {}
         x, y = zip(*[(ResearchGroup.objects.filter(category=key, **filters).count(), label)
                    for key, label in ResearchGroup._meta.get_field('category').choices])
         if sum(x) == 0:
@@ -175,20 +204,19 @@ class BarsTemplatePlot(TemplateView):
         else:
             render_plot = True
             x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
-            #x = [round(100*xi/sum(x)) for xi in x]
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
 
         hovertemplate = "%{value} grupos"
+        texttemplate = "%{text}%"
 
         return locals()
 
     # ----------------------------------------------------------------------
     def render_researchers_category(self, filters):
         """"""
-        if 'category' in filters:
-            return {}
-
-        self.template_name = "bars.html"
-        x, y = zip(*[(Professor.objects.filter(category=key, **filters).count(), label)
+        self.template_name = "Dima Pie.html"
+        x, y = zip(*[(Professor.objects.filter(category=key).count(), label)
                    for key, label in Professor._meta.get_field('category').choices])
 
         y, x = zip(*[(k, dict(zip(y, x))[k]) for k in Choices.RESEARCHER_CATEGORY_SORTED])
@@ -198,13 +226,83 @@ class BarsTemplatePlot(TemplateView):
             render_plot = True
             x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
             percentages = [round(100 * xi / sum(x)) for xi in x]
+            total_x = sum(x)
             # y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{x} docentes"
+        hovertemplate = "%{value} docentes<extra></extra>"
+        plottitle = f'{total_x}<br> Docentes'
+
+        return locals()
+    # ----------------------------------------------------------------------
+    def render_patent_type(self, filters):
+        """"""
+        if 'patent_type' in filters:
+            return {}
+
+        self.template_name = "Dima Pie.html"
+        x, y = zip(*[(Patent.objects.filter(patent_type=key, **filters).count(), label)
+                   for key, label in Patent._meta.get_field('patent_type').choices])
+
+        y, x = zip(*[(k, dict(zip(y, x))[k]) for k in Choices.PATENT_TYPE])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            total_x = sum(x)
+            # y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{value} productos<extra></extra>"
+        plottitle = f'{total_x}<br> Productos'
+
+        return locals()
+    # ----------------------------------------------------------------------
+    def render_patent_faculty(self, filters):
+        """"""
+        if 'faculty' in filters:
+            return {}
+        if 'departament' in filters:
+            return {}
+
+        self.template_name = "bars.html"
+        x, y = zip(*[(Patent.objects.filter(faculty=key, **filters).count(), label)
+                   for key, label in Patent._meta.get_field('faculty').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} productos"
 
         return locals()
 
+    # ----------------------------------------------------------------------
+    def render_patent_departament(self, filters):
+        """"""
+        if 'departament' in filters:
+            return {}
+
+        self.template_name = "bars.html"
+        x, y = zip(*[(Patent.objects.filter(departament=key, **filters).count(), label)
+                   for key, label in Patent._meta.get_field('departament').choices])
+        if sum(x) == 0:
+            x, y = [], []
+        else:
+            render_plot = True
+            x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            percentages = [round(100 * xi / sum(x)) for xi in x]
+            y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+
+        texttemplate = "%{text}%"
+        hovertemplate = "%{x} productos"
+        return locals()
     # ----------------------------------------------------------------------
     def render_researchers_faculty(self, filters):
         """"""
@@ -314,24 +412,22 @@ class BarsTemplatePlot(TemplateView):
     # ----------------------------------------------------------------------
     def render_projects_call_type(self, filters):
         """"""
-        if 'call_type' in filters:
-            return {}
-        if 'call' in filters:
-            return {}
-
-        self.template_name = "bars.html"
-        x, y = zip(*[(Project.objects.filter(call_type=key, **filters).count(), label)
+        self.template_name = "Dima Pie.html"
+        x, y = zip(*[(Project.objects.filter(call_type=key).count(), label)
                    for key, label in Project._meta.get_field('call_type').choices])
         if sum(x) == 0:
             x, y = [], []
         else:
             render_plot = True
             x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))
+            y = ['Tipologia ' + label for label in y]
             percentages = [round(100 * xi / sum(x)) for xi in x]
             y = break_words(y, width=max(map(len, y)) / 2, break_='<br>')
+            total_x = sum(x)
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{x} proyectos"
+        hovertemplate = "%{value} proyectos<extra></extra>"
+        plottitle = f'{total_x}<br> Proyectos'
 
         return locals()
 

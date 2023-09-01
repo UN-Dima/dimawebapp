@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'visualizations.apps.VisualizationsConfig',
 
     'researchers.apps.ResearchersConfig',
+    'data.apps.DataConfig',
     'groups.apps.GroupsConfig',
     'dima.apps.DimaConfig',
     #'projects',

@@ -60,8 +60,7 @@ class Project(models.Model):
     # ----------------------------------------------------------------------
     @classmethod
     def unobscure(cls, obscured: bytes) -> bytes:
-        print('Goodbye, World!')
         return zlib.decompress(b64d(obscured))
 
     class Meta:
-        verbose_name = "Proyectos"
+        verbose_name = "Proyecto"

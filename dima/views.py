@@ -31,44 +31,44 @@ class HomeView(TemplateView):
 
 
 ########################################################################
-class DataView(TemplateView):
-    template_name = "data.html"
+# class DataView(TemplateView):
+#     template_name = "data.html"
 
-    # ----------------------------------------------------------------------
-    def get_context_data(self, **kwargs):
-        """"""
-        context = super().get_context_data(**kwargs)
-        context['OCDE'] = Choices.OCDE
-        context['groups'] = ResearchGroup.objects.all()
-        context['groups_admin'] = ResearchGroup._meta
-        # context['broadcasts'] = Broadcast.objects.filter(
-            # expiration__gt=date.today())
-        # context['broadcasts_admin'] = Broadcast._meta
-        context['faculties'] = Choices.FACULTY
-        context['departaments'] = Choices.DEPARTAMENT
-        context['categories'] = Choices.GROUPS_CATEGORY
-        context['professors'] = Professor.objects.all()
-        context['projects'] = Project.objects.all()
-        context['patents'] = Patent.objects.all()
-        context['patents_admin'] = Patent._meta
-        context['professors_admin'] = Professor._meta
-        context['researcher_categories'] = Choices.RESEARCHER_CATEGORY
-        context['patents_types'] = Choices.PATENT_TYPE
-        context['patent_admin'] = Patent._meta
-        context['dedication']=Choices.DEDICATION
-        context['type'] = Choices.CALL_TYPE
-        context['state'] = Choices.PROJECT_STATE
-        context['page'] = 'datos'
+#     # ----------------------------------------------------------------------
+#     def get_context_data(self, **kwargs):
+#         """"""
+#         context = super().get_context_data(**kwargs)
+#         context['OCDE'] = Choices.OCDE
+#         context['groups'] = ResearchGroup.objects.all()
+#         context['groups_admin'] = ResearchGroup._meta
+#         # context['broadcasts'] = Broadcast.objects.filter(
+#             # expiration__gt=date.today())
+#         # context['broadcasts_admin'] = Broadcast._meta
+#         context['faculties'] = Choices.FACULTY
+#         context['departaments'] = Choices.DEPARTAMENT
+#         context['categories'] = Choices.GROUPS_CATEGORY
+#         context['professors'] = Professor.objects.all()
+#         context['projects'] = Project.objects.all()
+#         context['patents'] = Patent.objects.all()
+#         context['patents_admin'] = Patent._meta
+#         context['professors_admin'] = Professor._meta
+#         context['researcher_categories'] = Choices.RESEARCHER_CATEGORY
+#         context['patents_types'] = Choices.PATENT_TYPE
+#         context['patent_admin'] = Patent._meta
+#         context['dedication']=Choices.DEDICATION
+#         context['type'] = Choices.CALL_TYPE
+#         context['state'] = Choices.PROJECT_STATE
+#         context['page'] = 'datos'
 
 
-        context['cards'] = [
-            ('Grupos de investigación', ResearchGroup.objects.count()),
-            ('Departamentos', len(ResearchGroup._meta.get_field('departament').choices)),
-            ('Investigadores', Researcher.objects.count() + Professor.objects.exclude(
-             ** fix_filters(Professor, {'category': 'Sin información', })[0]).count()),
-        ]
+#         context['cards'] = [
+#             ('Grupos de investigación', ResearchGroup.objects.count()),
+#             ('Departamentos', len(ResearchGroup._meta.get_field('departament').choices)),
+#             ('Investigadores', Researcher.objects.count() + Professor.objects.exclude(
+#              ** fix_filters(Professor, {'category': 'Sin información', })[0]).count()),
+#         ]
 
-        return context
+#         return context
 
 
 ########################################################################

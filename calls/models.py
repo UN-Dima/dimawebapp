@@ -19,8 +19,8 @@ class InternalCall(models.Model):
     expiration = models.DateField('Finalización', help_text='Hasta cuando está abierta la convocatoria')
     link = models.URLField('Link de referencia')
     title = models.CharField('Título', max_length=2 ** 10)
-    objective = HTMLField('Objetivo', max_length=2 ** 12)
-    headed = HTMLField('Dirigido a', max_length=2 ** 12)
+    objective = HTMLField('Objetivo', max_length=2 ** 12, default = ' ')
+    headed = HTMLField('Dirigido a', max_length=2 ** 12, default = ' ')
     active = models.BooleanField('Convocatoria activa', help_text='Oculta la convoctaria de la vista pública', default=True)
 
     # ----------------------------------------------------------------------

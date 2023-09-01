@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import InternalCallView, CallsView, JointCallView, MincienciasCallView, StudentsCallView
+from .views import CallsView, JointCallView, MincienciasCallView, StudentsCallView, InternalCallView
 
 
 urlpatterns = [

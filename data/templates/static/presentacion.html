@@ -1,0 +1,37 @@
+{% extends "base_unal.html" %}
+{% load admin_urls %}
+
+{% block 'head-title' %}Presentación - {% endblock %}
+
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a href="#">Presentación</a></li>
+    </ol>
+  </nav>
+</div>
+{% endblock %}
+
+{% block 'main' %}
+
+<div class="container-lg">
+  <div class="row">
+
+    <h1 class="display-3">Presentación
+      <small class="text-muted">
+        {% if user.is_authenticated %}
+          <a href='{% url presentation_admin|admin_urlname:'change' presentation.pk %}'> Editar <i class="bi bi-pencil-square"></i></a>
+        {% endif %}
+      </small>
+    </h1>
+    <div class="dima-content">
+      {{presentation.content|safe}}
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}
+
