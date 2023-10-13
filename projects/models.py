@@ -17,9 +17,9 @@ class Call(models.Model):
 ########################################################################
 class Project(models.Model):
     """"""
-    hermes_cod = models.IntegerField('Código Hermes')
-    quipu_cod_0 = models.IntegerField('Código QUIPU_1',null=True,blank=True)
-    quipu_cod_1 = models.IntegerField('Código QUIPU_2',null=True,blank=True)
+    hermes_cod = models.BigIntegerField('Código Hermes', primary_key = True)
+    quipu_cod_0 = models.BigIntegerField('Código QUIPU_1', null=True, blank=True)
+    quipu_cod_1 = models.BigIntegerField('Código QUIPU_2', null=True, blank=True)
     project_name = models.CharField('Nombre del Proyecto',max_length=2**6)
     project_state = models.CharField('Estado del Proyecto',**Choices('PROJECT_STATE'))
     call_type = models.CharField('Tipo de convocatoria',**Choices('CALL_TYPE'),default='')
@@ -32,8 +32,8 @@ class Project(models.Model):
     email=models.EmailField('Correo del Investigador')
     departament = models.CharField('Departamento', **Choices('DEPARTAMENT'))
     faculty = models.CharField('Facultad', **Choices('FACULTY'))
-    start_date=models.CharField('Fecha Inicio',null=True,blank=True, max_length=2**6)
-    end_date=models.CharField('Fecha Inicio',null=True,blank=True, max_length=2**6) 
+    start_date = models.CharField('Fecha Inicio',null=True,blank=True, max_length=2**6)
+    end_date = models.CharField('Fecha Inicio',null=True,blank=True, max_length=2**6) 
     total_project = models.IntegerField('Total Proyecto',null=True,blank=True)
     total_appropriation = models.IntegerField('Total Apropiación',null=True,blank=True)
     executed = models.IntegerField('Ejecutado',null=True,blank=True)

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "base_unal.html" %}
+{% load humanize %}
+{% load admin_urls %}
+{% load dima_utils %}
+{% load template_tags %}
+{% block 'head-title' %}{{project.project_name}} - {% endblock %}
+
+
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        Está en: <a href="/">Inicio</a>
+      </li>
+      <li aria-current="page" class="breadcrumb-item active">
+        <a href="#">Projects</a>
+      </li>
+      <li aria-current="page" class="breadcrumb-item active">
+        <a href="#">{{project.project_name | title}}</a>
+      </li>
+      <li aria-current="page" class="breadcrumb-item active">
+        <a href="#">Reporte</a>
+      </li>
+    </ol>
+  </nav>
+</div>
+{% endblock %}
+
+
+{% block 'main' %}
+<div class="container-lg">
+
+    <h1 class="display-3">Generar Reporte</h1>
+
+    <div class="dima-content">
+        <div>
+            <form action="{% url 'projects' project.obscure %}/report/pdf">
+                <label for="project_name"><b>Nombre del proyecto:</b></label><br>
+                <textarea id="project_name" name="project_name" rows="4" cols="50">{{project.project_name}}</textarea><br>
+                <label for="hermes_cod"><b>Codigo Hermes:</b></label><br>
+                <input type="number" name="hermes_cod" id="hermes_cod" value="{{project.hermes_cod}}"><br>
+                <label for="quipu_cod_0"><b>Codigo Quipu:</b></label><br>
+                <input type="number" name="quipu_cod_0" id="quipu_cod_0" value="{{project.quipu_cod_0}}"><br>
+                {% if project.quipu_cod_1 != None %}
+                    <label for="quipu_cod_1"><b>Codigo Quipu 2:</b></label><br>
+                    <input type="number" name="quipu_cod_1" id="quipu_cod_1" value="{{project.quipu_cod_1}}"><br>
+                {% endif %}
+                <label for="call"><b>Nombre de la convocatoria:</b></label><br>
+                <textarea id="call" name="call" rows="4" cols="50">{{project.call}}</textarea><br>
+                <label for="researcher"><b>Nombre del profesor:</b></label><br>
+                <input type="text" name="researcher" id="researcher" value="{{project.first_name}} {{project.last_name}}"><br>
+                <label for="start_date"><b>Fecha de Inicio:</b></label><br>
+                <input type="date" name="start_date" id="start_date" value="{{project.start_date|date_to_html}}"><br>
+                <label for="end_date"><b>Fecha de Finalización:</b></label><br>
+                <input type="date" name="end_date" id="end_date" value="{{project.end_date|date_to_html}}"><br>
+                <label for="executed"><b>Presupuesto Ejecuado:</b></label><br>
+                <input type="text" name="executed" id="executed" value="{{project.executed}}"><br>
+                <label for="total_project"><b>Presupuesto Total:</b></label><br>
+                <input type="text" name="total_project" id="total_project" value="{{project.total_project}}"><br>
+                <div>
+                  <label for="source_1"><b>Desembolso #1</b></label><br>
+                  <input type="text" name="source_1" id="source_1">
+                  <button class="dima-click_buttons add" id="add_source--1" type="button" title="Agregar Desembolso">+</button>
+                  <button class="dima-click_buttons remove" id="remove_source--1" type="button" title="Quitar Desembolso">-</button><br>
+                </div>
+                <label for="note"><b>Nota</b></label><br>
+                <textarea id="note" name="note" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Generar">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -82,3 +82,56 @@ def load_report(file_path):
 
         report.append(project)
     return report
+
+
+def load_projects_xls(file_path):
+    # Create a 'soup' object.
+    # Hermes currently generates xls files using xml format.
+    # This means although programs like excel can open the files
+    # they should be treated like xmls to prevent data loss.
+    soup = bs(file_path.read(), "xml")
+
+    # We create a 'data' list
+    # Think like each entry on this list is a cell in order from
+    # top-left to bottom-right, with empty cells in between being
+    # set to NaN.
+    data = []
+    for d in soup.find_all("Data"):
+        if d.contents:
+            data += [d.contents[0]]
+        else:
+            data += [float("nan")]
+
+    # The last cell has the report's date.
+    # The row has a mixture of text and date, so I manually get rid of the text.
+    # This should be done with regex in the future
+    date = data[-1][19:-16]
+    date = datetime.strptime(date, '%b %d, %Y %I:%M %p').strftime('%d/%b/%Y')
+    
+    # This assumes the table was generated with all the information available.
+    # I am also assuming the "research group" column is being included.
+    # In total we should have 37 columns per project.
+    headers = data[3:40] 
+
+    # The last cell has the date which we already extracted.
+    # The cell before that is empty for padding.
+    # Aside from that: project_info = data - headers
+    project_info = data[40:-2]
+
+    # We'll make a list of dictionaries so it's easy for tools like pandas to create headers
+    # later on.
+    df = []
+
+    # num_projects = project_info/num_headers
+    for i in range(int(len(project_info)/37)):
+        # Create an empty dictionary
+        entry = {}
+        # For each header we include the corresponding info.
+        # Since we read the data as a list, it should be in the same order
+        # as headers.
+        for h,dat in zip(headers, project_info[i*37:(i+1)*37]):
+            entry[h] = dat
+        # Add the dictionary to the list
+        df += [entry]
+
+    return df, date

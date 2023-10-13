@@ -25,20 +25,20 @@ class DataView(TemplateView):
         self.template_name = "tables.html"
 
         context = self.get_context_data(**kwargs)
-        choice = json.loads(request.POST['data'])['data_choice']
-        context['data_choice'] = choice
+        #choice = json.loads(request.POST['data'])['data_choice']
+        #context['data_choice'] = choice
 
-        context['professors'] = Professor.objects.all()
-        context['professors_admin'] = Professor._meta
-        context['patents_admin'] = Patent._meta
-        context['patents'] = Patent.objects.all()
-        context['projects_admin'] = Project._meta
-        context['projects'] = Project.objects.all()
-        context['groups_admin'] = ResearchGroup._meta
-        context['groups'] = ResearchGroup.objects.all()
-        context['categories'] = Choices.GROUPS_CATEGORY
-        context['faculties'] = Choices.FACULTY
-        context['departaments'] = Choices.DEPARTAMENT
+        # context['professors'] = Professor.objects.all()
+        # context['professors_admin'] = Professor._meta
+        # context['patents_admin'] = Patent._meta
+        # context['patents'] = Patent.objects.all()
+        # context['projects_admin'] = Project._meta
+        # context['projects'] = Project.objects.all()
+        # context['groups_admin'] = ResearchGroup._meta
+        # context['groups'] = ResearchGroup.objects.all()
+        # context['categories'] = Choices.GROUPS_CATEGORY
+        # context['faculties'] = Choices.FACULTY
+        # context['departaments'] = Choices.DEPARTAMENT
         
         # context['cards'] = [
         #     ('Grupos de investigación', ResearchGroup.objects.count()),

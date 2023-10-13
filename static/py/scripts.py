@@ -1,5 +1,6 @@
 from browser import document, bind, html, window
 from time import sleep
+import re
 from dima_scripts import ajax_render, update_plot, ajax_request
 import json
 import logging
@@ -203,7 +204,7 @@ def update_researcher_dedication(evt):
         FILTERS_RESEARCHERS['dedication'] = evt.target.value
 
     update_all_plots(filters_to_use='FILTERS_RESEARCHERS')
-    ajax_render('dima-placeholder__researchers',
+    ajax_render('dima-render--researchers',
                 "/investigadores/", FILTERS_RESEARCHERS)
 
 # ----------------------------------------------------------------------
@@ -216,10 +217,29 @@ def update_patents_departament(evt):
     else:
         FILTERS_PATENTS['departament'] = evt.target.value
 
-    ajax_render('dima-placeholder__patents',
+    ajax_render('dima-render--patents',
                 "/propiedad_intelectual/patents/", FILTERS_PATENTS)
+    update_all_plots(filters_to_use='FILTERS_PATENTS')
+# ----------------------------------------------------------------------
+@bind('#dima-select--faculty__patents', 'change')
+def update_patents_departament(evt):
+    """"""
+    global FILTERS_PATENTS
+    if evt.target.value == 'All':
+        FILTERS_PATENTS.pop('faculty')
+    else:
+        FILTERS_PATENTS['faculty'] = evt.target.value
 
+    if 'departament' in FILTERS_PATENTS:
+        FILTERS_PATENTS.pop('departament')
 
+    document.select_one('#dima-select--departament__patents').value = 'All'
+    update_all_options(filters_to_use='FILTERS_RESEARCHERS',
+                       id='#dima-select--departament__patents')
+
+    ajax_render('dima-render--patents',
+                "/propiedad_intelectual/patents/", FILTERS_PATENTS)
+    update_all_plots(filters_to_use='FILTERS_PATENTS')
 # ----------------------------------------------------------------------
 @bind('#dima-select--patent_type__patents', 'change')
 def update_patents_types(evt):
@@ -230,8 +250,9 @@ def update_patents_types(evt):
     else:
         FILTERS_PATENTS['patent_type'] = evt.target.value
 
-    ajax_render('dima-placeholder__patents',
+    ajax_render('dima-render--patents',
                 "/propiedad_intelectual/patents/", FILTERS_PATENTS)
+    update_all_plots(filters_to_use='FILTERS_PATENTS')
 
 # ----------------------------------------------------------------------
 @bind('#dima-select--call_type__projects', 'change')
@@ -512,6 +533,44 @@ def hide_show(evt):
         update_all_plots(filters_to_use='FILTERS_PATENTS')
     else:
         update_all_plots(filters_to_use='FILTERS_PROJECTS')
+
+@bind("#executed", "keyup")
+@bind("#total_project", "keyup")
+@bind("#source_1", "keyup")
+def monetize(event):
+    id = event.target.id
+    value = document[id].value
+    value = re.subn('[^0-9]','',value)[0]
+    value = [value[::-1][i:i+3] for i in range(0, len(value), 3)]
+    document[id].value = f'${".".join(value)[::-1]}'
+
+@bind("#add_source--1", "click")
+def add_source(evt):
+    parent = document.select_one(f'#source_1').parent
+    i = 2
+    while document.select_one(f'#source_{i}'):
+        i += 1
+    label = html.LABEL(**{"for":f"source_{i}"}) 
+    label <= html.B(f'Desembolso #{i}')
+    parent <= label + html.BR()
+    parent <= html.INPUT(type="text", name=f"source_{i}", id=f"source_{i}") + html.BR()
+    parent.children[-2].bind("keyup", monetize)
+    
+@bind("#remove_source--1", "click")
+def remove_source(evt):
+    parent = document.select_one(f'#source_1').parent
+    i = 2
+    while document.select_one(f'#source_{i}'):
+        i += 1
+    i -= 1
+    if i>1:
+        children = parent.children
+        index = children.index(document.select_one(f'#source_{i}'))
+        children[index+1].remove() # <br>
+        children[index].remove() # <input>
+        children[index-1].remove() # <br>
+        children[index-2].remove() # <label>
+
 # # ----------------------------------------------------------------------
 # @bind('.dima-nav-home li.nav-item', 'mouseover')
 # def nav_home_hover(evt):

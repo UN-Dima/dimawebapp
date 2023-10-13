@@ -187,7 +187,7 @@ class BarsTemplatePlot(TemplateView):
             total_x = sum(x)
 
         texttemplate = "%{text}%"
-        hovertemplate = "%{value} grupos<extra></extra>"
+        hovertemplate = "%{value} grupos"
 
         return locals()
 
@@ -241,12 +241,13 @@ class BarsTemplatePlot(TemplateView):
             return {}
 
         self.template_name = "Dima Pie.html"
-        x, y = zip(*[(Patent.objects.filter(patent_type=key, **filters).count(), label)
+        x, y = zip(*[(Patent.objects.filter(patent_type=key).count(), label)
                    for key, label in Patent._meta.get_field('patent_type').choices])
 
         y, x = zip(*[(k, dict(zip(y, x))[k]) for k in Choices.PATENT_TYPE])
         if sum(x) == 0:
             x, y = [], []
+            total_x = 0
         else:
             render_plot = True
             x, y = map(list, (zip(*filter(lambda l: l[0], zip(x, y)))))

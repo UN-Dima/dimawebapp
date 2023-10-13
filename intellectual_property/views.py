@@ -20,7 +20,7 @@ class PatentsView(TemplateView):
             Patent, json.loads(request.POST['data']))[0]
 
         context['patents'] = Patent.objects.filter(
-            **{k: filters[k] for k in ['departament', 'patent_type'] if k in filters})
+            **{k: filters[k] for k in ['departament', 'patent_type', 'faculty'] if k in filters})
 
         context['patents_admin'] = Patent._meta
         return self.render_to_response(context)

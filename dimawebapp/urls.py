@@ -40,9 +40,6 @@ urlpatterns = [
 
     path("datos/", include('data.urls')),
 
-
-
-
     # Third party modules
     path('tinymce/', include('tinymce.urls')),
     path('.well-known/', include('letsencrypt.urls')),

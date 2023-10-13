@@ -77,4 +77,19 @@
 
  <!-- </div>
 </div>-->
+    <div id = "PopOutDiv" class="PopOut">
+      <div class="flex-div">
+        <button id="Close_Popup" class="Button_Transparent">X</button>
+        <img id="PopOutImg" src="/static/popups/invitacion_grupos_investigacion.jpeg" alt="NewsImage" class="NewsImage" title="Cerrar">
+      </div>
+    </div>
+  <script type="text/python">
+    from browser import bind, document
+    
+    @bind("#PopOutDiv", "click")
+    @bind("#PopOutImg", "click")
+    @bind("#Close_Popup", "click")
+    def close_popup(event):
+        document["PopOutDiv"].style.display = "none"
+  </script>
 {% endblock %}

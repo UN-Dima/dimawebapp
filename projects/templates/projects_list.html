@@ -33,9 +33,10 @@
       {% replace project.project_state_pretty '' '' as state %}
       <tr>
         <td class="dima-group--view" data-obscure="{{project.obscure}}">
-          <a class="btn btn-link dima--table-btn-link" href="{% url 'projects' project.obscure %}" role="button">{{name}}</a>
+          <a class="btn btn-link dima--table-btn-link" href="{% url 'projects' project.obscure %}" role="button" target="_blank">{{name}}</a>
           {% if user.is_authenticated %}
             <a class="" href="{% url projects_admin|admin_urlname:'change' project.obscure %}">Editar<i class="bi bi-pencil-square"></i></a>
+            <a class="" href="{% url 'projects' project.obscure %}/report" target="_blank"> Reporte<i class="bi bi-pencil-square"></i></a>
           {% endif %}
         </td>
         <td style="text-align:center;vertical-align:top;"> {{first_name|title}} {{last_name|title}}</td>

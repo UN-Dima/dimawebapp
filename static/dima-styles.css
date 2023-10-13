@@ -1648,7 +1648,7 @@ text-align: right !important;
   margin:0;
   width: 45px;
   height: 45px;
-  transform: rotate(90deg);
+  transform: rotate(270deg);
 }
 
 .anim-button-closed {
@@ -1657,7 +1657,7 @@ text-align: right !important;
   margin:0;
   width: 45px;
   height: 45px;
-  transform: rotate(0deg);
+  transform: rotate(90deg);
 }
 
 .row {
@@ -1695,4 +1695,43 @@ text-align: right !important;
   font-weight:bold;
   font-size: 20px;
   cursor:help;
+}
+
+.add {
+  color:white;
+  background-color: #94b43b;
+  font-size: 30px;
+  padding:2px 10px;
+  box-shadow: 0px 16px 13px #EFF1F9BF;
+}
+
+.remove {
+  color:white;
+  background-color: #b43b3b;
+  font-size: 30px;
+  padding:2px 10px;
+  box-shadow: 0px 16px 13px #EFF1F9BF;
+}
+
+.PopOut{
+  z-index: 5;
+  position: fixed;
+  background-color: rgba(0,0,0,0.9);
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+.NewsImage{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  padding-top:80px;
+  cursor:pointer;
+}
+.Button_Transparent{
+  font-size: 30px;
+  border-color:rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0)
 }
