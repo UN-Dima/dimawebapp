@@ -1,4 +1,4 @@
-from browser import document, bind, html, window, ajax, console
+from browser import document, bind, html, window, ajax, console, window
 
 Date = window.Date.new
 
@@ -61,6 +61,8 @@ def ondrop(evt):
         if req.status == 200:
             for line in req.json['msg']:
                 _ul <= html.LI(line)
+            if req.json['redirect']:
+                window.location.href = req.json['redirect']
         else:
             _ul <= html.LI('Se produjo un error al enviar el formulario')
 

@@ -269,11 +269,11 @@ class Choices:
     )
 
     CALL_TYPE = (
-        'Minciencias',
-        'Regalías',
-        'Interna',
         'Externa',
+        'Interna',
+        'Minciencias',
         'Otra',
+        'Regalías',
     )
 
     CALL_STATE = (
@@ -282,15 +282,15 @@ class Choices:
     )
 
     CALL_STUDENT = (
-        'Pregrado',
         'Posgrado'
+        'Pregrado',
     )
 
     PROJECT_STATE = (
-        'Propuesto',
-        'No aprobado',
         'Activo',
         'Finalizado',
+        'No aprobado',
+        'Propuesto',
         'Sin finalizar',
         'Suspendido',
     )

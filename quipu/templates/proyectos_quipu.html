@@ -1,64 +1,69 @@
 {% extends "base.html" %}
 {% load admin_urls %}
 
-{% block 'head-title' %}Proyectos - {% endblock %}
+{% block 'head-title' %}Quipu - {% endblock %}
 
 {% block 'main' %}
+{% if user.is_authenticated %}
+  <div class="container-lg">
+    <div class="row">
 
-<div class="container-lg">
-  <div class="row">
-
-    <h1 class="display-3">Proyectos</h1>
-
-
+      <h1 class="display-5">Información Quipu</h1>
 
 
-      <form method="post" class="dima-dragndrop_form" enctype="multipart/form-data" action="{% url 'proyectos' %}">
-        {% csrf_token %}
-        <!--<input type="file" name="xmlfile" />-->
-        <!--<input type="submit" name="submit" value="Upload" />-->
 
-          <div class="dima-dragndrop">
-            <!--<input type="file" name="xmlfile" id="file" class="dima-dragndrop_input" multiple />-->
 
-            <div class="mb-3">
-              <input class="form-control dima-dragndrop_input" name="xmlfile" type="file" id="file" multiple>
+        <form method="post" class="dima-dragndrop_form" enctype="multipart/form-data" action="{% url 'proyectos' %}">
+          {% csrf_token %}
+          <!--<input type="file" name="xmlfile" />-->
+          <!--<input type="submit" name="submit" value="Upload" />-->
+
+            <div class="dima-dragndrop">
+              <!--<input type="file" name="xmlfile" id="file" class="dima-dragndrop_input" multiple />-->
+
+              <div class="mb-3">
+                <input class="form-control dima-dragndrop_input" name="xmlfile" type="file" id="file" multiple>
+              </div>
+
+              <div class="dima-dragndrop_area" for="dima-dragndrop_form">
+                <strong>Seleccionar archivos</strong><span> o arrastrarlos aquí</span>.<br><br>
+              </div>
             </div>
 
-            <div class="dima-dragndrop_area" for="dima-dragndrop_form">
-              <strong>Seleccionar archivos</strong><span> o arrastrarlos aquí</span>.<br><br>
-            </div>
-          </div>
+        </form>
 
-      </form>
-
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Código</th>
-        <th scope="col">Empresa</th>
-        <th scope="col">Recursos</th>
-        <th scope="col">Proyecto</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      {% for project in projects %}
+    <table class="table table-hover">
+      <thead>
         <tr>
-          <td><a class="btn btn-link dima--table-btn-link" href="{% url 'proyectos' project.pk %}" role="button">{{project.code}}</a></td>
-          <td>{{project.empresa}}</td>
-          <td>{{project.resources_list}}</td>
-          <td>{{project.proyecto}}</td>
+          <th scope="col">Código</th>
+          <th scope="col">Empresa</th>
+          <th scope="col">Recursos</th>
+          <th scope="col">Proyecto</th>
         </tr>
-      {% endfor %}
-    </tbody>
+      </thead>
 
-  </table>
+      <tbody>
+        {% for project in projects %}
+          <tr>
+            <td><a class="btn btn-link dima--table-btn-link" href="{% url 'proyectos' project.pk %}" role="button">{{project.code}}</a></td>
+            <td>{{project.empresa}}</td>
+            <td>{{project.resources_list}}</td>
+            <td>{{project.proyecto}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
 
 
 
 
+    </div>
   </div>
-</div>
+{% else %}
+  <div class="container-lg">
+    <h1>Usuario no autenticado</h1>
+  </div>
+{% endif %}
 {% endblock %}
 
