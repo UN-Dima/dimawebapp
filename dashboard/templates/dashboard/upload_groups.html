@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load admin_urls %}
+{% load dima_utils %}
+
+{% block 'head-title' %}Subir Proyectos - {% endblock %}
+
+{% block 'main' %}
+{% if user.is_authenticated %}
+  <div class="container-lg">
+    <div class="row">
+
+      <h1 class="display-5">Subir Proyectos</h1>
+
+        <form method="post" class="dima-dragndrop_form" enctype="multipart/form-data" action="{% url 'upload_project' %}">
+          {% csrf_token %}
+          <!--<input type="file" name="xmlfile" />-->
+          <!--<input type="submit" name="submit" value="Upload" />-->
+
+            <div class="dima-dragndrop">
+              <!--<input type="file" name="xmlfile" id="file" class="dima-dragndrop_input" multiple />-->
+
+              <div class="mb-3">
+                <input class="form-control dima-dragndrop_input" name="xmlfile" type="file" id="file" multiple>
+              </div>
+
+              <div class="dima-dragndrop_area" for="dima-dragndrop_form">
+                <strong>Seleccionar archivos</strong><span> o arrastrarlos aquí</span>.<br><br>
+              </div>
+            </div>
+
+        </form>
+
+    </div>
+  </div>
+{% else %}
+  <div class="container-lg">
+    <h1>Usuario no autenticado</h1>
+  </div>
+{% endif %}
+{% endblock %}
+

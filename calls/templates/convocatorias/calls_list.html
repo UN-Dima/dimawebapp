@@ -13,7 +13,11 @@
                 <div class="col-md-12 col-lg-12 dima-margin-bottom__30">
                 <div class="card calls-card">
                     <div class="calls-img">
+                        {% if call.image %}
+                        <img class="call-img" src="/media/{{call.image}}" alt="image">
+                        {% else %}
                         <img class="call-img" src="/static/bootstrap-icons/image.svg" alt="image">
+                        {% endif %}
                     </div>
                     <div class="card-body calls-card-body">
                         <div class="cards-title">
@@ -22,18 +26,36 @@
                                     <a href="{% url 'students_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a>
                                 </h1>
                             </div>
+                            {% if calls_admin.db_table == 'calls_studentscall' %}
                             <div class="db-title student-title">
                                 <b>Estudiantes Auxiliares</b>
                             </div>
+                            {% elif calls_admin.db_table == 'calls_jointcall'%}
+                            <div class="db-title joint-title">
+                                <b>Conjunta</b>
+                            </div>
+                            {% elif calls_admin.db_table == 'calls_internalcall'%}
+                            <div class="db-title inner-title">
+                                <b>Interna</b>
+                            </div>
+                            {% elif calls_admin.db_table == 'calls_mincienciascall'%}
+                            <div class="db-title minscience-title">
+                                <b>Minciencias</b>
+                            </div>
+                            {% endif %}
                         </div>
 
                     <dl class="row">
-                        <dt class="col-sm-4">Proyecto</dt>
-                        <dd class="col-sm-8">{{call.funding}}</dd>
+                        {% if calls_admin.db_table == 'calls_studentscall' %}
+                            <dt class="col-sm-4">Proyecto</dt>
+                            <dd class="col-sm-8">{{call.funding}}</dd>
 
-                        <dt class="col-sm-4">Estímulo económico</dt>
-                        <dd class="col-sm-8">{{call.economic_stimulus}}</dd>
-
+                            <dt class="col-sm-4">Estímulo económico</dt>
+                            <dd class="col-sm-8">{{call.economic_stimulus}}</dd>
+                        {% elif calls_admin.db_table == 'calls_jointcall'%}
+                            <dt class="col-sm-4">Objectivo</dt>
+                            <dd class="col-sm-8">{{call.objective | untagged}}</dd>
+                        {% endif %}
                         <!-- <dt class="col-sm-4">Tipo de estudiante{% if call.students > 1 %}s{% endif %}</dt>
                         <dd class="col-sm-8">
                         {% if call.undergraduate and call.postgraduate %}
@@ -47,6 +69,7 @@
                     </dl>
                     <br>
                     <div class="cards-details">
+                        {% if calls_admin.db_table == 'calls_studentscall' %}
                         <div class="card-state"><p class="card-attribute">Estudiante</p>
                             {% if call.undergraduate and call.postgraduate %}
                                 Pregrado y Posgrado
@@ -56,6 +79,11 @@
                                 Posgrado
                             {% endif %}
                         </div>
+                        {% elif calls_admin.db_table == 'calls_jointcall'%}
+                        <div class="card-state"><p class="card-attribute">Dirigido a</p>
+                            {{call.headed | untagged}}
+                        </div>
+                        {% endif %}
                             {% if user.is_authenticated %}
                                 {% if call.expired %}<div class="card-state card-state-closed"><p class="card-attribute">Finalizada</p>
                                 {% else %}<div class="card-state card-state-active"><p class="card-attribute">Activa hasta</p>{% endif %}
@@ -67,8 +95,16 @@
                             {{call.expiration}}
                         </div>
                     </div>
-
+                    {% if calls_admin.db_table == 'calls_studentscall' %}
                     <a href="{% url 'students_call' call.pk %}" class="card-link">Ver convocatoria...</a>
+                    {% elif calls_admin.db_table == 'calls_jointcall'%}
+                    <a href="{% url 'joint_call' call.pk %}" class="card-link">Ver convocatoria...</a>
+                    {% elif calls_admin.db_table == 'calls_internalcall'%}
+                    <a href="{% url 'internal_call' call.pk %}" class="card-link">Ver convocatoria...</a>
+                    {% elif calls_admin.db_table == 'calls_mincienciascall'%}
+                    <a href="{% url 'minciencias_call' call.pk %}" class="card-link">Ver convocatoria...</a>
+                    {% endif %}
+
 
                     </div>
                 </div>
