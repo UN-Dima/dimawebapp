@@ -64,6 +64,7 @@ def ondrop(evt):
                 window.location.href = req.json['redirect']
         else:
             _ul <= html.LI('Se produjo un error al enviar el formulario')
+            print(req.json['msg'])
 
     req.bind('complete', handle_response)
 

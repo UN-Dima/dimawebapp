@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User, Group
 from django.conf import settings
 from admin_interface.models import Theme
-from .models import Newsletter, Broadcast, Team, Content, Attachment_Content
+from .models import Newsletter, Broadcast, Team, Content, Attachment_Content, UpdateFiles
 
 admin.site.unregister(Group)
 # admin.site.unregister(User)
@@ -42,6 +42,10 @@ class ContentAdmin(admin.ModelAdmin):
     inlines = [Attachment_ContentAdmin,
                ]
 
+@admin.register(UpdateFiles)
+class ContentAdmin(admin.ModelAdmin):
+    list_display = ('table_to_update', 'file', 'upload_date')
+    list_display_links = ['table_to_update']
 
 # @admin.register(Content)
 # class ContentAdmin(SummernoteModelAdmin):

@@ -9,9 +9,12 @@ from django.dispatch import receiver
 from tinymce.models import HTMLField
 from datetime import date
 
+from utils.update_db import update_table
+
 upload_to_newsletter = os.path.join('uploads', 'newsletter')
 upload_to_broadcast = os.path.join('uploads', 'broadcast')
 upload_to_content = os.path.join('uploads', 'content')
+upload_to_updates = os.path.join('uploads', 'updates')
 
 
 # ----------------------------------------------------------------------
@@ -106,6 +109,30 @@ class Newsletter(models.Model):
     def __str__(self):
         return f'Editar boletín (ID:#{self.pk})'
 
+
+class UpdateFiles(models.Model):
+    """"""
+    table_to_update = models.CharField('Tabla', max_length=2**8, help_text='Base de Datos a Actualizar')
+    file = models.FileField('Archivo', upload_to=upload_to_updates)
+    upload_date = models.DateTimeField(auto_now_add=True)
+
+    def save(self):
+        """"""
+        if self.file.name.lower().endswith('.xls') or self.file.name.lower().endswith('.xml'):
+            super(UpdateFiles, self).save()
+            print(self.file.name)
+            update_table(self.table_to_update, self.file.name)
+            print('Hello, World!')
+        else:
+            raise 'Archivo No Soportado'
+
+    class Meta:
+        verbose_name = "Actualizar XLS"
+        verbose_name_plural = "Actualizaciónes de XLS"
+
+    def __str__(self):
+        return f'Editar xls de referencia'
+        
 
 ########################################################################
 class Broadcast(models.Model):

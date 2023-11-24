@@ -82,6 +82,7 @@ INSTALLED_APPS = [
     #'quipu.apps.QuipuConfig',
     'dashboard.apps.DashboardConfig',
     'quipu',
+    'django_cleanup.apps.CleanupConfig'
 ]
 
 MIDDLEWARE = [

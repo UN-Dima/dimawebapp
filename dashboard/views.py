@@ -4,8 +4,10 @@ import re
 
 from django.views.generic.base import TemplateView
 from django.http import JsonResponse, FileResponse
+from django.core.exceptions import PermissionDenied
 
 from projects.models import Project
+from groups.models import ResearchGroup
 from quipu.models import Resources_QuipuProject, Row_QuipuProject
 from utils import nan_2_zero
 from utils.xml_scraper import load_projects_xls
@@ -26,8 +28,11 @@ def download_backup(request, obscure=None, *args, **kwargs):
     global OLD_DB
     old_database = OLD_DB
     OLD_DB = None
-    return FileResponse(open(f'{old_database}.sqlite3','rb'), as_attachment=True,
+    if request.user.is_authenticated:
+        return FileResponse(open(f'{old_database}.sqlite3','rb'), as_attachment=True,
                         filename=f'{old_database}.sqlite3')
+    else:
+        raise PermissionDenied
 
 ########################################################################
 class DashboardProyectView(TemplateView):
@@ -40,7 +45,7 @@ class DashboardProyectView(TemplateView):
         if pk:
             context['project'] = Project.objects.get(pk=pk)
             context['project_admin'] = Project._meta
-            self.template_name = "proyectos_quipu_view.html"
+            self.template_name = "projects_view.html"
         else:
             context['projects'] = Project.objects.all()
             context['projects_admin'] = Project._meta
@@ -53,11 +58,13 @@ class DashboardProyectView(TemplateView):
         """"""
         global OLD_DB
         messages = []
+        response = {}
         for file in request.FILES.getlist('xmlfile'):
             if file.name.lower().endswith('.xls'):
                 df, report_date = load_projects_xls(file)
                 OLD_DB = f'{DATABASES["default"]["NAME"][:-8]}_{datetime.now()}'
                 os.system(f'cp "{DATABASES["default"]["NAME"]}" "{OLD_DB}.sqlite3"')
+                response['redirect'] = f'/dashboard/download/'
                 status, msg = self.save_report(df)
                 if status:
                     messages.append(f'Cargado: {file.name}')
@@ -66,9 +73,8 @@ class DashboardProyectView(TemplateView):
                     messages.append(f'Error: {msg}')
             else:
                 messages.append(f'Archivo no soportado: {file.name}')
-
-        return JsonResponse({'msg': messages,
-                             'redirect':f'/dashboard/download/'})
+        response['msg'] = messages
+        return JsonResponse(response)
     def foo(self, request, *args, **kwargs):
         print('Hello, World!')
         print(request)
@@ -256,47 +262,31 @@ class DashboardProyectView(TemplateView):
             return False, e
 ########################################################################
 
-# class DashboardGroupView(TemplateView):
+class DashboardGroupView(TemplateView):
 
-#     # ----------------------------------------------------------------------
-#     def get(self, request, pk=None, *args, **kwargs):
-#         """"""
-#         context = self.get_context_data(**kwargs)
+    # ----------------------------------------------------------------------
+    def get(self, request, pk=None, *args, **kwargs):
+        """"""
+        context = self.get_context_data(**kwargs)
 
-#         if pk:
-#             context['project'] = Project.objects.get(pk=pk)
-#             context['project_admin'] = Project._meta
-#             self.template_name = "proyectos_quipu_view.html"
-#         else:
-#             context['projects'] = Project.objects.all()
-#             context['projects_admin'] = Project._meta
-#             self.template_name = "dashboard/upload_groups.html"
+        if pk:
+            context['project'] = ResearchGroup.objects.get(pk=pk)
+            context['project_admin'] = ResearchGroup._meta
+            self.template_name = "group_view.html"
+        else:
+            context['projects'] = ResearchGroup.objects.all()
+            context['projects_admin'] = ResearchGroup._meta
+            self.template_name = "dashboard/upload_groups.html"
 
-#         return self.render_to_response(context)
+        return self.render_to_response(context)
 
-#     # ----------------------------------------------------------------------
-#     def post(self, request, *args, **kwargs):
-#         """"""
-#         global OLD_DB
-#         messages = []
-#         for file in request.FILES.getlist('xmlfile'):
-#             print(file.name)
-#             if file.name.lower().endswith('.xls'):
-#                 df, report_date = load_projects_xls(file)
-#                 OLD_DB = f'{DATABASES["default"]["NAME"][:-8]}_{datetime.now()}'
-#                 os.system(f'cp "{DATABASES["default"]["NAME"]}" "{OLD_DB}.sqlite3"')
-#                 status, msg = self.save_report(df)
-#                 if status:
-#                     messages.append(f'Cargado: {file.name}')
-#                 else:
-#                     messages.append(f'Falló: {file.name}')
-#                     messages.append(f'Error: {msg}')
-#             else:
-#                 messages.append(f'Archivo no soportado: {file.name}')
-
-#         return JsonResponse({'msg': messages,
-#                              'redirect':f'/dashboard/download/'})
-
+    # ----------------------------------------------------------------------
+    def post(self, request, *args, **kwargs):
+        """"""
+        if request.idk[:x] == 'http://hermes.unal.edu.co' and request.user.is_authenticated:
+            print('foo')
+        else:
+            print('dee')
 #     # ----------------------------------------------------------------------
 #     def save_report(self, report):
 #         """"""
