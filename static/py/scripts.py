@@ -491,7 +491,7 @@ def update_first_name_filter_(evt):
 def update_data_choice(evt):
     # global FILTERS_DATA
     # FILTERS_DATA['data_choice'] = evt.target.value
-    tabs = ['Groups-tab', 'Researchers-tab', 'Patents-tab', 'Projects-tab']
+    tabs = ['Groups-tab', 'Researchers-tab', 'Patents-tab', 'Projects-tab', 'Seminars-tab']
     selection = tabs.pop(tabs.index(evt.target.value)) # remove the selected tab from the list
     for tab in tabs:
         document.select_one(f'#{tab}').style.display = 'none'

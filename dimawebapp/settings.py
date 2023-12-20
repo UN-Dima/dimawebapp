@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'data.apps.DataConfig',
     'groups.apps.GroupsConfig',
     'dima.apps.DimaConfig',
+    'seminars.apps.SeminarsConfig',
     #'projects',
     'projects.apps.ProjectsConfig',
     'projects.templatetags.template_tags', #Load custom template tags to format text/values

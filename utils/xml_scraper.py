@@ -2,6 +2,11 @@ import bs4
 from bs4 import BeautifulSoup as bs
 from datetime import datetime
 from copy import copy
+import re
+
+import urllib.request
+import ssl
+import numpy as np
 
 REINDEX = {
     'IMPUTACION': 'imputacion',
@@ -135,3 +140,151 @@ def load_projects_xls(file_path):
         df += [entry]
 
     return df, date
+
+def load_groups_xls(file_path):
+    soup = bs(file_path.read(), "xml")
+
+    data = []
+    for d in soup.find_all("Data"):
+        if d.contents:
+            data += [d.contents[0]]
+        else:
+            data += [float('nan')]
+
+    data_array = np.array(data)
+
+    s = data_array == 'Registrado'
+    s += data_array == 'Categorizado'
+
+    base_url = 'http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo='
+
+    groups = []
+    for i in np.where(s)[0]:
+        group = {'minciencias_code' : data_array[i-4],
+                'hermes_code' : data_array[i-7],
+                'name' : data_array[i-2],
+                'founded' : datetime.strptime(data_array[i+5], '%Y-%m-%dT%H:%M:%S').date(),
+                'departament' : data_array[i+9],
+                'category' : data_array[i-3],
+                'ocde' : f'{data_array[i+3]} | {data_array[i+4]}',
+                'leader_id' : data_array[i+6][21:],
+                'faculty' : data_array[i+2]}
+
+        try:
+            fp = urllib.request.urlopen(base_url+data_array[i-7])
+            mybytes = fp.read()
+
+            mystr = mybytes.decode("latin-1")
+            fp.close()
+
+            try:
+                start = mystr.index('https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=')
+                gruplac = mystr[start:]
+                end = gruplac.index('target')
+                gruplac = gruplac[:end-2]
+            except:
+                gruplac = float('nan')
+
+            try:
+                start = mystr.index('Lineas de investigaci')+137
+                end = mystr[start:].index('<a name="enfoque">')-58
+                research = mystr[start:start+end].replace('\t','')\
+                                                .replace('\n','')\
+                                                .replace('&#218;','Ú')\
+                                                .replace('&#211;','Ó')\
+                                                .replace('&#209;','Ñ')\
+                                                .replace('&#205;','Í')\
+                                                .replace('&#201;','É')\
+                                                .replace('&#193;','Á')\
+                                                .split('</li><li>')
+            except:
+                research = float('nan')
+
+            try:
+                start = mystr.index('<div class="informacion-titulo">Agendas de conocimiento </div>')
+                end = mystr.index('<div class="informacion-subtitulo">Agendas del conocimiento secundarias</div>')
+                knowledge_area = mystr[start+156:end-6].replace('\t','')\
+                                                    .replace('\n','')\
+                                                    .replace('&#218;','Ú').replace('&#250;','ú')\
+                                                    .replace('&#211;','Ó').replace('&#243;','ó')\
+                                                    .replace('&#209;','Ñ').replace('&#241;','ñ')\
+                                                    .replace('&#205;','Í').replace('&#237;','í')\
+                                                    .replace('&#201;','É').replace('&#233;','é')\
+                                                    .replace('&#193;','Á').replace('&#225;','á')
+            except:
+                knowledge_area = float('nan')
+        except:
+            gruplac = float('nan')
+            research = float('nan')
+            knowledge_area = float('nan')
+        
+        group['gruplac'] = gruplac
+        group['research'] = research
+        group['knowledge_area'] = knowledge_area
+        #group['researchers'] = data_array
+
+        groups += [group]
+    return groups
+
+def get_members(url):
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+    members_list = []
+    try:
+        fp = urllib.request.urlopen(url, context=context)
+        mybytes = fp.read()
+
+        mystr = mybytes.decode("latin-1")
+        fp.close()
+
+        members = mystr[mystr.index('Integrantes del grupo'):]
+        members = members[:members.index('<br/>')]
+    except:
+        return []
+    
+    matches = re.findall(r'>([ ]*[A-Za-zÀ-ÿ]+([ ]+[A-Za-zÀ-ÿ]+([ ]+)*([0-9]+)*)+[ ]*)</a>', members, re.UNICODE)
+    matches_url = re.findall(r'cod_rh=([0-9]+)', members, re.UNICODE)
+    for i in range(len(matches)):
+        matches[i] = matches[i][0].replace('  ', ' ')
+        matches_url[i] = 'https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh='+matches_url[i]
+        members_list += [[matches[i], matches_url[i]]]
+    return members_list
+
+def load_seminars_xls(file_path):
+    soup = bs(file_path, "xml")
+
+    data = []
+    for d in soup.find_all("Data"):
+        if d.contents:
+            data += [d.contents[0]]
+        else:
+            data += [float('nan')]
+
+    data = np.array(data)
+    # The first 3 elements are just titles
+    # There are 20 headers in all, which we use as our dictionary keys
+    headers = data[3:23]
+
+    # Calculate the number of seminars based on the known number of headers
+    num_seminars = int(len(data[23:])/20)
+
+    #Make a list of dictionaries
+    seminars = []
+    for h in data[23:].reshape(num_seminars, 20):
+        d = dict(zip(headers, h))
+        d['Línea de investigación'] = [d['Línea de investigación']]
+        d['Fecha creación'] = datetime.strptime(d['Fecha creación'], '%Y-%m-%dT%H:%M:%S').date()
+        seminars += [d]
+
+    # Seminars appear once for every research line.
+    # Here we merge all the research lines into one field per seminar
+    # We check the last element in the list since seminars are sorted by code
+    
+    f = [seminars[0]]
+    for i in seminars[1:]:
+        cod = i['Código']
+        if cod == f[-1]['Código']:
+            f[-1]['Línea de investigación'] += i['Línea de investigación']
+        else:
+            f += [i]
+
+    return f

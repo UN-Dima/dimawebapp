@@ -282,7 +282,7 @@ class Choices:
     )
 
     CALL_STUDENT = (
-        'Posgrado'
+        'Posgrado',
         'Pregrado',
     )
 
@@ -306,7 +306,10 @@ class Choices:
         'Docente medio tiempo', 'Docente tiempo completo',
     )
 
-    
+    SEMINAR_STATE = {
+        'Activo',
+        'Inactivo'
+    }
 
     # ----------------------------------------------------------------------
     def __new__(self, choices: str) -> dict:

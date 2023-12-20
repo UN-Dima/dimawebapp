@@ -34,7 +34,8 @@ class ResearchGroup(models.Model):
 
         elif attr.endswith('_json'):
             field = attr.replace('_json', '')
-            return json.loads(getattr(self, field))
+            print(getattr(self, field))
+            return json.loads(getattr(self, field).replace('\'','\"'))
 
         return super().__getattr__(attr)
 

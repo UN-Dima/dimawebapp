@@ -6,6 +6,7 @@ from django.db import models
 from django.conf import settings
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+from django.utils import timezone
 from tinymce.models import HTMLField
 from datetime import date
 
@@ -119,10 +120,10 @@ class UpdateFiles(models.Model):
     def save(self):
         """"""
         if self.file.name.lower().endswith('.xls') or self.file.name.lower().endswith('.xml'):
+            self.upload_date = timezone.now()
             super(UpdateFiles, self).save()
             print(self.file.name)
             update_table(self.table_to_update, self.file.name)
-            print('Hello, World!')
         else:
             raise 'Archivo No Soportado'
 

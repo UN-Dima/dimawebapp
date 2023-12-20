@@ -39,5 +39,21 @@ class PatentsView(TemplateView):
 
         return self.render_to_response(context)
 
+class SpinOffView(TemplateView):
+    # ----------------------------------------------------------------------
+    def get(self, request, pk=None, *args, **kwargs):
+        """"""
+        self.template_name = "spinoff_groups.html"
+        context = self.get_context_data(**kwargs)
+
+        try:
+            print('Hello, World!')
+            # context['patent'] = Patent.objects.get(pk=pk.replace('-', '/'))
+            # context['patent_admin'] = Patent._meta
+        except:
+            return HttpResponseNotFound('<h1>Page not found</h1>')
+
+        return self.render_to_response(context)
+
 
 

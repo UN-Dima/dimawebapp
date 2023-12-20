@@ -23,7 +23,15 @@
                         <div class="cards-title">
                             <div>
                                 <h1 class="card-title">
+                                    {% if calls_admin.db_table == 'calls_studentscall' %}
                                     <a href="{% url 'students_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a>
+                                    {% elif calls_admin.db_table == 'calls_jointcall'%}
+                                    <a href="{% url 'joint_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a>
+                                    {% elif calls_admin.db_table == 'calls_internalcall'%}
+                                    <a href="{% url 'internal_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a>
+                                    {% elif calls_admin.db_table == 'calls_mincienciascall'%}
+                                    <a href="{% url 'minciencias_call' call.pk %}" class="dima-non_style_link">{{ call.title|lower|capfirst }}</a>
+                                    {% endif %}
                                 </h1>
                             </div>
                             {% if calls_admin.db_table == 'calls_studentscall' %}

@@ -1,0 +1,87 @@
+{% extends "base_unal.html" %}
+{% load admin_urls %}
+{% block 'head-title' %}{{seminar.name}} - {% endblock %}
+
+
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        Está en:
+        <a href="/">
+          Inicio
+        </a>
+      </li>
+      <li aria-current="page" class="breadcrumb-item active">
+        <a href="#">
+          {{seminar.name}}
+        </a>
+      </li>
+    </ol>
+  </nav>
+</div>
+{% endblock %}
+
+
+{% block 'main' %}
+<div class="container-lg">
+
+
+
+    <h1 class="display-3">{{seminar.name}}
+      <small class="text-muted">
+        {% if user.is_authenticated %}
+          <a href='{% url seminar_admin|admin_urlname:'change' seminar.pk %}'> Editar <i class="bi bi-pencil-square"></i></a>
+        {% endif %}
+      </small>
+    </h1>
+
+
+    <div class="dima-content">
+
+        <div class="row">
+
+        <div class="col-lg-6">
+          <dl class="row">
+            <dt class="col-sm-4">Lider:</dt>
+            <dd class="col-sm-8">{{seminar.leader}}</dd>
+            <dt class="col-sm-4">Email:</dt>
+            <dd class="col-sm-8">{{seminar.email}}</dd>
+            <dt class="col-sm-4">&nbsp;</dt>
+            <dd class="col-sm-8"> </dd>
+
+            <dt class="col-sm-4">Facultad:</dt>
+            <dd class="col-sm-8">{{seminar.faculty_pretty}}</dd>
+
+            <dt class="col-sm-4">Departamento:</dt>
+            <dd class="col-sm-8">{{seminar.departament_pretty}}</dd>
+
+            <dt class="col-sm-4">Área del conocimiento:</dt>
+            <dd class="col-sm-8">{{seminar.knowledge_area_pretty}}</dd>
+
+            <dt class="col-sm-4">Líneas de investigación:</dt>
+            <dd class="col-sm-8">
+              <ul class="dima-list-noindent">
+              {% for research in seminar.lines_json %}
+              <li>{{research}}</li>
+              {% endfor %}
+              </ul>
+            </dd>
+          </dl>
+        </div>
+
+        </div>
+        <div class="col-lg-24">
+          <dl class="row">
+            <dt class="col-sm-4">Presentación:</dt>
+            <dd class="col-sm-24">{{seminar.intro}}</dd>
+            <dt class="col-sm-4">&nbsp;</dt>
+            <dd class="col-sm-8"> </dd>
+            <dt class="col-sm-4">Objetivo General:</dt>
+            <dd class="col-sm-24">{{seminar.general_obj}}</dd>
+          </dl>
+        </div>
+    </div>
+</div>
+{% endblock %}

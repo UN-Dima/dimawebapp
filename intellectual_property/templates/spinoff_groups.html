@@ -1,0 +1,33 @@
+{% extends "base_unal.html" %}
+{% load admin_urls %}
+{% load static %}
+
+{% block 'head-title' %}Emprendimientos Spin-off{% endblock %}
+
+{% block 'breadcrumb' %}
+<div class="breadcrumb-class">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Está en:<a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a href="#">Emprendimientos Spin-off</a></li>
+    </ol>
+  </nav>
+</div>
+{% endblock %}
+
+{% block 'main' %}
+<div class="container-lg">
+  <div class="row">
+
+    <h1 class="display-3">Emprendimientos Spin-Offs</h1>
+    <div class="dima-content">
+      <img src="{% static '/unal/images/SpinOffs/Inference 1.png' %}" alt="Inference" width="500"><br>
+      <b>Inference: </b>Su objetivo es crear herramientas de inteligencia artificial y desarrollo de software que permitan comercializar productos tecnológicos a partir de las investigaciones de alto impacto del GCPDS, aplicadas en el sector empresarial. Solucionan problemas de desaprovechamiento de información valiosa que se puede extraer de los datos y que puede ayudar a resolver diferentes problemas dentro de las organizaciones.<br>
+      <img src="{% static '/unal/images/SpinOffs/harka1 (1).jpg' %}" alt="Harka" width="500"><br>
+      <b>Harka: </b>Realiza desarrollos de simuladores industriales y maquinaria especializada, así como escenarios industriales de referencia para entrenamientos y capacitaciones. Ofrece servicios de entrenamiento virtual de personal en el área de seguridad y salud en el trabajo y reconocimiento de elementos, utilizando machine learning, y seguimiento y control a través de Internet de las cosas.<br>
+      <img src="{% static '/unal/images/SpinOffs/Arithmos (1).png' %}" alt="Arithmos" width="500"><br>
+      <b>Arithmos: </b>Realiza desarrollos a la medida para el mejoramiento de los procesos internos de las organizaciones en términos de eficiencia y productividad, fundamentados en procesamiento de datos, imágenes y señales con modelos matemáticos para análisis, predicciones y recomendaciones.<br>
+    </div>
+  </div>
+</div>
+{% endblock %}

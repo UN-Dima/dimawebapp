@@ -26,7 +26,7 @@
     <h1 class="dima-formatos-text1">Formatos y solicitudes 
       <small class="text-muted">
         {% if user.is_authenticated %}
-          <a href='{% url formatos_admin|admin_urlname:'change' formatos.pk %}'> Editar <i class="bi bi-pencil-square"></i></a>
+          <a href="{% url formatos_admin|admin_urlname:'change' formatos.pk %}"> Editar <i class="bi bi-pencil-square"></i></a>
         {% endif %}
       </small>
     </h1>

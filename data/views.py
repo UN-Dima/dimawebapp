@@ -4,6 +4,7 @@ from utils.models import Choices
 from groups.models import ResearchGroup
 from django.shortcuts import render
 from researchers.models import Researcher, Professor
+from seminars.models import Seminars
 from projects.models import Project
 import json
 import numpy as np
@@ -64,10 +65,12 @@ class DataView(TemplateView):
         context['professors'] = Professor.objects.all()
         context['projects'] = Project.objects.all()
         context['patents'] = Patent.objects.all()
+        context['seminars'] = Seminars.objects.all()
         context['projects_admin'] = Project._meta
         context['patents_admin'] = Patent._meta
         context['professors_admin'] = Professor._meta
         context['patent_admin'] = Patent._meta
+        context['seminars_admin'] = Seminars._meta
         context['active_projects'] = Project.objects.filter(project_state='project_state_0001').count()
         context['researcher_categories'] = Choices.RESEARCHER_CATEGORY
         context['patents_types'] = Choices.PATENT_TYPE

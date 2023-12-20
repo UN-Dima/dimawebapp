@@ -1,0 +1,3919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+		<Author/>
+		<Title/>
+		<Description/>
+	</DocumentProperties>
+	<Styles>
+		<Style ss:ID="22">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="9.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="47">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="41">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="21">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="13.0" ss:Bold="1" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#0000a0"/>
+			<Interior ss:Color="#e6e6e6" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="30">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+			<NumberFormat/>
+		</Style>
+		<Style ss:ID="34">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="1">
+			<NumberFormat ss:Format="yyyy-M-d HH:mm:ss AM/PM"/>
+		</Style>
+		<Style ss:ID="24">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="31">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="33">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="44">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="42">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="40">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="38">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="35">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-409]MMM d, yyyy H:mm AM/PM"/>
+		</Style>
+		<Style ss:ID="46">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="36">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="48">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="11.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="28">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+			<NumberFormat/>
+		</Style>
+		<Style ss:ID="45">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="43">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:Weight="1"/>
+				<Border ss:Position="Left" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="39">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="37">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:Weight="1"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="32">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Dot" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="25">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:Weight="1"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="9.0" ss:Bold="1" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#0000a0"/>
+			<Interior ss:Color="#e6e6e6" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="26">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:Weight="1"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="9.0" ss:Bold="1" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#0000a0"/>
+			<Interior ss:Color="#e6e6e6" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="27">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="13.0" ss:Bold="1" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#0000a0"/>
+			<Interior ss:Color="#e6e6e6" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="20">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="9.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="23">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Double" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="9.0" ss:Bold="1" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#0000a0"/>
+			<Interior ss:Color="#e6e6e6" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="49">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="9.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="29">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+			</Borders>
+			<Font ss:FontName="Verdana" ss:Size="7.0" ss:Bold="0" ss:Italic="0" ss:StrikeThrough="0" ss:Color="#000000"/>
+		</Style>
+	</Styles>
+	<Names/>
+	<Worksheet ss:Name="Sheet1">
+		<ss:Table>
+			<ss:Column ss:Width="46"/>
+			<ss:Column ss:Width="24"/>
+			<ss:Column ss:Width="22"/>
+			<ss:Column ss:Width="17"/>
+			<ss:Column ss:Width="16"/>
+			<ss:Column ss:Width="13"/>
+			<ss:Column ss:Width="2"/>
+			<ss:Column ss:Width="20"/>
+			<ss:Column ss:Width="24"/>
+			<ss:Column ss:Width="23"/>
+			<ss:Column ss:Width="3"/>
+			<ss:Column ss:Width="20"/>
+			<ss:Column ss:Width="13"/>
+			<ss:Column ss:Width="33"/>
+			<ss:Column ss:Width="4"/>
+			<ss:Column ss:Width="34"/>
+			<ss:Column ss:Width="8"/>
+			<ss:Column ss:Width="10"/>
+			<ss:Column ss:Width="18"/>
+			<ss:Column ss:Width="18"/>
+			<ss:Column ss:Width="42"/>
+			<ss:Column ss:Width="4"/>
+			<ss:Column ss:Width="3"/>
+			<ss:Column ss:Width="8"/>
+			<ss:Column ss:Width="2"/>
+			<ss:Column ss:Width="33"/>
+			<ss:Column ss:Width="23"/>
+			<ss:Column ss:Width="23"/>
+			<ss:Column ss:Width="7"/>
+			<ss:Column ss:Width="7"/>
+			<ss:Column ss:Width="7"/>
+			<ss:Column ss:Width="7"/>
+			<ss:Column ss:Width="7"/>
+			<ss:Column ss:Width="11"/>
+			<ss:Column ss:Width="46"/>
+			<ss:Column ss:Width="46"/>
+			<ss:Column ss:Width="51"/>
+			<ss:Column ss:Width="0"/>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="20" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="3" ss:StyleID="20" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="8" ss:StyleID="21" ss:MergeAcross="3" ss:MergeDown="0">
+					<Data ss:Type="String">REPORTE DE PROYECTOS</Data>
+				</Cell>
+				<Cell ss:Index="12" ss:StyleID="20" ss:MergeAcross="3" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="16" ss:StyleID="20" ss:MergeAcross="3" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="20" ss:StyleID="20" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="21" ss:MergeAcross="36" ss:MergeDown="0">
+					<Data ss:Type="String">RESUMEN DE LA CONVOCATORIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="22" ss:MergeAcross="36" ss:MergeDown="0">
+					<Data ss:Type="String">&#160;</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="23" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String">CONVOCATORIA</Data>
+				</Cell>
+				<Cell ss:Index="6" ss:StyleID="24" ss:MergeAcross="31" ss:MergeDown="0">
+					<Data ss:Type="String">Convocatoria Nacional de Extensi&#xf3;n Solidaria 2022: Fortalecimiento de la innovaci&#xf3;n social y armonizaci&#xf3;n de las funciones misionales.</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="23" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String">MODALIDAD</Data>
+				</Cell>
+				<Cell ss:Index="6" ss:StyleID="24" ss:MergeAcross="31" ss:MergeDown="0">
+					<Data ss:Type="String">Modalidad 2: Fortalecimiento o escalabilidad de iniciativas de Extensi&#xf3;n Solidaria con enfoque de innovaci&#xf3;n social</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="23" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String">OFERENTE</Data>
+				</Cell>
+				<Cell ss:Index="6" ss:StyleID="24" ss:MergeAcross="31" ss:MergeDown="0">
+					<Data ss:Type="String">Comit&#xe9; del Fondo Nacional de Extensi&#xf3;n Solidaria</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="20" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="6" ss:StyleID="25" ss:MergeAcross="15" ss:MergeDown="0">
+					<Data ss:Type="String">ESTADO PROYECTOS</Data>
+				</Cell>
+				<Cell ss:Index="22" ss:StyleID="26" ss:MergeAcross="15" ss:MergeDown="0">
+					<Data ss:Type="String">CANTIDAD DE PROYECTOS</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="27" ss:MergeAcross="36" ss:MergeDown="0">
+					<Data ss:Type="String">SEDE</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="24" ss:MergeAcross="36" ss:MergeDown="0">
+					<Data ss:Type="String">Nivel Nacional</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="22" ss:MergeAcross="36" ss:MergeDown="0">
+					<Data ss:Type="String">&#160;</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="23" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ID</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="23" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String">QUIPU</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="23" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">NOMBRE DEL PROYECTO/EVENTO</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="23" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">INVESTIGADOR PRINCIPAL</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="23" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">DOCUMENTO</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="23" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String">EMAIL</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="23" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">DEDICACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="23" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">DEPARTAMENTO/INSTITUTO</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="23" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String">FACULTAD</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="23" ss:MergeAcross="3" ss:MergeDown="0">
+					<Data ss:Type="String">SEDE</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="23" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String">FUENTES DE FINANCIACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="23" ss:MergeAcross="5" ss:MergeDown="0">
+					<Data ss:Type="String">ESTUDIANTES ASOCIADOS</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="23" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PRODUCTOS ENTREGADOS</Data>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="23" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">FECHA PROPUESTO</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="23" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESTADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55009</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">--* Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nombre(M&#xe1;x. 1000 caracteres): * Nomb</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">HENRY ALFONSO DIAZ AVENDA&#xd1;O</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">1032437665</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">hadiaza@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">sindefinir</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">1- DIRECCI&#xd3;N NACIONAL DE EXTENSI&#xd3;N, INNOVACI&#xd3;N Y PROPIEDAD INTELECTUAL</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">1- DIRECCI&#xd3;N NACIONAL DE EXTENSI&#xd3;N, INNOVACI&#xd3;N Y PROPIEDAD INTELECTUAL</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Nivel Nacional</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ACEMONT AGRO SAS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">124121</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="31" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">LUISA MARIA CARVAJAL LE&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">1020804375</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">ANTROPOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="33" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-02-15T10:29:09</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">No aprobado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ACEMONT AGRO SAS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">48866455</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="Number">55194</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">Fortalecimiento de una alternativa de uso sostenible de la biodiversidad, asociada a las chagras, en una comunidad de la Amazon&#xed;a, como iniciativa de preservaci&#xf3;n del conocimiento tradicional y est&#xed;mulo para la recuperaci&#xf3;n de este sistema agroforestal en riesgo.</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">GIOVANNY &#160;GARAVITO CARDENAS</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">19420648</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">ggaravitoc@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">2- DEPARTAMENTO DE FARMACIA</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">2- FACULTAD DE CIENCIAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="5">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">COMUNIDAD INDIGENA ZIORA-AMENA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="31" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">MARIA HELENA ARIAS MARCIALES</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">52530717</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">DOCTORADO EN CIENCIAS FARMAC&#xc9;UTICAS</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="33" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">DOCTORADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="DateTime">2022-02-14T16:38:13</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">No aprobado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PARQUE ECOLOGICO MUNDO AMAZONICO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">COMUNIDAD INDIGENA ZIORA-AMENA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PARQUE ECOLOGICO MUNDO AMAZONICO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="9">
+					<Data ss:Type="Number">55304</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="9">
+					<Data ss:Type="String">317010038430</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="9">
+					<Data ss:Type="String">Vinculaci&#xf3;n de una comunidad vulnerable del departamento de Santander al ciclo de desarrollo tecnol&#xf3;gico de un sistema de deshidrataci&#xf3;n solar pasivo &#160;de matrices alimentarias de origen vegetal</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="9">
+					<Data ss:Type="String">CARLOS MARIO ZULUAGA DOMINGUEZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="9">
+					<Data ss:Type="String">80240793</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="9">
+					<Data ss:Type="String">cmzuluagad@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="9">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="9">
+					<Data ss:Type="String">2- DEPARTAMENTO DE DESARROLLO RURAL Y AGROALIMENTARIO</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="9">
+					<Data ss:Type="String">2- FACULTAD DE CIENCIAS AGRARIAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="9">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="36" ss:MergeAcross="5" ss:MergeDown="9">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="9">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="9">
+					<Data ss:Type="DateTime">2022-02-17T08:40:26</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="9">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">APICULTURA LOS CEREZOS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ALCALDIA MUNICIPAL DE GALAN (SANTANDER)</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION APISY</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SMART BEE CIENCIA Y TECNOLOGIA S.A.S.</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">APICULTURA LOS CEREZOS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SMART BEE CIENCIA Y TECNOLOGIA S.A.S.</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ALCALDIA MUNICIPAL DE GALAN (SANTANDER)</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION APISY</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55336</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Fortalecimiento del Centro de Ense&#xf1;anza en Agro Acuicultura Integrada SWAKA mediante la implementaci&#xf3;n de tecnolog&#xed;as sostenibles enfocadas en sistemas acuap&#xf3;nicos y de producci&#xf3;n de alevinos de tilapia</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">ANDRES &#160;CABRERA OROZCO</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">79838402</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">ancabreraor@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">2- DEPARTAMENTO DE QU&#xcd;MICA</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">2- FACULTAD DE CIENCIAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GUNEY MAKU DURAN IZQUIERDO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1193141144</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">TRABAJO SOCIAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-02T17:57:17</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">No aprobado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DESPENSA DE LA SIERRA S.A.S</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DWAWIN RUARITH DURAN IZQUIERDO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1133570225</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DESPENSA DE LA SIERRA S.A.S</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">DIAWIN &#160;ZALABATA MESTRE</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">1192756848</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">CINE Y TELEVISI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="Number">55353</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="4">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">Sintaxis Espacial II: una estrategia de innovaci&#xf3;n social desde el diagn&#xf3;stico de la infraestructura educativa en el Urab&#xe1; Antioque&#xf1;o.</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">CARLOS MAURICIO BEDOYA MONTOYA</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">98589947</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="4">
+					<Data ss:Type="String">cmbedoya@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">3- ESCUELA DE CONSTRUCCI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="4">
+					<Data ss:Type="String">3- DECANATURA FACULTAD DE ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="4">
+					<Data ss:Type="String">Medell&#xed;n</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PABLO ENRIQUE L&#xd3;PEZ GARNICA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1113526341</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN EST&#xc9;TICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="DateTime">2022-03-03T13:01:50</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="String">Cancelado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SECRETARIA DE EDUCACION DE APARTADO - MUNICIPIO DE APARTADO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">35000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">VALENTINA &#160;ARANGO BEDOYA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1027891388</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ARTES PL&#xc1;STICAS</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ANDREA &#160;OSORIO CHALARCA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1037658719</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CONSTRUCCI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">SECRETARIA DE EDUCACION DE APARTADO - MUNICIPIO DE APARTADO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARIA ANG&#xc9;LICA OROZCO RODR&#xcd;GUEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1020490509</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">VALENTINA &#160;OSORIO CAMPILLO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1152466239</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55359</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">317010038812</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">FORTALECIMIENTO DE LOS PROCESOS ASOCIATIVOS Y PRODUCTIVOS DE PEQUE&#xd1;OS PRODUCTORES AGROPECUARIOS MEDIANTE PR&#xc1;CTICAS DE GESTI&#xd3;N SOCIAL EN EL MUNICIPIO DE YOTOCO.</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">CARLOS ALBERTO JARAMILLO CRUZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">16776208</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">cajaramillocr@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">5- DEPARTAMENTO DE CIENCIA ANIMAL</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">5- FACULTAD DE CIENCIAS AGROPECUARIAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Palmira</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ANDRES FELIPE LEAL MU&#xd1;OZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1125476126</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ZOOTECNIA ACUERDO 033</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-03T08:32:55</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION PARA EL DESARROLLO AGROAMBIENTAL Y FORESTAL - ASODAFOR</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">WILLIAM &#160;GUERRERO CANCIMANCE</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">T</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1006325063</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIERIA AGRICOLA ACUERDO 033</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION PARA EL DESARROLLO AGROAMBIENTAL Y FORESTAL - ASODAFOR</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">NADIA CATALINA LOPERA L&#xd3;PEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1128384913</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA EN INGENIERIA AGROINDUSTRIAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">EDNA MARCELA MORA ANDRADE</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1110516765</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA EN ADMINISTRACION</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55374</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">317010039728</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">ResCaTe Mar 2.0: Resiliencia costera basada en la bioeconom&#xed;a y construcci&#xf3;n de conocimiento en territorios Marino-Costeros</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">ANDRES FERNANDO OSORIO ARIAS</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">94491339</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">afosorioar@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">3- DEPARTAMENTO DE GEOCIENCIAS Y MEDIO AMBIENTE - MINAS</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">3- FACULTAD DE MINAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Medell&#xed;n</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CEMARIN, CORPORATION CENTER OF EXCELLENCE IN MARINE SCIENCES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">HANNA LUCIETH BOHORQUEZ ALZATE</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1036674905</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN MEDIO AMBIENTE Y DESARROLLO</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-02T16:04:57</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">NATALIA &#160;ZAPATA DELGADO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1090508950</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN INGENIER&#xcd;A - RECURSOS HIDR&#xc1;ULICOS</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CEMARIN, CORPORATION CENTER OF EXCELLENCE IN MARINE SCIENCES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BALLANTYNE &#160;PUIN CASTA&#xd1;O</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1214734092</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN MEDIO AMBIENTE Y DESARROLLO</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ANA MARIA ALVAREZ VILLA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1000445174</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">Ingenier&#xed;a Ambiental</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55382</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Innovaci&#xf3;n social para la adaptaci&#xf3;n clim&#xe1;tica y el desarrollo rural basada en el turismo comunitario</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">CARLOS ALBERTO ZARATE YEPES</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">71645873</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">cazarate@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">3- DEPARTAMENTO DE GEOCIENCIAS Y MEDIO AMBIENTE - MINAS</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">3- FACULTAD DE MINAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Medell&#xed;n</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CORPORACION ROTARIA MEDELLIN NUTIBARA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">HANNA LUCIETH BOHORQUEZ ALZATE</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1036674905</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN MEDIO AMBIENTE Y DESARROLLO</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-03T15:27:12</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">No aprobado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARIA FERNANDA HOYOS RESTREPO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1039471644</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">Ingenier&#xed;a Ambiental</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CORPORACION ROTARIA MEDELLIN NUTIBARA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ANG&#xc9;LICA MAR&#xcd;A CASTIBLANCO PINEDA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">1074558829</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ZOOTECNIA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="Number">55391</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">C&#xe1;tedra abierta en Cannabis medicinal e industrial : Formaci&#xf3;n de formadoras/es para la reactivaci&#xf3;n agr&#xed;cola y agroindustrial a trav&#xe9;s de transferencia tecnol&#xf3;gica y del conocimiento enfocado hacia comunidades productivas e iniciativas privadas de la regi&#xf3;n andina</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">EDUARDO &#160;RUIZ DURANTEZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">336895</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">eruizd@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">5- DEPARTAMENTO DE CIENCIAS B&#xc1;SICAS</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">5- FACULTAD DE INGENIER&#xcd;A Y ADMINISTRACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="5">
+					<Data ss:Type="String">Palmira</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SECRETARIA DE AGRICULTURA DEPARTAMENTAL</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DIANA ALEJANDRA &#xd1;USTES PEREZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1030606880</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIERIA AGROINDUSTRIAL ACUERDO 033</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="DateTime">2022-02-17T16:40:58</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">No aprobado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">AGROCANNA SAS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CRISTIAN NACIANCENO PARRA GONZ&#xc1;LEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1112622297</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA EN INGENIERIA AGROINDUSTRIAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SECRETARIA DE AGRICULTURA DEPARTAMENTAL</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">HAROL ANDRES AGUIRRE CORZO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1016020988</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA EN CIENCIAS AGRARIAS ACUERDO 033</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">DALLIAM FELIPE CHACON CURREA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">1010230383</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">INGENIERIA AMBIENTAL ACUERDO 033</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">AGROCANNA SAS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="7">
+					<Data ss:Type="Number">55393</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="7">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="7">
+					<Data ss:Type="String">AULAS VIVAS: Espacios de di&#xe1;logo intercultural para compartir las tecnolog&#xed;as ancestrales vivas a trav&#xe9;s de las experiencias con las comunidades &#xe9;tnicas y campesinas a nivel interno, local, regional y nacional.</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="7">
+					<Data ss:Type="String">FABIO ENRIQUE LOPEZ DE LA ROCHE</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="7">
+					<Data ss:Type="String">10532219</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="7">
+					<Data ss:Type="String">felopezd@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="7">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="7">
+					<Data ss:Type="String">2- INSTITUTO DE ESTUDIOS POL&#xcd;TICOS Y RELACIONES INTERNACIONALES - IEPRI</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="7">
+					<Data ss:Type="String">2- INSTITUTO DE ESTUDIOS POL&#xcd;TICOS Y RELACIONES INTERNACIONALES - IEPRI</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="7">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">FUNDACION CREANDO LAZOS DE SABER Y VIDA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RODRIGO ARMANDO FUENTES ARIAS</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1065642393</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MEDICINA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="7">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="7">
+					<Data ss:Type="DateTime">2022-03-03T15:44:36</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="7">
+					<Data ss:Type="String">No cumpli&#xf3; requisitos</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="6">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="6">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CAMILO ANDRES TALCO ARIAS</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1003241784</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A AGRON&#xd3;MICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ELMER ERIK VEGA SANCHEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1121216539</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SOCIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARIA FERNANDA CHAMORRO RAMIREZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">36751508</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN DISE&#xd1;O</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARTIN ELIECER PRADA RAMIREZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1026569437</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ECONOM&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESNEIDER &#160;LOPEZ MEDINA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1013618642</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GEOGRAF&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ALEXANDER &#160;RESTREPO RAMIREZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">80031562</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DOCTORADO EN CIENCIAS HUMANAS Y SOCIALES</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DOCTORADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DANEY &#160;NEPAYANUBA TETEYE</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1120046316</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">HISTORIA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="Number">55396</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="1">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">PROGRAMA DE ATENCI&#xd3;N A LAS FAMILIAS DE PACIENTES CON TRASTORNOS NEUROPSIQUI&#xc1;TRICOS. &#xc9;NFASIS EN TRASTORNOS DEL ESTADO &#xc1;NIMO Y COGNITIVOS.</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">HUMBERTO &#160;ARBOLEDA GRANADOS</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">19051148</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="1">
+					<Data ss:Type="String">harboledag@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">2- DEPARTAMENTO DE PEDIATR&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="1">
+					<Data ss:Type="String">2- FACULTAD DE MEDICINA</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="1">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">49300000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="31" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">HEBERT JAMES BERNAL CASTRO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">1018459407</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="32" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">MAESTRIA EN NEUROCIENCIAS</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="33" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="DateTime">2022-02-17T12:35:12</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">No cumpli&#xf3; requisitos</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION COLOMBIANA DE BIPOLARES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="Number">55402</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="15">
+					<Data ss:Type="String">317010038991</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">PROMOCI&#xd3;N DE UNA CULTURA DE DESARROLLO SOSTENIBLE: PROGRAMA DE FORMACI&#xd3;N EN ECOTURISMO-ARTROPOFAUNA EN TRES COMUNIDADES COLOMBIANAS</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">FELIPE &#160;SARMIENTO SALAZAR</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">79916144</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="15">
+					<Data ss:Type="String">fsarmientos@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">2- DEPARTAMENTO DE BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="15">
+					<Data ss:Type="String">2- FACULTAD DE CIENCIAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="15">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GRUPO DE INVESTIGACION EN BIODIVERSIDAD Y EDUCACION AMBIENTAL (BIOEDUQ) - &#160;UNIVERSIDAD DEL QUINDIO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">AURA YESENIA MORALES CARDENAS</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1094918439</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA EN ENSE&#xd1;ANZA DE LAS CIENCIAS EXACTAS Y NATURALES</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="DateTime">2022-03-03T16:55:01</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CABILDO INDIGENA INGA PAKAI DE PUERTO LIMON</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SHIRLEY DANIELLA MARTINEZ TORRES</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1018414436</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DOCTORADO EN CIENCIAS - BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DOCTORADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RESERVA NATURAL EL AMARGAL: ESTACION BIOLOGICA &amp; ECOTURISMO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">EMERSON JAIR ALONSO ALARCON</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1014260513</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JASBLEIDY JOHANNA ABRIL</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1012375800</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CABILDO INDIGENA INGA PAKAI DE PUERTO LIMON</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CLAUDIA MILENA BUITRAGO RODRIGUEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053324175</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN MEDIO AMBIENTE Y DESARROLLO</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD DE LOS ANDES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="10">
+					<Data ss:Type="String">ALEJANDRO &#160;LEYTON NOVOA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="10">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="10">
+					<Data ss:Type="String">1023909676</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="10">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="10">
+					<Data ss:Type="String">MAESTRIA EN ENSE&#xd1;ANZA DE LAS CIENCIAS EXACTAS Y NATURALES</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="10">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CENTRO DE INVESTIGACION PARA EL DESARROLLO SUSTENTABLE, A.C.</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GRUPO DE INVESTIGACION EN BIODIVERSIDAD Y EDUCACION AMBIENTAL (BIOEDUQ) - &#160;UNIVERSIDAD DEL QUINDIO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CONSEJO COMUNITARIO DE ARUSI, ADSCRITO AL CONSEJO GENERAL LOS RISCALES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RESERVA DE AVIFAUNA SUTU MISTRATO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RESERVA NATURAL EL AMARGAL: ESTACION BIOLOGICA &amp; ECOTURISMO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CENTRO DE INVESTIGACION PARA EL DESARROLLO SUSTENTABLE, A.C.</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD DE LOS ANDES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CONSEJO COMUNITARIO DE ARUSI, ADSCRITO AL CONSEJO GENERAL LOS RISCALES</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RESERVA DE AVIFAUNA SUTU MISTRATO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55414</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">317010039765</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Laboratorio de proyectos situados: una estrategia de incremento de capacidades para la apropiaci&#xf3;n y gesti&#xf3;n de la CTeL</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">MIGUEL ANGEL RUIZ GARCIA</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">71664843</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">maruizg@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">3- DEPARTAMENTO DE ESTUDIOS FILOS&#xd3;FICOS Y CULTURALES</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">3- DECANATURA FACULTAD DE CIENCIAS HUMANAS Y ECON&#xd3;MICAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Medell&#xed;n</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PARQUE EXPLORA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">LEIDY ALEJANDRA OTERO ORJUELA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1020490668</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CIENCIA POL&#xcd;TICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-03T16:48:11</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JENNIFER LIZETH HERNANDEZ MORA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1032502402</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPECIALIZACI&#xd3;N EN INGENIER&#xcd;A GEOTECNIA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPECIALIZACION</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PARQUE EXPLORA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">GABRIEL FERNANDO BENAVIDES BOTINA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">1085277941</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">DOCTORADO EN CIENCIAS HUMANAS Y SOCIALES</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">DOCTORADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="8">
+					<Data ss:Type="Number">55420</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="8">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="8">
+					<Data ss:Type="String">Fortalecimiento de las din&#xe1;micas de gobernanza territorial y soberan&#xed;a alimentaria mediante el intercambio de conocimientos relacionados con sistemas de producci&#xf3;n agroecol&#xf3;gica entre colectivos de comunidades v&#xed;ctimas del conflicto sociopol&#xed;tico y la Universidad Nacional de Colombia</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="8">
+					<Data ss:Type="String">LINA MARCELA GONZALEZ GOMEZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="8">
+					<Data ss:Type="String">42897039</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="8">
+					<Data ss:Type="String">lmgonzalg@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="8">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="8">
+					<Data ss:Type="String">3- DEPARTAMENTO DE HISTORIA</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="8">
+					<Data ss:Type="String">3- DECANATURA FACULTAD DE CIENCIAS HUMANAS Y ECON&#xd3;MICAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="8">
+					<Data ss:Type="String">Medell&#xed;n</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION CAMPESINA AGROECOLOGICA CAMPO VIVO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SARA CRISTINA ZULUAGA GOMEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1017254179</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="8">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="8">
+					<Data ss:Type="DateTime">2022-03-02T18:00:05</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="8">
+					<Data ss:Type="String">No cumpli&#xf3; requisitos</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">LINA MARIA OSPINA ROJAS</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1110577690</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A FORESTAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="6">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL PINARES DE ORIENTE</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="6">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARIANA &#160;FLOREZ RESTREPO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1037646804</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A FORESTAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUAN PABLO TRUJILLO MEDINA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1018376810</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A AMBIENTAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JIMMY LIMANS CRISTANCHO BALAGUERA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1020739653</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A AMBIENTAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SIM&#xd3;N &#160;FERIA D&#xcc;AZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1017254650</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A AMBIENTAL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ALEJANDRO &#160;PATI&#xd1;O MAYA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1036655147</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CIENCIA POL&#xcd;TICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JORGE ESTEBAN ROMERO MONROY</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1152469808</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CIENCIA POL&#xcd;TICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUANITA ISABELLA CLAVIJO RODRIGUEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1003564921</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ZOOTECNIA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="Number">55421</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="2">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">Semillas de comunidad: construyendo autonom&#xed;as colectivas para las mujeres de Altos de la Torre</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">JOHANNA &#160;VASQUEZ VELASQUEZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">43620047</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="2">
+					<Data ss:Type="String">jovasquezve@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">3- DEPARTAMENTO DE ECONOM&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="2">
+					<Data ss:Type="String">3- DECANATURA FACULTAD DE CIENCIAS HUMANAS Y ECON&#xd3;MICAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="2">
+					<Data ss:Type="String">Medell&#xed;n</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">FUNDACION CASA CULTURAL LA CHISPA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">EVERLY NARYURI DIAZ MANTILLA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1152708415</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ECONOM&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="DateTime">2022-03-03T09:56:30</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">No cumpli&#xf3; requisitos</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JOHN JAIRO GALLEGO ISAZA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1047970096</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CIENCIA POL&#xcd;TICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUAN PABLO CEBALLOS OCAMPO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1152712337</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CIENCIA POL&#xcd;TICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="Number">55423</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="4">
+					<Data ss:Type="String">317010038334</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">enTRAMAdos. Apropiaci&#xf3;n, conservaci&#xf3;n y comercio justo del sombrero aguade&#xf1;o</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">JUAN MANUEL SARMIENTO NOVA</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">19112765</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="4">
+					<Data ss:Type="String">jmsarmienton@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="4">
+					<Data ss:Type="String">4- ESCUELA DE ARQUITECTURA Y URBANISMO</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="4">
+					<Data ss:Type="String">4- DECANATURA FACULTAD DE INGENIER&#xcd;A Y ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="4">
+					<Data ss:Type="String">Manizales</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESTEBAN &#160;RAMIREZ GOMEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053866001</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="46" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">0104 - Actividad de Educaci&#xf3;n continua y permanente basada en resultados del proyecto de Extensi&#xf3;n.</Data>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="DateTime">2022-03-03T15:34:47</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ALCALDIA DE AGUADAS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DAVID SANTIAGO DUQUE LOPEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1007404391</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="47" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">0119 - Creaci&#xf3;n y publicaci&#xf3;n de medio de divulgaci&#xf3;n o difusi&#xf3;n virtual</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DANIEL ISAAC CONTRERAS BARRERA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053857294</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ADMINISTRACION DE SISTEMAS INFORMATICOS</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ALCALDIA DE AGUADAS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARIA CAMILA RINCON GUTIERREZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053865320</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ADMINISTRACION DE EMPRESAS (D)</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DANIELA CAROLINA IBARRA CHAVES</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053856370</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA EN ADMINISTRACION</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="Number">55451</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="15">
+					<Data ss:Type="String">317010038683</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">MANOS A LA CUENCA. Laboratorio Social para la gesti&#xf3;n integrada del agua y el territorio en Suesca - Fase 2</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">MARTHA &#160;BUSTOS LOPEZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">52055373</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="15">
+					<Data ss:Type="String">mcbustosl@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="15">
+					<Data ss:Type="String">2- DEPARTAMENTO DE INGENIER&#xcd;A CIVIL Y AGR&#xcd;COLA</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="15">
+					<Data ss:Type="String">2- FACULTAD DE INGENIER&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="15">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION DE USUARIOS DE ACUEDUCTO VEREDA TENERIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">HUGO ALEJANDRO PE&#xd1;A MORENO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1019105429</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="DateTime">2022-03-03T15:50:55</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="15">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CANAL COMUNITARIO TV SUESCA - PROGRAMA SENDEROS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">LAURA ESPERANZA RUIZ MARIN</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1073254218</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JHOAN SANTIAGO BABATIVA CHAVEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1022442513</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A CIVIL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION DE USUARIOS DE ACUEDUCTO - ACUASANTAROSITA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DAVID &#160;MORENO ESPEJO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">T</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1000285852</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A CIVIL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL VEREDA TENERIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">KEVIN GERARDO MANZANO HOYOS</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1098740808</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A AGRON&#xd3;MICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL VEREDA SANTA ROSITA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DAVID &#160;MORENO ESPEJO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1000285852</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A CIVIL</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL VEREDA G&#xdc;ITA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ISAAC &#160;ZARATE REYES</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1014258629</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIER&#xcd;A DE SISTEMAS Y COMPUTACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">EMISORA ROCA STEREO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SABINA ALEJANDRA HERNANDEZ ABRIL</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1000470860</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION DE USUARIOS DE ACUEDUCTO VEREDA TENERIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MIGUEL &#160;G&#xd3;MEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1019130800</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL VEREDA TENERIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUAN FELIPE BAUTISTA VERDUGO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1026286986</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ASOCIACION DE USUARIOS DE ACUEDUCTO - ACUASANTAROSITA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DANNA VALENTINA PI&#xd1;EROS PRIETO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1007029241</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CARLOS ARTURO VEGA SUAREZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1007628515</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CANAL COMUNITARIO TV SUESCA - PROGRAMA SENDEROS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ALEXANDRA JOSABET CASTA&#xd1;EDA MURILLO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1005862972</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL VEREDA SANTA ROSITA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">LEIDY ALEXANDRA SALGADO GAITAN</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">1070014471</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUNTA DE ACCION COMUNAL VEREDA G&#xdc;ITA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">EMISORA ROCA STEREO</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="Number">55529</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">Artes vivas y audiovisuales en la vereda II: Construyendo un tejido de animaci&#xf3;n sociocultural rural.</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">JAVIER ORLANDO LOZANO ESCOBAR</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">79670812</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">jolozanoe@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">C&#xe1;tedra</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="5">
+					<Data ss:Type="String">4- DEPARTAMENTO DE CIENCIAS HUMANAS</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="5">
+					<Data ss:Type="String">4- FACULTAD DE ADMINISTRACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="5">
+					<Data ss:Type="String">Manizales</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">CORPORACION ELEUSIS</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">700000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">SARA FERNANDA RIOBO FERREIRA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1007449192</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GESTION CULTURAL Y COMUNICATIVA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="DateTime">2022-03-02T23:13:56</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="5">
+					<Data ss:Type="String">No cumpli&#xf3; requisitos</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="4">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">LUISA MARIA GARCIA GIRALDO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1192808143</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GESTION CULTURAL Y COMUNICATIVA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DANITZA JULIANA PINTO RODRIGUEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1121222420</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GESTION CULTURAL Y COMUNICATIVA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JULIANA &#160;MONTOYA MAGON</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053871636</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GESTION CULTURAL Y COMUNICATIVA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">TATIANA ZULENY BELLO GARZON</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1053869978</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GESTION CULTURAL Y COMUNICATIVA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">HEIDY ALEXANDRA ROBELTO ARANGO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1032471514</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GESTION CULTURAL Y COMUNICATIVA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55538</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">INCREMENTO Y FORTALECIMIENTO DEL CONOCIMIENTO DE LA DIVERSIDAD BIOL&#xd3;GICA AL SERVICIO DE LAS COMUNIDADES REGIONALES</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">JAIME &#160;AGUIRRE CEBALLOS</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">6457389</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">jaguirrec@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">2- INSTITUTO DE CIENCIAS NATURALES</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">2- FACULTAD DE CIENCIAS</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JUAN CAMILO VIEDA ORTEGA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1032476086</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTR&#xcd;A EN CIENCIAS - BIOLOGIA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-03T16:48:57</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">No aprobado</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RESERVA ROBLE &amp; NOGAL</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">MARIA FERNANDA BUSTOS HERNANDEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1018491274</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">NANCY NATHALY TELLEZ ROCHA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">1023966444</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">ESPO</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">MAESTR&#xcd;A EN CIENCIAS - BIOLOGIA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">MAESTRIA</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RESERVA ROBLE &amp; NOGAL</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="Number">55544</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="1">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">--Fortalecimiento de competencias acad&#xe9;micas y motivantes emocionales que faciliten y estimulen el ingreso a la educaci&#xf3;n superior de los j&#xf3;venes de las islas de San Andr&#xe9;s, Providencia y Santa Catalina</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">JOHANNIE LUCIA JAMES CRUZ</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">52424848</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="1">
+					<Data ss:Type="String">jljamesc@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="1">
+					<Data ss:Type="String">8- UNIDAD DE DOCENCIA Y FORMACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="1">
+					<Data ss:Type="String">8- DIRECCI&#xd3;N DE SEDE CARIBE</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="1">
+					<Data ss:Type="String">Caribe</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="36" ss:MergeAcross="5" ss:MergeDown="1">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="36" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="1">
+					<Data ss:Type="String">Ingresando Proyecto</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">RAIZAL YOUTH ORGANIZATION( RYOUTH)</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="Number">55550</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">317010038284</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Hilando Caminos</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">GUSTAVO ADOLFO OSORIO LONDO&#xd1;O</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">10023134</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">gaosoriol@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">Exclusiva</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="3">
+					<Data ss:Type="String">4- DEPARTAMENTO DE INGENIER&#xcd;A EL&#xc9;CTRICA, ELECTR&#xd3;NICA Y COMPUTACI&#xd3;N</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="3">
+					<Data ss:Type="String">4- DECANATURA FACULTAD DE INGENIER&#xcd;A Y ARQUITECTURA</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="3">
+					<Data ss:Type="String">Manizales</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JAKELINE &#160;ARREDONDO SANCHEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1002545471</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIERIA ELECTRONICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="35" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="DateTime">2022-03-03T17:03:01</Data>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="3">
+					<Data ss:Type="String">Activo</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESTEBAN &#160;CHICA ZULETA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1002655094</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIERIA ELECTRONICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GRUPOTEC</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ANAMARIA &#160;LOPEZ BONILLA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1002547269</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIERIA ELECTRONICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">GRUPOTEC</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="Number">0</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BRAYAN ORLANDO AVENDA&#xd1;O MESA</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1052411165</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">INGENIERIA ELECTRONICA</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="28" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="Number">55575</Data>
+				</Cell>
+				<Cell ss:Index="2" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="2">
+					<Data ss:Type="String">NA</Data>
+				</Cell>
+				<Cell ss:Index="4" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">Juventudes revalorizando el conocimiento ancestral campesino, para la sostenibilidad y escalabilidad del proceso comunitario Finca Susense Sostenible, a trav&#xe9;s de la innovaci&#xf3;n comunitaria, en el municipio de Susa (Cundinamarca).</Data>
+				</Cell>
+				<Cell ss:Index="7" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">SARA ELOISA DEL CASTILLO MATAMOROS</Data>
+				</Cell>
+				<Cell ss:Index="10" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">51717670</Data>
+				</Cell>
+				<Cell ss:Index="13" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="2">
+					<Data ss:Type="String">sedelcastillom@unal.edu.co</Data>
+				</Cell>
+				<Cell ss:Index="15" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">Tiempo completo</Data>
+				</Cell>
+				<Cell ss:Index="18" ss:StyleID="24" ss:MergeAcross="2" ss:MergeDown="2">
+					<Data ss:Type="String">2- DEPARTAMENTO DE NUTRICI&#xd3;N HUMANA</Data>
+				</Cell>
+				<Cell ss:Index="21" ss:StyleID="24" ss:MergeAcross="1" ss:MergeDown="2">
+					<Data ss:Type="String">2- FACULTAD DE MEDICINA</Data>
+				</Cell>
+				<Cell ss:Index="23" ss:StyleID="24" ss:MergeAcross="3" ss:MergeDown="2">
+					<Data ss:Type="String">Bogot&#xe1;</Data>
+				</Cell>
+				<Cell ss:Index="27" ss:StyleID="29" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">UNIVERSIDAD NACIONAL DE COLOMBIA</Data>
+				</Cell>
+				<Cell ss:Index="28" ss:StyleID="30" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="Number">50000000</Data>
+				</Cell>
+				<Cell ss:Index="29" ss:StyleID="37" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">LAURA DANIELA DAZA ROMERO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">T</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1000604997</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="38" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">DERECHO</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="39" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+				<Cell ss:Index="35" ss:StyleID="34" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="36" ss:StyleID="36" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="37" ss:StyleID="24" ss:MergeAcross="0" ss:MergeDown="2">
+					<Data ss:Type="String">Ingresando Proyecto</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="40" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">JORGE AUGUSTO APARICIO MONTENEGRO</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">T</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1010053887</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="41" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ANTROPOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="42" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="29" ss:StyleID="43" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">VALENTINA &#160;HERN&#xc1;DEZ L&#xd3;PEZ</Data>
+				</Cell>
+				<Cell ss:Index="30" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">C</Data>
+				</Cell>
+				<Cell ss:Index="31" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">1014276014</Data>
+				</Cell>
+				<Cell ss:Index="32" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">ESPR</Data>
+				</Cell>
+				<Cell ss:Index="33" ss:StyleID="44" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">BIOLOG&#xcd;A</Data>
+				</Cell>
+				<Cell ss:Index="34" ss:StyleID="45" ss:MergeAcross="0" ss:MergeDown="0">
+					<Data ss:Type="String">PREGRADO</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="22" ss:MergeAcross="36" ss:MergeDown="0">
+					<Data ss:Type="String">&#160;</Data>
+				</Cell>
+			</Row>
+			<Row>
+				<Cell ss:Index="1" ss:StyleID="48" ss:MergeAcross="3" ss:MergeDown="0">
+					<Data ss:Type="String">Dec 18, 2023 4:21 PM</Data>
+				</Cell>
+				<Cell ss:Index="5" ss:StyleID="20" ss:MergeAcross="3" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="9" ss:StyleID="20" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String"/>
+				</Cell>
+				<Cell ss:Index="11" ss:StyleID="48" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">P&#xe1;g.</Data>
+				</Cell>
+				<Cell ss:Index="14" ss:StyleID="49" ss:MergeAcross="2" ss:MergeDown="0">
+					<Data ss:Type="String">1</Data>
+				</Cell>
+				<Cell ss:Index="17" ss:StyleID="49" ss:MergeAcross="1" ss:MergeDown="0">
+					<Data ss:Type="String">de</Data>
+				</Cell>
+				<Cell ss:Index="19" ss:StyleID="49" ss:MergeAcross="4" ss:MergeDown="0">
+					<Data ss:Type="String">1</Data>
+				</Cell>
+			</Row>
+		</ss:Table>
+		<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+			<PageSetup>
+				<Layout x:Orientation="Landscape"/>
+			</PageSetup>
+		</WorksheetOptions>
+	</Worksheet>
+</Workbook>

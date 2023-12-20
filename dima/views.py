@@ -120,7 +120,7 @@ class ContentView(TemplateView):
         files=[]
         for attachment in Content.objects.get(label=self.label).attachment.all():
             if attachment.label =='file' and attachment.area == folder:
-                files.append([attachment.name,attachment.area,attachment.type,attachment.attachment])       
+                files.append([attachment.name,attachment.area,attachment.type,attachment.attachment])
         if folder:
             context['file_data']=folder
             context['files']=files

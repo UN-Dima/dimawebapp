@@ -25,6 +25,7 @@ urlpatterns = [
     path("", include('dima.urls')),
 
     path("grupos/", include('groups.urls')),
+    path("semilleros/", include('seminars.urls')),
     path("investigadores/", include('researchers.urls')),
     path("propiedad_intelectual/", include('intellectual_property.urls')),
 

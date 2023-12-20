@@ -1,14 +1,17 @@
 import re
+import os
 from datetime import datetime
 
 import bs4
 
 from projects.models import Project
+from researchers.models import Professor
 from groups.models import ResearchGroup
+from seminars.models import Seminars
 from quipu.models import Resources_QuipuProject, Row_QuipuProject, QuipuProject
 
 from . import nan_2_zero
-from .xml_scraper import load_projects_xls, load_report
+from .xml_scraper import load_projects_xls, load_report, load_groups_xls, get_members, load_seminars_xls
 
 def save_project(report):
         """"""
@@ -216,11 +219,228 @@ def save_quipu(report):
             return False
 
 def save_groups(file):
-    
-    return False
+    departaments = {
+            '4- DEPARTAMENTO DE ADMINISTRACIÓN': 'departament_0001',
+            '4- DEPARTAMENTO DE CIENCIAS HUMANAS': 'departament_0002',
+            '4- DEPARTAMENTO DE FÍSICA Y QUÍMICA': 'departament_0003',
+            '4- DEPARTAMENTO DE INFORMÁTICA Y COMPUTACIÓN': 'departament_0004',
+            '4- DEPARTAMENTO DE INGENIERÍA CIVIL': 'departament_0005',
+            '4- DEPARTAMENTO DE INGENIERÍA ELÉCTRICA, ELECTRÓNICA Y COMPUTACIÓN': 'departament_0006',
+            '4- DEPARTAMENTO DE INGENIERÍA INDUSTRIAL': 'departament_0007',
+            '4- DEPARTAMENTO DE INGENIERÍA QUÍMICA': 'departament_0008',
+            '4- DEPARTAMENTO DE MATEMÁTICAS': 'departament_0009',
+            '4- ESCUELA DE ARQUITECTURA Y URBANISMO': 'departament_0010',
+            '4- DEPARTAMENTO DE FÍSICA Y QUÍMICA': 'departament_0011',
+        }
+
+    faculties = {
+        '4- FACULTAD DE ADMINISTRACIÓN': 'faculty_0001',
+        '4- FACULTAD DE CIENCIAS EXACTAS Y NATURALES': 'faculty_0002',
+        '4- FACULTAD DE INGENIERÍA Y ARQUITECTURA': 'faculty_0003',
+        '4- INSTITUTO DE BIOTECNOLOGÍA Y AGROINDUSTRIA': 'faculty_0004',
+    }
+
+    categories = {
+        'A':'groups_category_0001',
+        'A1':'groups_category_0002',
+        'B':'groups_category_0003',
+        'C':'groups_category_0004',
+        'Sin Categoría':'groups_category_0005',
+    }
+
+    areas = {
+        "Ambiente y biodiversidad": "knowledge_0001",
+        "Arte y cultura": "knowledge_0002",
+        "Biotecnología": "knowledge_0003",
+        "Cyt de minerales y materiales": "knowledge_0004",
+        "Ciencias agrarias y desarrollo rural": "knowledge_0005",
+        "Construcción de ciudadanía e inclusión social": "knowledge_0006",
+        "Desarrollo organizacional económico e industrial": "knowledge_0007",
+        "Energía ": "knowledge_0008",
+        "Estado, sistemas políticos y jurídicos": "knowledge_0009",
+        "Hábitat, ciudad y territorio": "knowledge_0010",
+        "Salud y vida": "knowledge_0011",
+        "Tecnologías de la información y comunicaciones": "knowledge_0012",
+    }
+
+    try:
+        for group in file:
+            if ResearchGroup.objects.filter(pk=group['minciencias_code']).count():
+                g = ResearchGroup.objects.get(pk=group['minciencias_code'])
+
+                # Update
+                
+                g.hermes_code = group['hermes_code']
+                g.name = group['name']
+                g.research = group['research']
+                g.founded = group['founded']
+                g.departament = departaments[group['departament']]
+                g.category = categories[group['category']]
+                g.ocde = group['ocde']
+                g.leader = Professor.objects.get(pk=int(group['leader_id'])) 
+                g.faculty = faculties[group['faculty']]
+                g.gruplac = group['gruplac']
+                if nan_2_zero(group['knowledge_area']):
+                    g.knowledge_area = areas[group['knowledge_area'].capitalize()]
+                else:
+                    g.knowledge_area = float('nan')
+                if nan_2_zero(group['gruplac']):
+                    g.researchers = str(get_members(group['gruplac']))
+                else:
+                    g.researchers = str([])
+                g.save()
+            else:
+                if group['minciencias_code'][:3] != 'COL':
+                    pass
+                else:
+                    try:
+                        if nan_2_zero(group['gruplac']):
+                            researchers = str(get_members(group['gruplac']))
+                        else:
+                            researchers = str([])
+                        if nan_2_zero(group['knowledge_area']):
+                            knowledge_area = areas[group['knowledge_area'].capitalize()]
+                        else:
+                            knowledge_area = float('nan')
+                        grp = {
+                            'minciencias_code': group['minciencias_code'],
+                            'hermes_code': group['hermes_code'],
+                            'name': group['name'],
+                            'research': group['research'],
+                            'founded': group['founded'],
+                            'departament': departaments[group['departament']],
+                            'category': categories[group['category']],
+                            'ocde': group['ocde'],
+                            'leader': Professor.objects.get(pk=int(group['leader_id'])) ,
+                            'faculty': faculties[group['faculty']],
+                            'gruplac': group['gruplac'],
+                            'knowledge_area': knowledge_area,
+                            'researchers': researchers,
+                        }
+
+                        g = ResearchGroup.objects.create(**grp)
+                    except Exception as e:
+                        print(e, group)
+        return True
+    except Exception as e:
+        print(e, group)
+        return False
+
+def save_seminars(file):
+    departaments = {
+        '4- DEPARTAMENTO DE ADMINISTRACIÓN': 'departament_0001',
+        '4- DEPARTAMENTO DE CIENCIAS HUMANAS': 'departament_0002',
+        '4- DEPARTAMENTO DE FÍSICA Y QUÍMICA': 'departament_0003',
+        '4- DEPARTAMENTO DE INFORMÁTICA Y COMPUTACIÓN': 'departament_0004',
+        '4- DEPARTAMENTO DE INGENIERÍA CIVIL': 'departament_0005',
+        '4- DEPARTAMENTO DE INGENIERÍA ELÉCTRICA, ELECTRÓNICA Y COMPUTACIÓN': 'departament_0006',
+        '4- DEPARTAMENTO DE INGENIERÍA INDUSTRIAL': 'departament_0007',
+        '4- DEPARTAMENTO DE INGENIERÍA QUÍMICA': 'departament_0008',
+        '4- DEPARTAMENTO DE MATEMÁTICAS': 'departament_0009',
+        '4- ESCUELA DE ARQUITECTURA Y URBANISMO': 'departament_0010',
+        '4- DEPARTAMENTO DE FÍSICA Y QUÍMICA': 'departament_0011',
+    }
+    faculties = {
+        '4- FACULTAD DE ADMINISTRACIÓN': 'faculty_0001',
+        '4- FACULTAD DE CIENCIAS EXACTAS Y NATURALES': 'faculty_0002',
+        '4- FACULTAD DE INGENIERÍA Y ARQUITECTURA': 'faculty_0003',
+        '4- INSTITUTO DE BIOTECNOLOGÍA Y AGROINDUSTRIA': 'faculty_0004',
+    }
+    areas = {
+        'Ambiente y Biodiversidad': "knowledge_0001",
+        'Arte y Cultura': "knowledge_0002",
+        'Biotecnología': "knowledge_0003",
+        'CyT de minerales y materiales': "knowledge_0004",
+        'Ciencias Agrarias y Desarrollo Rural': "knowledge_0005",
+        'Construcción de Ciudadanía e Inclusión social': "knowledge_0006",
+        'Desarrollo Organizacional Económico e Industrial': "knowledge_0007",
+        'Energía': "knowledge_0008",
+        'Estado, Sistemas Políticos y Jurídicos': "knowledge_0009",
+        'Hábitat, Ciudad y Territorio': "knowledge_0010",
+        'Salud y vida': "knowledge_0011",
+        'Tecnologías de la Información y Comunicaciones': "knowledge_0012",
+    }
+    states = {
+        'Activo': 'seminar_state_0001',
+        'Inactivo': 'seminar_sate_0002',
+    }
+    try:
+        for seminar in file:
+            prof = seminar['Líder'].lower().split(' ')
+            prof_lastnames = prof.pop(-2).capitalize()
+            prof_lastnames += ' '+prof.pop(-1).capitalize()
+            prof_name = ''
+            for i in prof:
+                prof_name += i.capitalize()+' '
+            prof_name = prof_name[:-1]
+            prof = f'{prof_name} {prof_lastnames}'# Professor.objects.get(first_name__unaccent=prof_name, last_name__unaccent=prof_lastnames)
+            print(prof)
+            if Seminars.objects.filter(pk=seminar['Código']).count():
+                s = Seminars.objects.get(pk=seminar['Código'])
+                s.code = seminar['Código']
+                s.name = seminar['Nombre']
+                s.state = states[seminar['Estado Actual']]
+                s.leader = prof
+                s.email = seminar['E-mail']
+                s.departament = departaments[seminar['Dependencia principal']]
+                s.faculty = faculties[seminar['Facultad principal']]
+                s.founded = seminar['Fecha creación']
+                s.intro = seminar['Presentación']
+                s.general_obj = seminar['Objetivo general']
+                s.justification = seminar['Justificación']
+                s.focus = seminar['Enfoque']
+                s.ocde = seminar['Área OCDE Principal']
+                s.ODS = seminar['Objetivo Desarrollo Sostenible']
+                if nan_2_zero(seminar['Agenda conocimiento']):
+                    s.knowledge_area = areas[seminar['Agenda conocimiento']]
+                else:
+                    s.knowledge_area = float('nan')
+                s.discourse = seminar['Pertinencia / Articulación con grupos de investigación']
+                s.methodology = seminar['Metodología']
+                s.lines = seminar['Línea de investigación']
+
+                s.save()
+            else:
+                prof = seminar['Líder'].lower().split(' ')
+                prof_lastnames = prof.pop(-2).capitalize()
+                prof_lastnames += ' '+prof.pop(-1).capitalize()
+                prof_name = ''
+                for i in prof:
+                    prof_name += i.capitalize()+' '
+                prof_name = prof_name[:-1]
+                prof = f'{prof_name} {prof_lastnames}'# Professor.objects.get(first_name=prof_name, last_name=prof_lastnames)
+                if nan_2_zero(seminar['Agenda conocimiento']):
+                    knowledge_area = areas[seminar['Agenda conocimiento']]
+                else:
+                    knowledge_area = float('nan')
+                smnr = {
+                    'code':seminar['Código'],
+                    'name':seminar['Nombre'],
+                    'state':states[seminar['Estado Actual']],
+                    'leader':prof,
+                    'email':seminar['E-mail'],
+                    'departament':departaments[seminar['Dependencia principal']],
+                    'faculty':faculties[seminar['Facultad principal']],
+                    'founded':seminar['Fecha creación'],
+                    'intro':seminar['Presentación'],
+                    'general_obj':seminar['Objetivo general'],
+                    'justification':seminar['Justificación'],
+                    'focus':seminar['Enfoque'],
+                    'ocde':seminar['Área OCDE Principal'],
+                    'ODS':seminar['Objetivo Desarrollo Sostenible'],
+                    'knowledge_area':knowledge_area,
+                    'discourse':seminar['Pertinencia / Articulación con grupos de investigación'],
+                    'methodology':seminar['Metodología'],
+                    'lines':seminar['Línea de investigación'],
+                }
+                s = Seminars.objects.create(**smnr)
+        return True
+    except Exception as e:
+        print(e, seminar)
+        return False
 
 def update_table(table:str, file:str) -> bool:
-    """_summary_
+    """Update a table with a given file
 
     Parameters
     ----------
@@ -240,13 +460,27 @@ def update_table(table:str, file:str) -> bool:
 
     if table == 'PROYECTOS':
         if file.lower().endswith('.xls'):
-            df, report_date = load_projects_xls(open(f'./media_root/{file}','rb'))
+            if os.getenv('DEBUG', False) == 'True':
+                df, report_date = load_projects_xls(open(f'./media_root/{file}','rb'))
+            else:
+                df, report_date = load_projects_xls(open(f'/www/dimawebapp/media_root/{file}','rb'))
             status, msg = save_project(df)
     elif table == 'QUIPU':
         if file.lower().endswith('.xml'):
-            status = save_quipu(load_report(open(f'./media_root/{file}','rb')))
+            if os.getenv('DEBUG', False) == 'True':
+                status = save_quipu(load_report(open(f'./media_root/{file}','rb')))
+            else:
+                status = save_quipu(load_report(open(f'/www/dimawebapp/media_root/{file}','rb')))
     elif table == 'GRUPOS':
         if file.lower().endswith('.xls'):
-            status = save_groups(load_report(open(f'./media_root/{file}','rb')))
-            
+            if os.getenv('DEBUG', False) == 'True':
+                status = save_groups(load_groups_xls(open(f'./media_root/{file}','rb')))
+            else:
+                status = save_groups(load_groups_xls(open(f'/www/dimawebapp/media_root/{file}','rb')))
+    elif table == 'SEMILLEROS':
+        if file.lower().endswith('.xls'):
+            if os.getenv('DEBUG', False) == 'True':
+                status = save_seminars(load_seminars_xls(open(f'./media_root/{file}','rb')))
+            else:
+                status = save_seminars(load_seminars_xls(open(f'/www/dimawebapp/media_root/{file}','rb')))        
     return status
