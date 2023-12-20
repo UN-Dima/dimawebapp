@@ -105,7 +105,7 @@ def save_project(report):
                     s2 = 0
                     for resource in qr:
                         q = Row_QuipuProject.objects.filter(resource_id = resource.id)
-                        last_imp = str(max([int(imp.imputacion) for imp in q]))
+                        last_imp = str(2)
                         saldo = Row_QuipuProject.objects.filter(resource_id = resource.id,
                                                                  imputacion = last_imp)[0].saldo_por_comprometer
                         s += float(saldo)

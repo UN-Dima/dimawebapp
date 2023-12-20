@@ -323,6 +323,18 @@ def update_project_name_filter_(evt):
     ajax_render('dima-render--projects',
                 "/proyectos/", FILTERS_PROJECTS)
 
+@bind('#dima-search--hermes_cod__projects', 'input')
+def update_project_name_filter_(evt):
+    """"""
+    global FILTERS_PROJECTS
+    if evt.target.value == '':
+        FILTERS_PROJECTS.pop('hermes_cod')
+    else:
+        FILTERS_PROJECTS['hermes_cod'] = evt.target.value
+
+    ajax_render('dima-render--projects',
+                "/proyectos/", FILTERS_PROJECTS)
+
 # ----------------------------------------------------------------------
 @bind('#patentes-tab', 'click')
 def update_patentes__plot(evt):

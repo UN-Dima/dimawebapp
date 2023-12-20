@@ -32,6 +32,8 @@ def fix_filters(model, filters):
     for k in filters:
         if 'name' in k:
             searchers[k+'__icontains'] = filters[k]
+        elif 'cod' in k:
+            searchers[k] = filters[k]
         else:
             k_plain = k.replace('~', '')
 
@@ -39,7 +41,8 @@ def fix_filters(model, filters):
                 filters[k] = flts[0][0]
 
     for k in searchers.keys():
-        filters.pop(k[:-11])
+        if k.endswith('__icontains'):
+            filters.pop(k[:-11])
     return filters, searchers
 
 

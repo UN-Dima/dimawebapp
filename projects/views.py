@@ -29,10 +29,14 @@ class Projects(TemplateView):
         filters, searchers = fix_filters(
             Project, json.loads(request.POST['data']))
 
+        print(searchers)
+
         query = Q()
 
         if 'project_name__icontains' in searchers:
             query |= Q(project_name__icontains=searchers['project_name__icontains'])
+        if 'hermes_cod' in searchers:
+            query |= Q(hermes_cod=int(searchers['hermes_cod']))
 
         projects = Project.objects.filter(
             query,
